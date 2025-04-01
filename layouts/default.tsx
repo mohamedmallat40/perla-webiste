@@ -20,11 +20,11 @@ export default function DefaultLayout({
         <Link
           isExternal
           className="flex items-center gap-1 text-current"
-          href="https://www.heroui.com"
-          title="heroui.com homepage"
+          href="https://www.perla-it.com"
+          title="perla-it.com homepage"
         >
           <span className="text-default-600">Powered by</span>
-          <p className="text-primary">HeroUI</p>
+          <p className="text-primary">Perla it</p>
         </Link>
       </footer>
     </div>
