@@ -7,54 +7,292 @@ import { siteConfig } from "@/config/site";
 import { title, subtitle } from "@/components/primitives";
 import { GithubIcon } from "@/components/icons";
 import DefaultLayout from "@/layouts/default";
+import Footer from "./footer/footer";
+import {
+  Logo1,
+  Logo10,
+  Logo2,
+  Logo3,
+  Logo4,
+  Logo5,
+  Logo6,
+  Logo7,
+  Logo8,
+  Logo9,
+} from "./brand-scrooling-banner/logos";
+
+import ScrollingBanner from "./brand-scrooling-banner/scrolling-banner";
+import HeroSection from "./hero/ui-components-boost";
+
+const logos = [
+  {
+    key: "logo-1",
+    logo: Logo1,
+  },
+  {
+    key: "logo-2",
+    logo: Logo2,
+  },
+  {
+    key: "logo-3",
+    logo: Logo3,
+  },
+  {
+    key: "logo-4",
+    logo: Logo4,
+  },
+  {
+    key: "logo-5",
+    logo: Logo5,
+  },
+  {
+    key: "logo-6",
+    logo: Logo6,
+  },
+  {
+    key: "logo-7",
+    logo: Logo7,
+  },
+  {
+    key: "logo-8",
+    logo: Logo8,
+  },
+  {
+    key: "logo-9",
+    logo: Logo9,
+  },
+  {
+    key: "logo-10",
+    logo: Logo10,
+  },
+];
 
 export default function IndexPage() {
   return (
     <DefaultLayout>
-      <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
-        <div className="inline-block max-w-xl text-center justify-center">
-          <span className={title()}>Make&nbsp;</span>
-          <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
-          <br />
-          <span className={title()}>
-            websites regardless of your design experience.
-          </span>
-          <div className={subtitle({ class: "mt-4" })}>
-            Beautiful, fast and modern React UI library.
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
+          <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0">
+            <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="24"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="24"
+                className="text-pink-500"
+              >
+                <path
+                  d="M3.5 20.5c.83.83 2.17.83 3 0l13-13c.83-.83.83-2.17 0-3-.83-.83-2.17-.83-3 0l-13 13c-.83.83-.83 2.17 0 3ZM18.01 8.99l-3-3"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M8.5 2.44 10 2l-.44 1.5L10 5l-1.5-.44L7 5l.44-1.5L7 2l1.5.44ZM4.5 8.44 6 8l-.44 1.5L6 11l-1.5-.44L3 11l.44-1.5L3 8l1.5.44ZM19.5 13.44 21 13l-.44 1.5L21 16l-1.5-.44L18 16l.44-1.5L18 13l1.5.44Z"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </div>
+            <p className="text-base font-semibold">Themeable</p>
+          </div>
+          <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+            <p className="font-normal text-medium text-default-500">
+              Provides a plugin to customize default themes, you can change all
+              semantic tokens or create an entire new theme.
+            </p>
           </div>
         </div>
-
-        <div className="flex gap-3">
-          <Link
-            isExternal
-            className={buttonStyles({
-              color: "primary",
-              radius: "full",
-              variant: "shadow",
-            })}
-            href={siteConfig.links.docs}
-          >
-            Documentation
-          </Link>
-          <Link
-            isExternal
-            className={buttonStyles({ variant: "bordered", radius: "full" })}
-            href={siteConfig.links.github}
-          >
-            <GithubIcon size={20} />
-            GitHub
-          </Link>
+        <div className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
+          <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0">
+            <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="24"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="24"
+                className="text-pink-500"
+              >
+                <path
+                  d="M6.09 13.28h3.09v7.2c0 1.68.91 2.02 2.02.76l7.57-8.6c.93-1.05.54-1.92-.87-1.92h-3.09v-7.2c0-1.68-.91-2.02-2.02-.76l-7.57 8.6c-.92 1.06-.53 1.92.87 1.92Z"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeMiterlimit="10"
+                  strokeWidth="1.5"
+                />
+              </svg>
+            </div>
+            <p className="text-base font-semibold">Fast</p>
+          </div>
+          <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+            <p className="font-normal text-medium text-default-500">
+              Built on top of Tailwind CSS, which means no runtime styles, and
+              no unnecessary classes in your bundle.
+            </p>
+          </div>
         </div>
-
-        <div className="mt-8">
-          <Snippet hideCopyButton hideSymbol variant="bordered">
-            <span>
-              Get started by editing{" "}
-              <Code color="primary">pages/index.tsx</Code>
-            </span>
-          </Snippet>
+        <div className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
+          <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0">
+            <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="24"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="24"
+                className="text-pink-500"
+              >
+                <path
+                  d="M21.25 12C21.25 14.4533 20.2754 16.806 18.5407 18.5407C16.806 20.2754 14.4533 21.25 12 21.25V22.75C17.937 22.75 22.75 17.937 22.75 12H21.25ZM12 21.25C9.54675 21.25 7.19397 20.2754 5.45926 18.5407C3.72455 16.806 2.75 14.4533 2.75 12H1.25C1.25 17.937 6.063 22.75 12 22.75V21.25ZM2.75 12C2.75 9.54675 3.72455 7.19397 5.45926 5.45926C7.19397 3.72455 9.54675 2.75 12 2.75V1.25C6.063 1.25 1.25 6.063 1.25 12H2.75ZM15.5 14.25C13.975 14.25 12.5125 13.6442 11.4341 12.5659C10.3558 11.4875 9.75 10.025 9.75 8.5H8.25C8.25 10.4228 9.01384 12.2669 10.3735 13.6265C11.7331 14.9862 13.5772 15.75 15.5 15.75V14.25ZM20.425 11.469C19.9133 12.3176 19.191 13.0197 18.3281 13.5069C17.4652 13.9942 16.491 14.2501 15.5 14.25V15.75C16.7494 15.7504 17.9777 15.4279 19.0657 14.8138C20.1537 14.1997 21.0646 13.3148 21.71 12.245L20.425 11.469ZM9.75 8.5C9.74986 7.50903 10.0058 6.53483 10.4931 5.67193C10.9803 4.80902 11.6824 4.08669 12.531 3.575L11.755 2.291C10.6854 2.93628 9.80058 3.84701 9.18649 4.93486C8.57239 6.02271 8.2498 7.25078 8.25 8.5H9.75ZM12 2.75C11.9497 2.74903 11.9002 2.73811 11.8542 2.71785C11.8082 2.6976 11.7666 2.66842 11.732 2.632C11.6898 2.58965 11.6613 2.53568 11.65 2.477C11.646 2.446 11.648 2.356 11.755 2.291L12.531 3.575C13.034 3.271 13.196 2.714 13.137 2.276C13.075 1.821 12.717 1.25 12 1.25V2.75ZM21.71 12.245C21.644 12.352 21.554 12.354 21.523 12.35C21.4643 12.3387 21.4103 12.3102 21.368 12.268C21.3316 12.2334 21.3024 12.1918 21.2821 12.1458C21.2619 12.0998 21.251 12.0503 21.25 12H22.75C22.75 11.283 22.179 10.925 21.724 10.863C21.286 10.804 20.729 10.966 20.425 11.469L21.71 12.245Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </div>
+            <p className="text-base font-semibold">Light &amp; Dark UI</p>
+          </div>
+          <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+            <p className="font-normal text-medium text-default-500">
+              Automatic dark mode recognition, HeroUI automatically changes the
+              theme when detects HTML theme prop changes.
+            </p>
+          </div>
         </div>
+        <div className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
+          <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0">
+            <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
+              <svg
+                aria-hidden="true"
+                fill="none"
+                focusable="false"
+                height="24"
+                role="presentation"
+                viewBox="0 0 24 24"
+                width="24"
+                className="text-pink-500"
+              >
+                <path
+                  d="M10 16.95H6.21c-3.37 0-4.21-.84-4.21-4.21v-6c0-3.37.84-4.21 4.21-4.21h10.53c3.37 0 4.21.84 4.21 4.21M10 21.47v-4.52M2 12.95h8M6.74 21.47H10"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M22 12.8v5.71c0 2.37-.59 2.96-2.96 2.96h-3.55c-2.37 0-2.96-.59-2.96-2.96V12.8c0-2.37.59-2.96 2.96-2.96h3.55c2.37 0 2.96.59 2.96 2.96Z"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
+                />
+                <path
+                  d="M17.244 18.25h.01"
+                  stroke="currentColor"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                />
+              </svg>
+            </div>
+            <p className="text-base font-semibold">Unique DX</p>
+          </div>
+          <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+            <p className="font-normal text-medium text-default-500">
+              HeroUI is fully-typed to minimize the learning curve, and provide
+              the best possible developer experience.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div className="flex flex-col gap-2 items-start justify-center w-full">
+          <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
+            Apply your own
+          </h1>
+          <div>
+            <h1 className="tracking-tight inline font-semibold from-[#5EA2EF] to-[#0072F5] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
+              theming&nbsp;
+            </h1>
+            <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
+              decisions.
+            </h1>
+          </div>
+        </div>
+        <p className="w-full md:w-1/2 my-2 text-medium lg:text-large font-normal text-default-500 block max-w-full">
+          HeroUI provides a custom TailwindCSS plugin that allows you to
+          customize the default themes or create your own.
+        </p>
+      </div>
+      <section className="mx-auto w-full max-w-6xl px-6 py-20 sm:py-32 lg:px-8 lg:py-40">
+        <ScrollingBanner shouldPauseOnHover gap="40px">
+          {logos.map(({ key, logo }) => (
+            <div
+              key={key}
+              className="flex items-center justify-center text-foreground"
+            >
+              {logo}
+            </div>
+          ))}
+        </ScrollingBanner>
       </section>
+      <HeroSection />
+      <Footer />
     </DefaultLayout>
   );
+}
+
+{
+  /* <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
+  <div className="inline-block max-w-xl text-center justify-center">
+    <span className={title()}>Make&nbsp;</span>
+    <span className={title({ color: "violet" })}>beautiful&nbsp;</span>
+    <br />
+    <span className={title()}>
+      websites regardless of your design experience.
+    </span>
+    <div className={subtitle({ class: "mt-4" })}>
+      Beautiful, fast and modern React UI library.
+    </div>
+  </div>
+
+  <div className="flex gap-3">
+    <Link
+      isExternal
+      className={buttonStyles({
+        color: "primary",
+        radius: "full",
+        variant: "shadow",
+      })}
+      href={siteConfig.links.docs}
+    >
+      Documentation
+    </Link>
+    <Link
+      isExternal
+      className={buttonStyles({ variant: "bordered", radius: "full" })}
+      href={siteConfig.links.github}
+    >
+      <GithubIcon size={20} />
+      GitHub
+    </Link>
+  </div>
+
+  <div className="mt-8">
+    <Snippet hideCopyButton hideSymbol variant="bordered">
+      <span>
+        Get started by editing <Code color="primary">pages/index.tsx</Code>
+      </span>
+    </Snippet>
+  </div>
+</section>; */
 }
