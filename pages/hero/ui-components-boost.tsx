@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section
       className="relative z-10 flex flex-col gap-2 w-full mt-16 lg:mt-44 overflow-hidden bg-cover bg-center"
       style={{
-        backgroundImage: `url('/logos/hero-background.webp')`, // Background image URL
+        backgroundImage: `url('/logos/hero-background-white.webp')`, // Background image URL
       }}
     >
       <div className="flex flex-col gap-8 min-h-[480px]">
@@ -33,19 +33,21 @@ export default function HeroSection() {
                 beautiful&nbsp;
               </h1>
               <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl text-shadow">
-                components
+                and Modern UI Libraries
               </h1>
             </div>
           </div>
           <p className="w-full md:w-1/2 my-2 text-medium lg:text-large font-normal block max-w-full pr-12 text-foreground-500">
-            Premade templates of over 210+ beautiful and responsive components,
-            professionally created by the team behind HeroUI.
+            development without compromising quality. By leveraging top UI
+            libraries such as Hero UI, MUI, antd and others, we streamline the
+            frontend development process, reducing time-to-market for your
+            applications.
           </p>
           <div className="mt-4 text-foreground-600 font-medium space-y-2">
             {[
-              "210+ Components",
-              "Lifetime Access",
-              "Free Updates",
+              "Faster Deployment – Pre-built, customizable components speed up development.",
+              "Consistent UI/UX – Modern and responsive designs enhance user experience.",
+              "Flexible & Scalable – Easily adaptable for future improvements.",
               "Figma Files Included",
             ].map((text, index) => (
               <div key={index} className="flex gap-x-4 items-center">

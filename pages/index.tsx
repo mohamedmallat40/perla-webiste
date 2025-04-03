@@ -99,12 +99,12 @@ export default function IndexPage() {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">Themeable</p>
+            <p className="text-base font-semibold">AI Automation</p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              Provides a plugin to customize default themes, you can change all
-              semantic tokens or create an entire new theme.
+              Unlock the power of AI-driven automation, streamlining processes
+              and boosting productivity for your business.
             </p>
           </div>
         </div>
@@ -131,12 +131,12 @@ export default function IndexPage() {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">Fast</p>
+            <p className="text-base font-semibold">AI Integration</p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              Built on top of Tailwind CSS, which means no runtime styles, and
-              no unnecessary classes in your bundle.
+              Integrating advanced AI technologies like ChatGPT, DeepSeek, and
+              Gemini to make your apps smarter and more intuitive.
             </p>
           </div>
         </div>
@@ -159,12 +159,12 @@ export default function IndexPage() {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">Light &amp; Dark UI</p>
+            <p className="text-base font-semibold">Mobile Development</p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              Automatic dark mode recognition, HeroUI automatically changes the
-              theme when detects HTML theme prop changes.
+              Elegant, high-performance native apps for iOS and Android,
+              delivering a flawless user experience.
             </p>
           </div>
         </div>
@@ -204,12 +204,12 @@ export default function IndexPage() {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">Unique DX</p>
+            <p className="text-base font-semibold">Web Development</p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              HeroUI is fully-typed to minimize the learning curve, and provide
-              the best possible developer experience.
+              We build scalable, robust, and modern web solutions with
+              responsive UIs for seamless experiences across devices.
             </p>
           </div>
         </div>
