@@ -82,41 +82,17 @@ export default function Footer() {
   return (
     <footer className="flex w-full flex-col">
       <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-6 py-12 lg:px-8">
-        <div className="flex items-center justify-center">
-          {/* <AcmeIcon size={44} /> */}
-          <span className="text-medium font-medium">ACME</span>
-        </div>
-        <Spacer y={4} />
-        <div className="flex flex-wrap justify-center gap-x-4 gap-y-1">
-          {navLinks.map((item) => (
-            <Link
-              key={item.name}
-              isExternal
-              className="text-default-500"
-              href={item.href}
-              size="sm"
-            >
-              {item.name}
-            </Link>
-          ))}
-        </div>
-        <Spacer y={6} />
-        <div className="flex justify-center gap-x-4">
-          {socialItems.map((item) => (
-            <Link
-              key={item.name}
-              isExternal
-              className="text-default-400"
-              href={item.href}
-            >
-              <span className="sr-only">{item.name}</span>
-              <item.icon aria-hidden="true" className="w-5" />
-            </Link>
-          ))}
-        </div>
-        <Spacer y={4} />
+    
+        <Spacer y={8} />   
         <p className="mt-1 text-center text-small text-default-400">
-          &copy; 2024 Acme Inc. All rights reserved.
+          &copy; PERLA Code Innovators. All rights reserved.
+        </p>
+        <Spacer y={2} />   
+        <p className="text-center text-small text-default-400">
+          AV Hedi khfach 2023. Ariana Tunis, Tunisia
+        </p>
+        <p className="text-center text-small text-default-400">
+          Contact
         </p>
       </div>
     </footer>
