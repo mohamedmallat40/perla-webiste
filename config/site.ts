@@ -5,21 +5,17 @@ export const siteConfig = {
   description: "We code the future togther.",
   navItems: [
     {
-      label: "Home",
-      href: "/",
+      label: "Services",
+      href: "services",
     },
     {
-      label: "solutions",
-      href: "",
-    },
-    {
-      label: "Stack",
+      label: "Our Stack",
       href: "/pricing",
     },
    
     {
-      label: "About",
-      href: "",
+      label: "About Us",
+      href: "footer",
     },
   ],
 

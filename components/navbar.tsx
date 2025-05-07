@@ -1,16 +1,15 @@
 import {
   Navbar as HeroUINavbar,
   NavbarContent,
-  NavbarMenu,
   NavbarMenuToggle,
   NavbarBrand,
   NavbarItem,
   NavbarMenuItem,
 } from "@heroui/navbar";
-import { Button } from "@heroui/button";
 import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
 import { Input } from "@heroui/input";
+import { Button } from "@heroui/button";
 import { link as linkStyles } from "@heroui/theme";
 import NextLink from "next/link";
 import clsx from "clsx";
@@ -18,15 +17,23 @@ import clsx from "clsx";
 import { siteConfig } from "@/config/site";
 import { ThemeSwitch } from "@/components/theme-switch";
 import {
-  TwitterIcon,
   GithubIcon,
-  DiscordIcon,
   HeartFilledIcon,
   SearchIcon,
   Logo,
 } from "@/components/icons";
+import { useTranslations } from "@/hooks/use-translation";
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
-export const Navbar = () => {
+export const Navbar = ({ setLocale }: any) => {
+
+  const handleLocaleChange = (newLocale: string) => {
+    setLocale(newLocale);
+  };
+
+  const {t} = useTranslations();
+
+
   const searchInput = (
     <Input
       aria-label="Search"
@@ -79,11 +86,8 @@ export const Navbar = () => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-        <NavbarItem className="hidden sm:flex gap-2">
 
-          <ThemeSwitch />
-        </NavbarItem>
-        <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem>
+        {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
         <NavbarItem className="hidden md:flex">
           <Button
             isExternal
@@ -93,9 +97,14 @@ export const Navbar = () => {
             endContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"
           >
-            Built with
+            {t('navbar_slogon')}
           </Button>
         </NavbarItem>
+        <NavbarItem className="hidden sm:flex gap-2">
+
+<LanguageSwitcher onChange={handleLocaleChange} />
+<ThemeSwitch />
+</NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">

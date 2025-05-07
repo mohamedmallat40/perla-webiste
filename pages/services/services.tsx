@@ -1,6 +1,9 @@
-import React from 'react';
+import { useTranslations } from "@/hooks/use-translation";
 
 const Services: React.FC = () => {
+
+    const { t } = useTranslations();
+  
     return (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="flex flex-col relative overflow-hidden h-auto text-foreground box-border outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 shadow-medium rounded-large transition-transform-background motion-reduce:transition-none border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
@@ -31,12 +34,11 @@ const Services: React.FC = () => {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">AI Automation</p>
+            <p className="text-base font-semibold">{t('ai_automation')}</p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              Unlock the power of AI-driven automation, streamlining processes
-              and boosting productivity for your business.
+              {t('description_ai_automation')}
             </p>
           </div>
         </div>
@@ -63,12 +65,11 @@ const Services: React.FC = () => {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">AI Integration</p>
+            <p className="text-base font-semibold">{t('ai_integration')}</p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              Integrating advanced AI technologies like ChatGPT, DeepSeek, and
-              Gemini to make your apps smarter and more intuitive.
+            {t('description_ai_integration')}
             </p>
           </div>
         </div>
@@ -91,12 +92,12 @@ const Services: React.FC = () => {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">Mobile Development</p>
+            <p className="text-base font-semibold">{t('mobile_development')}
+            </p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              Elegant, high-performance native apps for iOS and Android,
-              delivering a flawless user experience.
+            {t('description_mobile_development')}
             </p>
           </div>
         </div>
@@ -136,12 +137,11 @@ const Services: React.FC = () => {
                 />
               </svg>
             </div>
-            <p className="text-base font-semibold">Web Development</p>
+            <p className="text-base font-semibold">              {t('web_development')}            </p>
           </div>
           <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
             <p className="font-normal text-medium text-default-500">
-              We build scalable, robust, and modern web solutions with
-              responsive UIs for seamless experiences across devices.
+              {t('description_web_development')}
             </p>
           </div>
         </div>

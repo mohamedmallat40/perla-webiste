@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from "react";
 import Link from "next/link";
-
+import { useTranslations } from "../../hooks/use-translation"; 
 import { title, subtitle } from "@/components/primitives";
 
 interface HeroLandingSectionProps {
@@ -12,42 +12,43 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
 }) => {
   const [isMounted, setIsMounted] = useState(false);
   const [copied, setCopied] = useState(false);
-  
-  const installCommand = "Let's code the future";
 
+  const { t } = useTranslations();
+  const installCommand = t("hero_slogan");
 
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
   return (
-<section
-  className=" flex items-center justify-between flex-nowrap overflow-hidden lg:overflow-visible h-[calc(70vh-64px)] "
->
-<img src="/svg/looper-pattern.svg" alt="pattern" className="absolute w-full left-0 rotate-[223deg]" />
+    <section className="flex items-center justify-between flex-nowrap overflow-hidden lg:overflow-visible h-[calc(70vh-64px)]">
+      <img
+        src="/svg/looper-pattern.svg"
+        loading="lazy"
+        alt="pattern"
+        className="absolute w-full left-0 rotate-[223deg]"
+      />
 
-<div >
-     <div className="relative z-20 flex flex-col gap-6 lg:w-1/2 xl:mt-10">
-  
-        <div className="leading-8 text-center md:leading-10 md:text-left">
-          <div className="inline-block">
-            <h1 className={title({ size: "md" })}>
-            Your Partner for &nbsp;
-            </h1>
-            <h1 className={title({ size: "md", color: "violet" })}>
-            AI-Driven&nbsp;
-            </h1>
+      <div>
+        <div className="relative z-20 flex flex-col gap-6 lg:w-1/2 xl:mt-10">
+          <div className="leading-8 text-center md:leading-10 md:text-left">
+            <div className="inline-block">
+              <h1 className={title({ size: "md" })}>{t("hero_title_1")}&nbsp;</h1>
+              <h1 className={title({ size: "md", color: "violet" })}>{t("hero_title_2")}&nbsp;</h1>
+            </div>
+            <h1 className={title({ size: "md" })}>{t("hero_title_3")}</h1>
           </div>
-          <h1 className={title({ size: "md" })}>
-          Mobile and Web Innovation
-          </h1>
-        </div>
-        
-        <h2 className={subtitle({ fullWidth: true, className: "text-center md:text-left lg:pr-8" })}>
-        Delivering intelligent digital solutions with AI, web, and mobile development tailored to your business goals.
-        </h2>
-        
-        <div className="flex flex-col items-center gap-4 md:flex-row">
+
+          <h2
+            className={subtitle({
+              fullWidth: true,
+              className: "text-center md:text-left lg:pr-8",
+            })}
+          >
+            {t("hero_subtitle")}
+          </h2>
+
+          <div className="flex flex-col items-center gap-4 md:flex-row">
           <Link 
             href="https://calendly.com/mohamedmallat40" 
             className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 text-medium gap-3 rounded-full [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover w-full md:h-11 md:w-auto"
@@ -130,9 +131,8 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
             GitHub
           </a>
         </div>
+        </div>
       </div>
-      
-    </div>
     </section>
   );
 };

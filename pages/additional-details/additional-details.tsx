@@ -1,8 +1,8 @@
 'use client';
 
 import { title, subtitle } from "@/components/primitives";
-import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 export default function HeroSection() {
   return (

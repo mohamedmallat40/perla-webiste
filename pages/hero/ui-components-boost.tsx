@@ -1,17 +1,14 @@
 "use client";
 
 import { useTheme } from "next-themes";
-import Link from "next/link";
 
 export default function UIUXSection() {
   const {theme} = useTheme();
 
   return (
     <section
-      className="relative z-10 flex flex-col gap-2 w-full mt-16 lg:mt-44  overflow-hidden bg-cover bg-center"
-      style={{
-        // backgroundImage: `url('/logos/hero-background${theme==="dark" ? "":"-white"}.webp')`, // Background image URL
-      }}
+      className="relative z-10 flex flex-col gap-2 w-full mt-2 lg:mt-2 mb-[8rem]  overflow-hidden bg-cover bg-center"
+
     >
       <img src={`/logos/hero-background${theme==="dark" ? "":"-white"}.webp`} alt="pattern" className="absolute w-full left-0  bounce-animation " />
 

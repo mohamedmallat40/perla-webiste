@@ -12,7 +12,6 @@ export default function DefaultLayout({
   return (
     <div className="relative flex flex-col h-screen overflow-x-hidden">
       <Head />
-      <Navbar />
       <main className="container mx-auto max-w-7xl px-6 flex-grow pt-16">
         {children}
       </main>

@@ -18,6 +18,7 @@ import HeroLandingSection from "./hero/hero-section";
 import Services from "./services/services";
 import AdditionalDetails from "./additional-details/additional-details";
 import UIUXSection from "./hero/ui-components-boost";
+import TachnoSection from "./technologies/techno";
 
 
 
@@ -53,18 +54,14 @@ export default function IndexPage() {
     {
       key: 'tawazi',
       logo: theme === "dark" ? tawazi : tawazi,
-    },
-    
-    
-  
+    }
   ];
 
   return (
     <DefaultLayout>
-      <HeroLandingSection></HeroLandingSection>
-      <Services></Services>
+      <HeroLandingSection/>
+      <Services/>
       <section className="mx-auto w-full max-w-6xl px-6 sm:py-32 lg:px-8 ">
-
         <ScrollingBanner shouldPauseOnHover gap="40px">
           {logos.map(({ key, logo }) => (
             <div
@@ -76,9 +73,10 @@ export default function IndexPage() {
           ))}
         </ScrollingBanner>
         </section>
-        <AdditionalDetails></AdditionalDetails>
       <UIUXSection />
-      <Footer />
+      <AdditionalDetails/>
+      <TachnoSection/>
+      <Footer/>
     </DefaultLayout>
   );
 }
