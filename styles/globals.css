@@ -2,16 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-
-.bounce-animation{
-    animation: 10s animation-up infinite;
+.bounce-animation {
+  animation: 10s animation-up infinite;
 }
 
-@keyframes animation-up{
-    0%, 100% {
-        transform: translateY(-25%);
-    }
-    50% {
-        transform: none;
-    }
+@keyframes animation-up {
+  0%,
+  100% {
+    transform: translateY(-25%);
+  }
+  50% {
+    transform: none;
+  }
+}
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.scrolling-horizontal {
+  display: flex;
+  width: max-content;
+  animation: scroll-horizontal linear infinite;
+  animation-duration: var(--duration);
+}
+
+@keyframes scroll-vertical {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+.scrolling-vertical {
+  display: flex;
+  flex-direction: column;
+  height: max-content;
+  animation: scroll-vertical linear infinite;
+  animation-duration: var(--duration);
 }

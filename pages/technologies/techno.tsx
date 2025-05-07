@@ -2,28 +2,99 @@
 
 import React from "react";
 import { title, subtitle } from "@/components/primitives";
+import { useTranslations } from "@/hooks/use-translation";
 
 const TachnoSection = () => {
+  const { t } = useTranslations();
 
-    const sponsors = [
-        { id: 1, name: "JavaScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
-        { id: 2, name: "TypeScript", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
-        { id: 3, name: "Python", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" },
-        { id: 4, name: "NestJS", img: "https://nestjs.com/img/logo-small.svg", isPremium: true },
-        { id: 5, name: "ExpressJS", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" },
-        { id: 6, name: "AWS", img: "https://cdn.simpleicons.org/apachekafka" },
-        { id: 7, name: "MongoDB", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg", isPrimary: true },
-        { id: 8, name: "PostgreSQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg", isPremium: true },
-        { id: 9, name: "MySQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" },
-        { id: 10, name: "Docker", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" },
-        { id: 11, name: "Kubernetes", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg" },
-        { id: 12, name: "Redis", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg" },
-        { id: 13, name: "Elasticsearch", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg" },
-        { id: 14, name: "React", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
-        { id: 15, name: "Next.js", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" },
-        { id: 16, name: "GraphQL", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg", isPremium: true },
-        { id: 17, name: "Linux", img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg", isPremium: true },
-      ];
+  const sponsors = [
+    {
+      id: 1,
+      name: "JavaScript",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    },
+    {
+      id: 2,
+      name: "TypeScript",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    },
+    {
+      id: 3,
+      name: "Python",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    },
+    {
+      id: 4,
+      name: "NestJS",
+      img: "https://nestjs.com/img/logo-small.svg",
+      isPremium: true,
+    },
+    {
+      id: 5,
+      name: "ExpressJS",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
+    },
+    { id: 6, name: "AWS", img: "https://cdn.simpleicons.org/apachekafka" },
+    {
+      id: 7,
+      name: "MongoDB",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      isPrimary: true,
+    },
+    {
+      id: 8,
+      name: "PostgreSQL",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      isPremium: true,
+    },
+    {
+      id: 9,
+      name: "MySQL",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg",
+    },
+    {
+      id: 10,
+      name: "Docker",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    },
+    {
+      id: 11,
+      name: "Kubernetes",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kubernetes/kubernetes-plain.svg",
+    },
+    {
+      id: 12,
+      name: "Redis",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+    },
+    {
+      id: 13,
+      name: "Elasticsearch",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/elasticsearch/elasticsearch-original.svg",
+    },
+    {
+      id: 14,
+      name: "React",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+    },
+    {
+      id: 15,
+      name: "Next.js",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    },
+    {
+      id: 16,
+      name: "GraphQL",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+      isPremium: true,
+    },
+    {
+      id: 17,
+      name: "Linux",
+      img: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+      isPremium: true,
+    },
+  ];
 
   return (
     <section className="relative gap-2 w-full flex flex-col items-center z-20 mt-16 lg:mt-44">
@@ -31,7 +102,10 @@ const TachnoSection = () => {
         <div>
           <div className="flex flex-col gap-2 justify-center w-full text-center items-center">
             <div className="flex md:inline-flex flex-col md:flex-row items-center">
-              <h1 className={title({ size: "lg" })}>Technologies We Excel In&nbsp;</h1>
+              <h1 className={title({ size: "lg" })}>
+                {" "}
+                {t("title_tech_we_use")} &nbsp;
+              </h1>
               <svg
                 aria-hidden="true"
                 fill="none"
@@ -50,11 +124,8 @@ const TachnoSection = () => {
               </svg>
             </div>
           </div>
-          <p className={subtitle()}>
-          We master over 15 cutting-edge technologies, delivering scalable, secure, and high-performance solutions tailored to real-world business challenges and goals.
-          </p>
+          <p className={subtitle()}>{t("description_tech_we_use")}</p>
 
-  
           <div className="relative mt-32 md:mt-60 w-full flex items-center justify-center ">
             <div className="relative inline-block">
               <div

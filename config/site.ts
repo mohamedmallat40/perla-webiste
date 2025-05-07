@@ -12,7 +12,7 @@ export const siteConfig = {
       label: "Our Stack",
       href: "/pricing",
     },
-   
+
     {
       label: "About Us",
       href: "footer",

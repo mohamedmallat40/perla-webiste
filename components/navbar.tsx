@@ -24,15 +24,14 @@ import {
 } from "@/components/icons";
 import { useTranslations } from "@/hooks/use-translation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
+import Image from "next/image";
 
 export const Navbar = ({ setLocale }: any) => {
-
   const handleLocaleChange = (newLocale: string) => {
     setLocale(newLocale);
   };
 
-  const {t} = useTranslations();
-
+  const { t } = useTranslations();
 
   const searchInput = (
     <Input
@@ -60,7 +59,8 @@ export const Navbar = ({ setLocale }: any) => {
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo />
+            <Logo></Logo>
+            {/* <Image src={'/logos/perla-no-background.png'} height={20} width={30} alt="perla"></Image> */}
             <p className="font-bold text-inherit">PERLA CI</p>
           </NextLink>
         </NavbarBrand>
@@ -70,7 +70,7 @@ export const Navbar = ({ setLocale }: any) => {
               <NextLink
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium"
+                  "data-[active=true]:text-primary data-[active=true]:font-medium",
                 )}
                 color="foreground"
                 href={item.href}
@@ -86,7 +86,6 @@ export const Navbar = ({ setLocale }: any) => {
         className="hidden sm:flex basis-1/5 sm:basis-full"
         justify="end"
       >
-
         {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
         <NavbarItem className="hidden md:flex">
           <Button
@@ -97,14 +96,13 @@ export const Navbar = ({ setLocale }: any) => {
             endContent={<HeartFilledIcon className="text-danger" />}
             variant="flat"
           >
-            {t('navbar_slogon')}
+            {t("navbar_slogon")}
           </Button>
         </NavbarItem>
         <NavbarItem className="hidden sm:flex gap-2">
-
-<LanguageSwitcher onChange={handleLocaleChange} />
-<ThemeSwitch />
-</NavbarItem>
+          <LanguageSwitcher onChange={handleLocaleChange} />
+          <ThemeSwitch />
+        </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
@@ -114,8 +112,6 @@ export const Navbar = ({ setLocale }: any) => {
         <ThemeSwitch />
         <NavbarMenuToggle />
       </NavbarContent>
-
-     
     </HeroUINavbar>
   );
 };

@@ -1,4 +1,4 @@
-"use client"; 
+"use client";
 
 import type { AppProps } from "next/app";
 import { HeroUIProvider } from "@heroui/system";
@@ -16,9 +16,9 @@ export default function App({ Component, pageProps }: AppProps) {
   const [mounted, setMounted] = useState(false);
   const [locale, setLocale] = useState("ar"); // Default locale is Arabic
 
-  const { t } = useTranslations(); 
+  const { t } = useTranslations();
   useEffect(() => {
-    setMounted(true); 
+    setMounted(true);
   }, []);
 
   if (!mounted) {

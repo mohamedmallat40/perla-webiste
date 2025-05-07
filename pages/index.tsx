@@ -9,9 +9,9 @@ import {
   zacta,
   dnextDark,
   dnextLight,
-  tawazi
+  tawazi,
 } from "./brand-scrooling-banner/logos";
-import {useTheme} from "next-themes";
+import { useTheme } from "next-themes";
 
 import ScrollingBanner from "./brand-scrooling-banner/scrolling-banner";
 import HeroLandingSection from "./hero/hero-section";
@@ -20,11 +20,8 @@ import AdditionalDetails from "./additional-details/additional-details";
 import UIUXSection from "./hero/ui-components-boost";
 import TachnoSection from "./technologies/techno";
 
-
-
 export default function IndexPage() {
-
-  const {theme} = useTheme();
+  const { theme } = useTheme();
 
   const logos = [
     {
@@ -33,7 +30,7 @@ export default function IndexPage() {
     },
     {
       key: "proxym-it",
-      logo:  theme === "dark" ? proxymLight : proxymDark,
+      logo: theme === "dark" ? proxymLight : proxymDark,
     },
     {
       key: "dnext",
@@ -52,15 +49,15 @@ export default function IndexPage() {
       logo: zacta,
     },
     {
-      key: 'tawazi',
+      key: "tawazi",
       logo: theme === "dark" ? tawazi : tawazi,
-    }
+    },
   ];
 
   return (
     <DefaultLayout>
-      <HeroLandingSection/>
-      <Services/>
+      <HeroLandingSection />
+      <Services />
       <section className="mx-auto w-full max-w-6xl px-6 sm:py-32 lg:px-8 ">
         <ScrollingBanner shouldPauseOnHover gap="40px">
           {logos.map(({ key, logo }) => (
@@ -72,12 +69,11 @@ export default function IndexPage() {
             </div>
           ))}
         </ScrollingBanner>
-        </section>
+      </section>
       <UIUXSection />
-      <AdditionalDetails/>
-      <TachnoSection/>
-      <Footer/>
+      <AdditionalDetails />
+      <TachnoSection />
+      <Footer />
     </DefaultLayout>
   );
 }
-
