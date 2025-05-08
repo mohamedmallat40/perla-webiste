@@ -1,7 +1,9 @@
 import { FC, useState, useEffect } from "react";
-import Link from "next/link";
 import { useTranslations } from "../../hooks/use-translation";
 import { title, subtitle } from "@/components/primitives";
+import { useLocale } from "@react-aria/i18n";
+
+import Link from "next/link";
 
 interface HeroLandingSectionProps {
   className?: string;
@@ -12,6 +14,8 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
 }) => {
   const [isMounted, setIsMounted] = useState(false);
   const [copied, setCopied] = useState(false);
+  const { locale } = useLocale();
+  const isRTL = locale === "ar";
 
   const { t } = useTranslations();
   const installCommand = t("hero_slogan");
@@ -20,18 +24,27 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
     setIsMounted(true);
   }, []);
 
+  const handleCopy = () => {
+    navigator.clipboard.writeText(installCommand);
+    setCopied(true);
+    setTimeout(() => setCopied(false), 2000);
+  };
+
   return (
-    <section className="flex items-center justify-between flex-nowrap overflow-hidden lg:overflow-visible h-[calc(70vh-64px)]">
+    <section 
+      className="flex items-center justify-between flex-nowrap overflow-hidden lg:overflow-visible h-[calc(70vh-64px)]"
+      dir={isRTL ? "rtl" : "ltr"}
+    >
       <img
         src="/svg/looper-pattern.svg"
         loading="lazy"
         alt="pattern"
-        className="absolute w-full left-0 rotate-[223deg]"
+        className={`absolute w-full ${isRTL ? "right-0 rotate-[43deg]" : "left-0 rotate-[223deg]"}`}
       />
 
-      <div>
-        <div className="relative z-20 flex flex-col gap-6 lg:w-1/2 xl:mt-10">
-          <div className="leading-8 text-center md:leading-10 md:text-left">
+      <div className={isRTL ? "mr-auto" : "ml-auto"}>
+        <div className={`relative z-20 flex flex-col gap-6 lg:w-1/2 xl:mt-10 ${isRTL ? "items-end" : ""}`}>
+          <div className={`leading-8 text-center md:leading-10 ${isRTL ? "md:text-right" : "md:text-left"}`}>
             <div className="inline-block">
               <h1 className={title({ size: "md" })}>
                 {t("hero_title_1")}&nbsp;
@@ -46,13 +59,13 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
           <h2
             className={subtitle({
               fullWidth: true,
-              className: "text-center md:text-left lg:pr-8",
+              className: `text-center ${isRTL ? "md:text-right lg:pl-8" : "md:text-left lg:pr-8"}`,
             })}
           >
             {t("hero_subtitle")}
           </h2>
 
-          <div className="flex flex-col items-center gap-4 md:flex-row">
+          <div className={`flex flex-col items-center gap-4 ${isRTL ? "md:flex-row-reverse" : "md:flex-row"}`}>
             <Link
               href="https://calendly.com/mohamedmallat40"
               className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 text-medium gap-3 rounded-full [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover w-full md:h-11 md:w-auto"
@@ -66,10 +79,10 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
                 role="presentation"
                 viewBox="0 0 24 24"
                 width="1em"
-                className="group-data-[hover=true]:translate-x-0.5 outline-none transition-transform"
+                className={`${isRTL ? "group-data-[hover=true]:-translate-x-0.5" : "group-data-[hover=true]:translate-x-0.5"} outline-none transition-transform`}
               >
                 <path
-                  d="M16.835 6.91821L23.9166 13.9999L16.835 21.0815"
+                  d={isRTL ? "M7.165 6.91821L0.0834 13.9999L7.165 21.0815" : "M16.835 6.91821L23.9166 13.9999L16.835 21.0815"}
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -77,7 +90,7 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
                   strokeWidth="2"
                 />
                 <path
-                  d="M4.08325 14H23.7183"
+                  d={isRTL ? "M19.9168 14H0.2817" : "M4.08325 14H23.7183"}
                   stroke="currentColor"
                   strokeLinecap="round"
                   strokeLinejoin="round"
@@ -94,6 +107,7 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
               <button
                 type="button"
                 aria-label="Copy to clipboard"
+                onClick={handleCopy}
                 className="group inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 gap-2 rounded-full px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-transparent min-w-8 w-8 h-8 group relative z-10 text-large text-inherit data-[hover=true]:bg-transparent"
                 data-copied={copied ? "true" : "false"}
               >
@@ -115,6 +129,25 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
                   <path d="M8 8V6.9C8 3.4 9.4 2 12.9 2h4.2C20.6 2 22 3.4 22 6.9v4.2c0 3.5-1.4 4.9-4.9 4.9H16"></path>
                   <path d="M16 12.9C16 9.4 14.6 8 11.1 8"></path>
                 </svg>
+                {copied && (
+                  <svg
+                    aria-hidden="true"
+                    fill="none"
+                    focusable="false"
+                    height="1em"
+                    role="presentation"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.5"
+                    viewBox="0 0 24 24"
+                    width="1em"
+                    className="absolute text-inherit opacity-0 scale-50 group-data-[copied=true]:opacity-100 group-data-[copied=true]:scale-100 transition-transform-opacity"
+                  >
+                    <path d="M22 11.1V6.9C22 3.4 20.6 2 17.1 2h-4.2C9.4 2 8 3.4 8 6.9V8"></path>
+                    <path d="M16 12.9v4.2c0 3.5-1.4 4.9-4.9 4.9H6.9C3.4 22 2 20.6 2 17.1v-4.2C2 9.4 3.4 8 6.9 8h4.2c3.5 0 4.9 1.4 4.9 4.9Z"></path>
+                  </svg>
+                )}
               </button>
             </div>
 
