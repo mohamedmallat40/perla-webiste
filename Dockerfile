@@ -9,7 +9,6 @@ COPY . .
 # Use pnpm instead of npm
 RUN pnpm install
 RUN pnpm build
-RUN pnpm export
 
 # Serve with nginx
 FROM nginx:alpine
