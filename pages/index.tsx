@@ -1,6 +1,5 @@
 import { useTheme } from "next-themes";
 
-import Footer from "./footer/footer";
 import {
   alwasaet,
   proxymLight,
@@ -12,6 +11,8 @@ import {
   dnextLight,
   tawazi,
 } from "../components/logos";
+
+import Footer from "./footer/footer";
 import ScrollingBanner from "./brand-scrooling-banner/scrolling-banner";
 import HeroLandingSection from "./hero/hero-section";
 import Services from "./services/services";

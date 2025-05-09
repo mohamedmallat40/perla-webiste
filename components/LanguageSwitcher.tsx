@@ -1,7 +1,7 @@
 import type { Language } from "../i18n/translations";
 
 import React, { useEffect, useState } from "react";
-import { Select, SelectItem } from "@heroui/react";
+import { Select, SelectItem } from "@heroui/select";
 import { Icon } from "@iconify/react";
 import { useLocale } from "@react-aria/i18n";
 

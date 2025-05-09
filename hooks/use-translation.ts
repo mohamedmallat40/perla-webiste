@@ -9,7 +9,10 @@ export function useTranslations() {
 
   const t = (key: TranslationKey) => {
     // Type assertion to tell TypeScript each language object has the same structure
-    return (translations[lang] as Record<TranslationKey, string>)?.[key] || translations.en[key];
+    return (
+      (translations[lang] as Record<TranslationKey, string>)?.[key] ||
+      translations.en[key]
+    );
   };
 
   return { t };
