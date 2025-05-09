@@ -42,7 +42,7 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
         className={`absolute w-full ${isRTL ? "right-0 rotate-[43deg]" : "left-0 rotate-[223deg]"}`}
       />
 
-      <div className={isRTL ? "mr-auto" : "ml-auto"}>
+      <div>
         <div className={`relative z-20 flex flex-col gap-6 lg:w-1/2 xl:mt-10 ${isRTL ? "items-end" : ""}`}>
           <div className={`leading-8 text-center md:leading-10 ${isRTL ? "md:text-right" : "md:text-left"}`}>
             <div className="inline-block">
@@ -65,7 +65,7 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
             {t("hero_subtitle")}
           </h2>
 
-          <div className={`flex flex-col items-center gap-4 ${isRTL ? "md:flex-row-reverse" : "md:flex-row"}`}>
+          <div className={`flex flex-col items-center gap-4 ${isRTL ? "md:flex-row ml-auto" : "md:flex-row"}`}>
             <Link
               href="https://calendly.com/mohamedmallat40"
               className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-6 min-w-24 h-12 text-medium gap-3 rounded-full [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-primary text-primary-foreground data-[hover=true]:opacity-hover w-full md:h-11 md:w-auto"
@@ -152,7 +152,7 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
             </div>
 
             <a
-              className="tap-highlight-transparent no-underline hover:opacity-hover active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-6 min-w-24 h-12 text-medium gap-3 rounded-full [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover w-full md:hidden"
+              className="tap-highlight-transparent hidden  no-underline hover:opacity-hover active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-6 min-w-24 h-12 text-medium gap-3 rounded-full [&>svg]:max-w-[theme(spacing.8)] transition-transform-colors-opacity motion-reduce:transition-none bg-transparent border-default text-foreground data-[hover=true]:opacity-hover w-full md:hidden"
               target="_blank"
               rel="noopener noreferrer"
             >

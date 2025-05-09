@@ -1,11 +1,15 @@
 "use client";
 
 import { useTranslations } from "@/hooks/use-translation";
+import { useLocale } from "@react-aria/i18n";
 import { useTheme } from "next-themes";
 
 export default function UIUXSection() {
   const { theme } = useTheme();
   const { t } = useTranslations();
+  const { locale } = useLocale();
+
+  const isRTL = locale === "ar";
 
   return (
     <section className="relative z-10 flex flex-col gap-2 w-full mt-2 lg:mt-2 mb-[8rem]  overflow-hidden bg-cover bg-center">
@@ -17,7 +21,7 @@ export default function UIUXSection() {
 
       <div className="flex flex-col gap-8 min-h-[480px]">
         {/* Text Content */}
-        <div className="z-30 flex w-screen h-full flex-col items-start justify-center leading-8 pt-4">
+        <div className={isRTL ? "items-end text-right z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4":"items-start z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4" }>
           <div className="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-6 text-tiny rounded-full bg-primary text-primary-foreground ml-0.5 transition-colors bg-gradient-to-br from-cyan-600 to-blue-600">
             <span className="flex-1 text-inherit px-1 text-tiny font-semibold">
               {t("uiux_section_pro_label")}
@@ -33,7 +37,7 @@ export default function UIUXSection() {
             <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl text-shadow">
               {t("uiux_section_heading_3")}&nbsp;
             </h1>
-            <div className="flex flex-col sm:flex-row">
+            <div className={isRTL ? "flex flex-col sm:flex-row justify-end" : "flex flex-col sm:flex-row "}>
               <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl text-shadow">
                 {t("uiux_section_heading_4")}
               </h1>
@@ -52,7 +56,7 @@ export default function UIUXSection() {
               t("uiux_section_benefit_3"),
               t("uiux_section_benefit_4"),
             ].map((text, index) => (
-              <div key={index} className="flex gap-x-4 items-center">
+              <div key={index} className={isRTL ? "flex gap-x-4 items-center flex-row-reverse":"flex gap-x-4 items-center "}>
                 <svg
                   fill="none"
                   height="11"

@@ -3,9 +3,12 @@
 import React from "react";
 import { title, subtitle } from "@/components/primitives";
 import { useTranslations } from "@/hooks/use-translation";
+import { useLocale } from "@react-aria/i18n";
 
 const TachnoSection = () => {
   const { t } = useTranslations();
+  const { locale } = useLocale();
+  const isRTL = locale === "ar";
 
   const sponsors = [
     {
@@ -102,7 +105,7 @@ const TachnoSection = () => {
         <div>
           <div className="flex flex-col gap-2 justify-center w-full text-center items-center">
             <div className="flex md:inline-flex flex-col md:flex-row items-center">
-              <h1 className={title({ size: "lg" })}>
+              <h1 className={title({ size: "lg" }) }>
                 {" "}
                 {t("title_tech_we_use")} &nbsp;
               </h1>
@@ -124,9 +127,9 @@ const TachnoSection = () => {
               </svg>
             </div>
           </div>
-          <p className={subtitle()}>{t("description_tech_we_use")}</p>
+          <p className={isRTL ? subtitle() + " text-right" :subtitle() }>{t("description_tech_we_use")}</p>
 
-          <div className="relative mt-32 md:mt-60 w-full flex items-center justify-center ">
+          <div className="relative mt-48 md:mt-60 w-full flex items-center justify-center ">
             <div className="relative inline-block">
               <div
                 className="relative flex items-center justify-center text-center rounded-full bg-transparent"

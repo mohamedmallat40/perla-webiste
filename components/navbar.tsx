@@ -24,12 +24,14 @@ import {
 } from "@/components/icons";
 import { useTranslations } from "@/hooks/use-translation";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import Image from "next/image";
+import { useLocale } from "@react-aria/i18n";
 
 export const Navbar = ({ setLocale }: any) => {
   const handleLocaleChange = (newLocale: string) => {
     setLocale(newLocale);
   };
+  const { locale } = useLocale();
+  const isRTL = locale === "ar";
 
   const { t } = useTranslations();
 
@@ -55,8 +57,8 @@ export const Navbar = ({ setLocale }: any) => {
   );
 
   return (
-    <HeroUINavbar maxWidth="xl" position="sticky">
-      <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
+    <HeroUINavbar  className={isRTL ? "reverse":""} maxWidth="xl" position="sticky">
+      <NavbarContent className={isRTL ? "basis-1/5 sm:basis-full flex-row-reverse" : "basis-1/5 sm:basis-full"} justify="start">
         <NavbarBrand className="gap-3 max-w-fit">
           <NextLink className="flex justify-start items-center gap-1" href="/">
             <Logo></Logo>
@@ -64,7 +66,7 @@ export const Navbar = ({ setLocale }: any) => {
             <p className="font-bold text-inherit">PERLA CI</p>
           </NextLink>
         </NavbarBrand>
-        <div className="hidden lg:flex gap-4 justify-start ml-2">
+        <div className={isRTL ? "hidden lg:flex gap-4 justify-start ml-auto flex-row-reverse":"hidden lg:flex gap-4 justify-start ml-2 "}>
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <NextLink
@@ -75,7 +77,7 @@ export const Navbar = ({ setLocale }: any) => {
                 color="foreground"
                 href={item.href}
               >
-                {item.label}
+                {t(`${item.label}`)}
               </NextLink>
             </NavbarItem>
           ))}
@@ -83,7 +85,7 @@ export const Navbar = ({ setLocale }: any) => {
       </NavbarContent>
 
       <NavbarContent
-        className="hidden sm:flex basis-1/5 sm:basis-full"
+        className={isRTL ? "hidden sm:flex basis-1/5 sm:basis-full flex-row-reverse":"hidden sm:flex basis-1/5 sm:basis-full"}
         justify="end"
       >
         {/* <NavbarItem className="hidden lg:flex">{searchInput}</NavbarItem> */}
@@ -99,18 +101,20 @@ export const Navbar = ({ setLocale }: any) => {
             {t("navbar_slogon")}
           </Button>
         </NavbarItem>
-        <NavbarItem className="hidden sm:flex gap-2">
+        <NavbarItem className={isRTL ? "hidden sm:flex gap-2 flex-row-reverse":"hidden sm:flex gap-2"}>
           <LanguageSwitcher onChange={handleLocaleChange} />
           <ThemeSwitch />
         </NavbarItem>
       </NavbarContent>
 
-      <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal href={siteConfig.links.github}>
+      <NavbarContent className={isRTL ?"sm:hidden basis-1 pl-4 flex-row-reverse":"sm:hidden basis-1 pl-4"} justify={"end"}>
+        <Link className="hidden" isExternal href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
         </Link>
+        <LanguageSwitcher onChange={handleLocaleChange} />
+
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        {/* <NavbarMenuToggle /> */}
       </NavbarContent>
     </HeroUINavbar>
   );

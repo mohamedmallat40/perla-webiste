@@ -5,16 +5,15 @@ export const siteConfig = {
   description: "We code the future togther.",
   navItems: [
     {
-      label: "Services",
+      label: "navbar_services",
       href: "services",
     },
     {
-      label: "Our Stack",
-      href: "/pricing",
+      label: "navbar_technologies",
+      href: "pricing",
     },
-
     {
-      label: "About Us",
+      label: "navbar_about",
       href: "footer",
     },
   ],
@@ -26,4 +25,4 @@ export const siteConfig = {
     discord: "https://discord.gg/9b6yyZKmH4",
     sponsor: "https://www.linkedin.com/in/mohamed-mallat-64192a107/",
   },
-};
+} as const; ;

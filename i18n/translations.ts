@@ -42,7 +42,7 @@ export const translations = {
     home_hero_heroui_title: "HeroUI + Next.js",
     home_hero_heroui_description:
       "HeroUI is fully compatible with the new Next.js app/ directory structure.",
-    service_hero_section_title_1: "Planifiez une réunion",
+    service_hero_section_title_1: "Schedule a meeting",
     service_hero_section_title_2: "Our Amazing Platform",
     service_hero_section_title_3: "Join us now",
     service_hero_section_subtitle:
