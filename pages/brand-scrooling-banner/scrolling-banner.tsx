@@ -1,8 +1,9 @@
 "use client";
 
-import { useTranslations } from "@/hooks/use-translation";
 import { Spacer } from "@heroui/spacer";
 import React from "react";
+
+import { useTranslations } from "@/hooks/use-translation";
 
 interface ScrollingBannerProps {
   className?: string;

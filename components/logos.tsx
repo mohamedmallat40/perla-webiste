@@ -1,86 +1,81 @@
 import Image from "next/image";
 
 export const alwasaet = (
-  <Image
-    src="/logos/alwasaet.png"
-    alt="alwasaet"
-    width={200}
-    height={100}
-  ></Image>
+  <Image alt="alwasaet" height={100} src="/logos/alwasaet.png" width={200} />
 );
 
 export const proxymLight = (
   <Image
-    src="/logos/proxym.png"
     alt="proxym"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/proxym.png"
+    width={200}
+  />
 );
 export const proxymDark = (
   <Image
-    src="/logos/proxym-dark.jpg"
     alt="proxym"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/proxym-dark.jpg"
+    width={200}
+  />
 );
 export const aramco = (
   <Image
-    src="/logos/aramco-light.webp"
     alt="aramco"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/aramco-light.webp"
+    width={200}
+  />
 );
 export const extraexpertise = (
   <Image
-    src="/logos/ee.webp"
     alt="extraexpertise"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/ee.webp"
+    width={200}
+  />
 );
 export const dnextLight = (
   <Image
-    src="/logos/dnext-light.svg"
     alt="dnext"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/dnext-light.svg"
+    width={200}
+  />
 );
 
 export const dnextDark = (
   <Image
-    src="/logos/dnext-dark.svg"
     alt="dnext"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/dnext-dark.svg"
+    width={200}
+  />
 );
 
 export const zacta = (
   <Image
-    src="/logos/zacta.svg"
     alt="dnext"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/zacta.svg"
+    width={200}
+  />
 );
 
 export const tawazi = (
   <Image
-    src="/logos/tawazi.png"
     alt="dnext"
-    width={200}
     height={100}
     loading="lazy"
-  ></Image>
+    src="/logos/tawazi.png"
+    width={200}
+  />
 );

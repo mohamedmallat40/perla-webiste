@@ -1,8 +1,9 @@
 "use client";
 
-import { useTranslations } from "@/hooks/use-translation";
 import { useLocale } from "@react-aria/i18n";
 import { useTheme } from "next-themes";
+
+import { useTranslations } from "@/hooks/use-translation";
 
 export default function UIUXSection() {
   const { theme } = useTheme();
@@ -14,14 +15,20 @@ export default function UIUXSection() {
   return (
     <section className="relative z-10 flex flex-col gap-2 w-full mt-2 lg:mt-2 mb-[8rem]  overflow-hidden bg-cover bg-center">
       <img
-        src={`/logos/hero-background${theme === "dark" ? "" : "-white"}.webp`}
         alt="pattern"
         className="absolute w-full left-0  bounce-animation "
+        src={`/logos/hero-background${theme === "dark" ? "" : "-white"}.webp`}
       />
 
       <div className="flex flex-col gap-8 min-h-[480px]">
         {/* Text Content */}
-        <div className={isRTL ? "items-end text-right z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4":"items-start z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4" }>
+        <div
+          className={
+            isRTL
+              ? "items-end text-right z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4"
+              : "items-start z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4"
+          }
+        >
           <div className="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-6 text-tiny rounded-full bg-primary text-primary-foreground ml-0.5 transition-colors bg-gradient-to-br from-cyan-600 to-blue-600">
             <span className="flex-1 text-inherit px-1 text-tiny font-semibold">
               {t("uiux_section_pro_label")}
@@ -37,7 +44,13 @@ export default function UIUXSection() {
             <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl text-shadow">
               {t("uiux_section_heading_3")}&nbsp;
             </h1>
-            <div className={isRTL ? "flex flex-col sm:flex-row justify-end" : "flex flex-col sm:flex-row "}>
+            <div
+              className={
+                isRTL
+                  ? "flex flex-col sm:flex-row justify-end"
+                  : "flex flex-col sm:flex-row "
+              }
+            >
               <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl text-shadow">
                 {t("uiux_section_heading_4")}
               </h1>
@@ -56,7 +69,14 @@ export default function UIUXSection() {
               t("uiux_section_benefit_3"),
               t("uiux_section_benefit_4"),
             ].map((text, index) => (
-              <div key={index} className={isRTL ? "flex gap-x-4 items-center flex-row-reverse":"flex gap-x-4 items-center "}>
+              <div
+                key={index}
+                className={
+                  isRTL
+                    ? "flex gap-x-4 items-center flex-row-reverse"
+                    : "flex gap-x-4 items-center "
+                }
+              >
                 <svg
                   fill="none"
                   height="11"
@@ -82,17 +102,17 @@ export default function UIUXSection() {
         {theme === "dark" ? (
           <>
             <div className="absolute md:hidden inset-0 pointer-events-none top-0 z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(255,255,255,_0)_5%,_rgba(0,0,0,_0.8)_50%,_rgba(0,0,0,1)_100%)]"></div>
+              <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(255,255,255,_0)_5%,_rgba(0,0,0,_0.8)_50%,_rgba(0,0,0,1)_100%)]" />
             </div>
 
             <div className="absolute hidden md:block md:inset-0 md:pointer-events-none md:top-0 md:z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(255,255,255,_0)_20%,_rgba(0,0,0,_0.8)_40%,_rgba(0,0,0,1)_100%)]"></div>
+              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(255,255,255,_0)_20%,_rgba(0,0,0,_0.8)_40%,_rgba(0,0,0,1)_100%)]" />
             </div>
           </>
         ) : (
           <>
             <div className="absolute hidden md:block md:inset-0 md:pointer-events-none md:top-0 md:z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(0,0,0,_0)_20%,_rgba(255,255,255,_0.9)_40%,_rgba(255,255,255,1)_100%)]"></div>
+              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(0,0,0,_0)_20%,_rgba(255,255,255,_0.9)_40%,_rgba(255,255,255,1)_100%)]" />
             </div>
           </>
         )}

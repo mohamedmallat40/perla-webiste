@@ -1,4 +1,5 @@
-import DefaultLayout from "@/layouts/default";
+import { useTheme } from "next-themes";
+
 import Footer from "./footer/footer";
 import {
   alwasaet,
@@ -10,15 +11,15 @@ import {
   dnextDark,
   dnextLight,
   tawazi,
-} from "./brand-scrooling-banner/logos";
-import { useTheme } from "next-themes";
-
+} from "../components/logos";
 import ScrollingBanner from "./brand-scrooling-banner/scrolling-banner";
 import HeroLandingSection from "./hero/hero-section";
 import Services from "./services/services";
 import AdditionalDetails from "./additional-details/additional-details";
 import UIUXSection from "./hero/ui-components-boost";
 import TachnoSection from "./technologies/techno";
+
+import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
   const { theme } = useTheme();

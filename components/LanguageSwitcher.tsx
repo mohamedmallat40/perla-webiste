@@ -1,9 +1,9 @@
+import type { Language } from "../i18n/translations";
+
 import React, { useEffect, useState } from "react";
 import { Select, SelectItem } from "@heroui/react";
 import { Icon } from "@iconify/react";
 import { useLocale } from "@react-aria/i18n";
-
-import type { Language } from "../i18n/translations";
 
 const languages: { key: Language; label: string; icon: string }[] = [
   { key: "en", label: "English", icon: "twemoji:flag-united-kingdom" },
@@ -27,29 +27,32 @@ export function LanguageSwitcher({ onChange }: LanguageSwitcherProps) {
 
   return (
     <Select
-      className="max-w-xs w-40"
       aria-label="Language selector"
-      selectedKeys={new Set([selectedKey])}
-      onSelectionChange={(keys) => {
-        const key = Array.from(keys)[0] as Language;
-        setSelectedKey(key);
-        onChange(key);
-      }}
+      className="max-w-xs w-40"
       renderValue={() => {
         const selected = languages.find((lang) => lang.key === selectedKey);
+
         if (!selected) return null;
+
         return (
           <div className="flex items-center gap-2">
-            <Icon icon={selected.icon} className="text-xl" />
+            <Icon className="text-xl" icon={selected.icon} />
             <span>{selected.label}</span>
           </div>
         );
+      }}
+      selectedKeys={new Set([selectedKey])}
+      onSelectionChange={(keys) => {
+        const key = Array.from(keys)[0] as Language;
+
+        setSelectedKey(key);
+        onChange(key);
       }}
     >
       {languages.map((lang) => (
         <SelectItem
           key={lang.key}
-          startContent={<Icon icon={lang.icon} className="text-xl" />}
+          startContent={<Icon className="text-xl" icon={lang.icon} />}
         >
           {lang.label}
         </SelectItem>

@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
+import { useLocale } from "@react-aria/i18n";
+
 import { title, subtitle } from "@/components/primitives";
 import { useTranslations } from "@/hooks/use-translation";
-import { useLocale } from "@react-aria/i18n";
 
 const TachnoSection = () => {
   const { t } = useTranslations();
@@ -105,29 +106,31 @@ const TachnoSection = () => {
         <div>
           <div className="flex flex-col gap-2 justify-center w-full text-center items-center">
             <div className="flex md:inline-flex flex-col md:flex-row items-center">
-              <h1 className={title({ size: "lg" }) }>
+              <h1 className={title({ size: "lg" })}>
                 {" "}
                 {t("title_tech_we_use")} &nbsp;
               </h1>
               <svg
                 aria-hidden="true"
+                className="text-pink-500 animate-heartbeat"
                 fill="none"
                 focusable="false"
                 height="50"
                 role="presentation"
+                style={{ animationDuration: "2.5s" }}
                 viewBox="0 0 24 24"
                 width="50"
-                className="text-pink-500 animate-heartbeat"
-                style={{ animationDuration: "2.5s" }}
               >
                 <path
                   d="M16.44 3.10156C14.63 3.10156 13.01 3.98156 12 5.33156C10.99 3.98156 9.37 3.10156 7.56 3.10156C4.49 3.10156 2 5.60156 2 8.69156C2 9.88156 2.19 10.9816 2.52 12.0016C4.1 17.0016 8.97 19.9916 11.38 20.8116C11.72 20.9316 12.28 20.9316 12.62 20.8116C15.03 19.9916 19.9 17.0016 21.48 12.0016C21.81 10.9816 22 9.88156 22 8.69156C22 5.60156 19.51 3.10156 16.44 3.10156Z"
                   fill="currentColor"
-                ></path>
+                />
               </svg>
             </div>
           </div>
-          <p className={isRTL ? subtitle() + " text-right" :subtitle() }>{t("description_tech_we_use")}</p>
+          <p className={isRTL ? subtitle() + " text-right" : subtitle()}>
+            {t("description_tech_we_use")}
+          </p>
 
           <div className="relative mt-48 md:mt-60 w-full flex items-center justify-center ">
             <div className="relative inline-block">
@@ -136,20 +139,20 @@ const TachnoSection = () => {
                 style={{ width: "80px", height: "80px" }}
               >
                 <button
-                  type="button"
-                  tabIndex={0}
                   aria-label="Become a sponsor"
                   className="group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 text-small gap-2 rounded-full px-0 !gap-0 transition-transform-colors-opacity motion-reduce:transition-none bg-default text-default-foreground min-w-10 data-[hover=true]:opacity-hover z-50 w-auto h-auto bg-gradient-to-b from-[#FF1CF7] to-[#7928CA]"
+                  tabIndex={0}
+                  type="button"
                 >
                   <svg
                     aria-hidden="true"
+                    className="flex items-center justify-center rounded-full text-white"
                     fill="none"
                     focusable="false"
                     height="54"
                     role="presentation"
                     viewBox="0 0 24 24"
                     width="54"
-                    className="flex items-center justify-center rounded-full text-white"
                   >
                     <g
                       fill="none"
@@ -158,8 +161,8 @@ const TachnoSection = () => {
                       strokeLinejoin="round"
                       strokeWidth="1.5"
                     >
-                      <path d="M6 12h12"></path>
-                      <path d="M12 18V6"></path>
+                      <path d="M6 12h12" />
+                      <path d="M12 18V6" />
                     </g>
                   </svg>
                 </button>
@@ -178,7 +181,6 @@ const TachnoSection = () => {
                   return (
                     <span
                       key={sponsor.id}
-                      tabIndex={-1}
                       className={`flex justify-center items-center box-border overflow-hidden align-middle z-0 outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 ${
                         sponsor.isPremium
                           ? "w-14 h-14 text-small text-warning-foreground"
@@ -191,13 +193,14 @@ const TachnoSection = () => {
                         sponsor.isPrimary ? "ring-primary" : "ring-default"
                       } absolute cursor-pointer bg-transparent before:bg-white/10 before:content-[''] before:block before:z-[-1] before:absolute before:inset-0 before:backdrop-blur-md before:backdrop-saturate-200`}
                       style={{ transform: `translate(${x}px, ${y}px)` }}
+                      tabIndex={-1}
                     >
                       {sponsor.img?.includes("undefined") ? (
                         <>
                           <img
-                            src={sponsor.img}
-                            className="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                             alt={sponsor.name}
+                            className="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
+                            src={sponsor.img}
                           />
                           <span
                             aria-label={sponsor.name}
@@ -209,10 +212,10 @@ const TachnoSection = () => {
                         </>
                       ) : (
                         <img
-                          src={sponsor.img}
-                          className="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                           alt={sponsor.name}
+                          className="flex object-cover w-full h-full transition-opacity !duration-500 opacity-0 data-[loaded=true]:opacity-100"
                           data-loaded="true"
+                          src={sponsor.img}
                         />
                       )}
                     </span>
@@ -233,7 +236,7 @@ const TachnoSection = () => {
                     background:
                       "linear-gradient(-180deg, rgba(121,40,202,0.4) 40%, hsl(var(--heroui-background)) 100%)",
                   }}
-                ></div>
+                />
                 <div
                   className="circle circle-1 absolute animate-expand-opacity"
                   style={{
@@ -248,7 +251,7 @@ const TachnoSection = () => {
                     background:
                       "linear-gradient(-180deg, rgba(121,40,202,0.30000000000000004) 20%, hsl(var(--heroui-background)) 100%)",
                   }}
-                ></div>
+                />
                 <div
                   className="circle circle-2 absolute animate-expand-opacity"
                   style={{
@@ -263,7 +266,7 @@ const TachnoSection = () => {
                     background:
                       "linear-gradient(-180deg, rgba(121,40,202,0.2) 20%, hsl(var(--heroui-background)) 100%)",
                   }}
-                ></div>
+                />
                 <div
                   className="circle circle-3 absolute animate-expand-opacity"
                   style={{
@@ -278,7 +281,7 @@ const TachnoSection = () => {
                     background:
                       "linear-gradient(-180deg, rgba(121,40,202,0.09999999999999998) 20%, hsl(var(--heroui-background)) 100%)",
                   }}
-                ></div>
+                />
               </div>
             </div>
           </div>

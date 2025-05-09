@@ -25,4 +25,4 @@ export const siteConfig = {
     discord: "https://discord.gg/9b6yyZKmH4",
     sponsor: "https://www.linkedin.com/in/mohamed-mallat-64192a107/",
   },
-} as const; ;
+} as const;
