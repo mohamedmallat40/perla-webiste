@@ -1,11 +1,17 @@
-# Stage 1: Build
 FROM node:18-alpine AS builder
+
+# Install pnpm
+RUN npm install -g pnpm
+
 WORKDIR /app
 COPY . .
-RUN npm ci
-RUN npm run build && npm run export
 
-# Stage 2: Serve with Nginx
+# Use pnpm instead of npm
+RUN pnpm install
+RUN pnpm build
+RUN pnpm export
+
+# Serve with nginx
 FROM nginx:alpine
 COPY --from=builder /app/out /usr/share/nginx/html
 EXPOSE 80
