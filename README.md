@@ -1,55 +1,10 @@
-# Next.js & HeroUI Template
+# Perla Website
 
-This is a template for creating applications using Next.js 14 (pages directory) and HeroUI (v2).
+Welcome to the Perla Website project! This repository contains the source code for a modern, responsive, and user-friendly website designed to showcase Perla's brand and services. Built with clean code and best practices, this project aims to deliver an exceptional user experience.
 
-[Try it on CodeSandbox](https://githubbox.com/heroui-inc/next-pages-template)
+## Features
+- **Responsive Design**: Optimized for all devices, from desktops to mobile phones.
+- **Modern UI/UX**: Sleek and intuitive interface for seamless navigation.
+- **Scalable Architecture**: Built to grow with future enhancements.
 
-> Note: Since Next.js 14, the pages router is recommend migrating to the [new App Router](https://nextjs.org/docs/app) to leverage React's latest features
->
-> Read more: [Pages Router](https://nextjs.org/docs/pages)
-
-## Technologies Used
-
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [HeroUI](https://heroui.com)
-- [Tailwind CSS](https://tailwindcss.com)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org)
-- [Framer Motion](https://www.framer.com/motion)
-- [next-themes](https://github.com/pacocoursey/next-themes)
-
-## How to Use
-
-To create a new project based on this template using `create-next-app`, run the following command:
-
-```bash
-npx create-next-app -e https://github.com/heroui-inc/next-pages-template
-```
-
-### Install dependencies
-
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
-
-```bash
-npm install
-```
-
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@heroui/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/heroui-inc/next-pages-template/blob/main/LICENSE).
+Feel free to explore, contribute, or provide feedback to help improve the project!
