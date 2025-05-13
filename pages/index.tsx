@@ -9,7 +9,7 @@ import {
   zacta,
   dnextDark,
   dnextLight,
-  tawazi,
+  tawazi, 
 } from "../components/logos";
 
 import Footer from "./footer/footer";

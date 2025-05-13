@@ -12,6 +12,7 @@ import { fontSans, fontMono } from "@/config/fonts";
 import { useTranslations } from "@/hooks/use-translation";
 import { Navbar } from "@/components/navbar";
 
+import { Spinner } from "@heroui/spinner";
 import "@/styles/globals.css";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -27,8 +28,13 @@ export default function App({ Component, pageProps }: AppProps) {
   }, []);
 
   if (!mounted) {
-    return <div>Loading...</div>;
-  }
+    return (
+      <div className="flex items-center justify-center h-screen">
+        <Spinner color="warning" label="Loading..." />
+      </div>
+    );
+  } 
+
 
   return (
     <I18nProvider locale={locale}>
@@ -40,6 +46,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </HeroUIProvider>
     </I18nProvider>
   );
+  
 }
 
 export const fonts = {
