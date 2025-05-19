@@ -72,10 +72,20 @@ export const zacta = (
 
 export const tawazi = (
   <Image
-    alt="dnext"
+    alt="tawazi"
     height={100}
     loading="lazy"
     src="/logos/tawazi.png"
-    width={200}
+    width={100}
+  />
+);
+
+export const tawazi_dark = (
+  <Image
+    alt="tawazi"
+    height={100}
+    loading="lazy"
+    src="/logos/tawazy_black.png"
+    width={100}
   />
 );

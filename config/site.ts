@@ -6,23 +6,19 @@ export const siteConfig = {
   navItems: [
     {
       label: "navbar_services",
-      href: "services",
+      href: "#services_id",
     },
     {
       label: "navbar_technologies",
-      href: "pricing",
+      href: "#technologies_id",
     },
     {
       label: "navbar_about",
-      href: "footer",
+      href: "#footer_id",
     },
   ],
 
   links: {
-    github: "https://github.com/heroui-inc/heroui",
-    twitter: "https://twitter.com/hero_ui",
-    docs: "https://heroui.com",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://www.linkedin.com/in/mohamed-mallat-64192a107/",
+    sponsor: "https://www.linkedin.com/company/100257723",
   },
 } as const;

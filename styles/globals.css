@@ -49,7 +49,7 @@
   animation-duration: var(--duration);
 }
 
-body{
+body {
   overflow: hidden;
 }
 /* RTL Overrides CSS */
@@ -152,6 +152,10 @@ html[dir="rtl"] .dropdown-menu {
 html[dir="rtl"] ::-webkit-scrollbar {
   direction: rtl;
 }
-.reverse header{
+.reverse header {
   flex-direction: row-reverse;
+}
+
+html {
+  scroll-behavior: smooth;
 }

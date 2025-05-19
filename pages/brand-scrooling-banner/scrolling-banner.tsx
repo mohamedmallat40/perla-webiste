@@ -29,12 +29,12 @@ const ScrollingBanner = React.forwardRef<HTMLDivElement, ScrollingBannerProps>(
       children,
       style,
     },
-    ref,
+    ref
   ) => {
     const { t } = useTranslations();
 
     return (
-      <section className="mx-auto w-full max-w-6xl px-6 sm:py-12 lg:px-2  py-28 md:py-0">
+      <section className="mx-auto w-full max-w-6xl px-6 sm:py-32 lg:px-8 ">
         <div>
           <div className="flex flex-col gap-2 justify-center w-full items-center">
             <div>
@@ -85,7 +85,7 @@ const ScrollingBanner = React.forwardRef<HTMLDivElement, ScrollingBannerProps>(
         </div>
       </section>
     );
-  },
+  }
 );
 
 ScrollingBanner.displayName = "ScrollingBanner";

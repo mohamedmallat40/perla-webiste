@@ -1,60 +1,83 @@
 "use client";
 
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
+import { useLocale } from "@react-aria/i18n";
+import clsx from "clsx";
 
 import { title, subtitle } from "@/components/primitives";
 import { useTranslations } from "@/hooks/use-translation";
 
 export default function HeroSection() {
   const { t } = useTranslations();
+  const { locale } = useLocale();
+  const isRTL = locale === "ar";
+  const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
 
   return (
-    <section className="relative z-10 flex-col gap-2 bg-transparent dark:bg-transparent before:bg-background/10 before:content-[''] before:block before:z-[-1] before:absolute before:inset-0 before:backdrop-blur-md before:backdrop-saturate-200 border-t border-b border-divider px-8  flex justify-center items-center ">
-      <div className="w-full  py-10 grid grid-cols-12 gap-6 md:gap-0 z-20">
-        {/* Left side - Text content */}
-        <div className="flex flex-col gap-2 col-span-12 md:col-span-6">
-          <div className="flex flex-col">
-            <h1 className="tracking-tight font-semibold text-[clamp(1rem,10vw,2rem)] sm:text-[clamp(1rem,10vw,3rem)] lg:text-5xl inline">
-              {t("home_hero_line1")}{" "}
+    <section
+      className={clsx(
+        "relative z-10 flex-col gap-2 bg-transparent dark:bg-transparent mt-60",
+        "before:bg-background/10 before:content-[''] before:block before:z-[-1]",
+        "before:absolute before:inset-0 before:backdrop-blur-md before:backdrop-saturate-200",
+        "border-t border-b border-divider px-8 flex justify-center items-center"
+      )}
+    >
+      <div
+        dir={isRTL ? "ltr" : "ltr"}
+        className={clsx("w-full py-10 grid grid-cols-12 gap-6 md:gap-0 z-20")}
+      >
+        <div
+          className={clsx(
+            "flex flex-col gap-2 col-span-12 md:col-span-6",
+            isRTL
+              ? "md:col-start-7 md:order-last items-end text-right"
+              : "md:col-start-1"
+          )}
+        >
+          <div className={clsx("flex flex-col", isRTL && "items-end")}>
+            <h1
+              className={clsx(
+                "tracking-tight font-semibold text-[clamp(1rem,10vw,2rem)] sm:text-[clamp(1rem,10vw,3rem)] lg:text-5xl inline",
+                isRTL && "w-full text-right"
+              )}
+            >
+              {t("home_hero_line1") + " "}
             </h1>
-            <div>
-              <h1 className="tracking-tight inline font-semibold text-[clamp(1rem,10vw,2rem)] sm:text-[clamp(1rem,10vw,3rem)] lg:text-5xl">
-                {t("home_hero_line2")}&nbsp;
-              </h1>
+            <div className={clsx("w-full", isRTL && "flex flex-col items-end")}>
               <h1 className={title({ color: "violet", size: "md" })}>
                 {t("home_hero_line2")}&nbsp;
               </h1>
             </div>
           </div>
           <p className={subtitle()}>{t("home_hero_description")}</p>
-          <div className="flex flex-row gap-3 justify-start">
-            <Link
-              className="z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 px-4 min-w-20 h-10 gap-2 rounded-full bg-secondary text-secondary-foreground data-[hover=true]:opacity-hover text-sm"
-              href="/docs/guide/installation"
-            >
-              Modern UI libraries
-              <ArrowRight
-                className="group-hover:translate-x-0.5 outline-none transition-transform"
-                size={16}
-              />
-            </Link>
-            <Link
-              className="tap-highlight-transparent no-underline hover:opacity-hover active:opacity-disabled transition-opacity z-0 group relative inline-flex items-center justify-center box-border appearance-none select-none whitespace-nowrap font-normal subpixel-antialiased overflow-hidden tap-highlight-transparent transform-gpu data-[pressed=true]:scale-[0.97] outline-none data-[focus-visible=true]:z-10 data-[focus-visible=true]:outline-2 data-[focus-visible=true]:outline-focus data-[focus-visible=true]:outline-offset-2 border-medium px-4 min-w-20 h-10 gap-2 rounded-full bg-transparent border-default text-foreground data-[hover=true]:opacity-hover text-sm"
-              href="https://github.com/heroui-inc/heroui"
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              Github
-            </Link>
-          </div>
         </div>
 
-        {/* Right side - Cards */}
-        <div className="col-span-12 md:col-span-6">
+        <div
+          className={clsx(
+            "col-span-12 md:col-span-6",
+            isRTL ? "md:order-first" : ""
+          )}
+        >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div className="flex flex-col relative overflow-hidden h-auto text-foreground shadow-medium rounded-large cursor-pointer transition-transform-background motion-reduce:transition-none hover:scale-[1.01] border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
-              <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0">
+            {/* Card 1 */}
+            <div
+              className={clsx(
+                "flex flex-col relative overflow-hidden h-auto",
+                "text-foreground shadow-medium rounded-large cursor-pointer",
+                "transition-transform-background motion-reduce:transition-none",
+                "hover:scale-[1.01] border-transparent bg-white/5",
+                "dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]"
+              )}
+            >
+              <div
+                className={clsx(
+                  "flex p-3 z-10 w-full items-center shrink-0",
+                  "overflow-inherit color-inherit subpixel-antialiased",
+                  "rounded-t-large gap-2 pb-0",
+                  isRTL && "flex-row-reverse"
+                )}
+              >
                 <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
                   <svg
                     aria-hidden="true"
@@ -74,7 +97,10 @@ export default function HeroSection() {
                       strokeWidth="1.5"
                     >
                       <path d="M8 2v3" />
-                      <path d="M16 2v3M7 13h8M7 17h5M16 3.5c3.33.18 5 1.45 5 6.15v6.18c0 4.12-1 6.18-6 6.18H9c-5 0-6-2.06-6-6.18V9.65c0-4.7 1.67-5.96 5-6.15z" />
+                      <path d="M16 2v3" />
+                      <path d="M7 13h8" />
+                      <path d="M7 17h5" />
+                      <path d="M16 3.5c3.33.18 5 1.45 5 6.15v6.18c0 4.12-1 6.18-6 6.18H9c-5 0-6-2.06-6-6.18V9.65c0-4.7 1.67-5.96 5-6.15z" />
                     </g>
                   </svg>
                 </div>
@@ -82,15 +108,38 @@ export default function HeroSection() {
                   {t("home_hero_getting_started_title")}
                 </p>
               </div>
-              <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+              <div
+                className={clsx(
+                  "relative flex w-full p-3 flex-auto flex-col",
+                  "place-content-inherit align-items-inherit h-auto break-words",
+                  "overflow-y-auto subpixel-antialiased",
+                  isRTL ? "text-right items-end" : "text-left items-start"
+                )}
+              >
                 <p className="font-normal text-medium text-default-500">
                   {t("home_hero_getting_started_description")}
                 </p>
               </div>
             </div>
 
-            <div className="flex flex-col relative overflow-hidden h-auto text-foreground shadow-medium rounded-large cursor-pointer transition-transform-background motion-reduce:transition-none hover:scale-[1.01] border-transparent bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]">
-              <div className="flex p-3 z-10 w-full justify-start items-center shrink-0 overflow-inherit color-inherit subpixel-antialiased rounded-t-large gap-2 pb-0">
+            {/* Card 2 */}
+            <div
+              className={clsx(
+                "flex flex-col relative overflow-hidden h-auto",
+                "text-foreground shadow-medium rounded-large cursor-pointer",
+                "transition-transform-background motion-reduce:transition-none",
+                "hover:scale-[1.01] border-transparent bg-white/5",
+                "dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]"
+              )}
+            >
+              <div
+                className={clsx(
+                  "flex p-3 z-10 w-full items-center shrink-0",
+                  "overflow-inherit color-inherit subpixel-antialiased",
+                  "rounded-t-large gap-2 pb-0",
+                  isRTL && "flex-row-reverse"
+                )}
+              >
                 <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
                   <svg
                     aria-hidden="true"
@@ -109,13 +158,16 @@ export default function HeroSection() {
                   {t("home_hero_heroui_title")}
                 </p>
               </div>
-              <div className="relative flex w-full p-3 flex-auto flex-col place-content-inherit align-items-inherit h-auto break-words text-left overflow-y-auto subpixel-antialiased">
+              <div
+                className={clsx(
+                  "relative flex w-full p-3 flex-auto flex-col",
+                  "place-content-inherit align-items-inherit h-auto break-words",
+                  "overflow-y-auto subpixel-antialiased",
+                  isRTL && "text-right"
+                )}
+              >
                 <p className="font-normal text-medium text-default-500">
                   {t("home_hero_heroui_description")}
-                  <code className="px-2 py-1 h-fit font-mono font-normal inline-block whitespace-nowrap bg-default/40 text-default-700 text-small rounded-small">
-                    app/
-                  </code>{" "}
-                  directory structure.
                 </p>
               </div>
             </div>

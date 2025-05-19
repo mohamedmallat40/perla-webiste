@@ -3,6 +3,7 @@ import {
   NavbarContent,
   NavbarBrand,
   NavbarItem,
+  NavbarMenuToggle,
 } from "@heroui/navbar";
 import { Kbd } from "@heroui/kbd";
 import { Link } from "@heroui/link";
@@ -69,10 +70,17 @@ export const Navbar = ({ setLocale }: any) => {
         }
         justify="start"
       >
-        <NavbarBrand className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
+        <NavbarBrand
+          className={clsx("gap-3 max-w-fit", isRTL ? "flex-row-reverse" : "")}
+        >
+          <NextLink
+            className={clsx(
+              "flex justify-start items-center gap-1",
+              isRTL ? "flex-row-reverse" : ""
+            )}
+            href="/"
+          >
             <Logo />
-            {/* <Image src={'/logos/perla-no-background.png'} height={20} width={30} alt="perla"></Image> */}
             <p className="font-bold text-inherit">PERLA CI</p>
           </NextLink>
         </NavbarBrand>
@@ -85,16 +93,23 @@ export const Navbar = ({ setLocale }: any) => {
         >
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
-              <NextLink
+              <a
+                href={item.href}
+                onClick={(e) => {
+                  e.preventDefault();
+                  const id = item.href.replace("#", "");
+                  const el = document.getElementById(id);
+                  if (el) {
+                    el.scrollIntoView({ behavior: "smooth" });
+                  }
+                }}
                 className={clsx(
                   linkStyles({ color: "foreground" }),
-                  "data-[active=true]:text-primary data-[active=true]:font-medium",
+                  "data-[active=true]:text-primary data-[active=true]:font-medium"
                 )}
-                color="foreground"
-                href={item.href}
               >
                 {t(`${item.label}`)}
-              </NextLink>
+              </a>
             </NavbarItem>
           ))}
         </div>
@@ -141,13 +156,8 @@ export const Navbar = ({ setLocale }: any) => {
         }
         justify={"end"}
       >
-        <Link isExternal className="hidden" href={siteConfig.links.github}>
-          <GithubIcon className="text-default-500" />
-        </Link>
         <LanguageSwitcher onChange={handleLocaleChange} />
-
         <ThemeSwitch />
-        {/* <NavbarMenuToggle /> */}
       </NavbarContent>
     </HeroUINavbar>
   );

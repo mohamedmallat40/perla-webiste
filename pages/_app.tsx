@@ -33,8 +33,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Spinner color="warning" label="Loading..." />
       </div>
     );
-  } 
-
+  }
 
   return (
     <I18nProvider locale={locale}>
@@ -46,7 +45,6 @@ export default function App({ Component, pageProps }: AppProps) {
       </HeroUIProvider>
     </I18nProvider>
   );
-  
 }
 
 export const fonts = {

@@ -9,7 +9,8 @@ import {
   zacta,
   dnextDark,
   dnextLight,
-  tawazi, 
+  tawazi,
+  tawazi_dark,
 } from "../components/logos";
 
 import Footer from "./footer/footer";
@@ -52,7 +53,7 @@ export default function IndexPage() {
     },
     {
       key: "tawazi",
-      logo: theme === "dark" ? tawazi : tawazi,
+      logo: theme === "dark" ? tawazi : tawazi_dark,
     },
   ];
 
@@ -60,21 +61,19 @@ export default function IndexPage() {
     <DefaultLayout>
       <HeroLandingSection />
       <Services />
-      <section className="mx-auto w-full max-w-6xl px-6 sm:py-32 lg:px-8 ">
-        <ScrollingBanner shouldPauseOnHover gap="40px">
-          {logos.map(({ key, logo }) => (
-            <div
-              key={key}
-              className="flex items-center justify-center text-foreground"
-            >
-              {logo}
-            </div>
-          ))}
-        </ScrollingBanner>
-      </section>
+      <ScrollingBanner shouldPauseOnHover gap="80px">
+        {logos.map(({ key, logo }) => (
+          <div
+            key={key}
+            className="flex items-center justify-center text-foreground"
+          >
+            {logo}
+          </div>
+        ))}
+      </ScrollingBanner>
       <UIUXSection />
-      <AdditionalDetails />
       <TachnoSection />
+      <AdditionalDetails />
       <Footer />
     </DefaultLayout>
   );

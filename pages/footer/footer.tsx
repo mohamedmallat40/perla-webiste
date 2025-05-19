@@ -1,22 +1,27 @@
 "use client";
 
 import type { IconProps } from "@iconify/react";
-
+import { useTranslations } from "@/hooks/use-translation";
 import { Spacer } from "@heroui/spacer";
 
 type SocialIconProps = Omit<IconProps, "icon">;
 
 export default function Footer() {
+  const { t } = useTranslations();
+
   return (
     <footer className="flex w-full flex-col pt-36">
-      <div className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-6 py-12 lg:px-8">
+      <div
+        id="footer_id"
+        className="mx-auto flex w-full max-w-7xl flex-col items-center justify-center px-6 py-12 lg:px-8"
+      >
         <Spacer y={8} />
         <p className="mt-1 text-center text-small text-default-400">
-          &copy; PERLA Code Innovators. All rights reserved.
+          &copy; PERLA Code Innovators. {t("rights")}
         </p>
         <Spacer y={2} />
         <p className="text-center text-small text-default-400">
-          AV Hedi khfacha 2023. Ariana Tunis, Tunisia
+          {t("address")}
         </p>
         <Spacer y={2} />
         <p className="text-center text-small text-default-400 flex items-center gap-2">
@@ -40,7 +45,7 @@ export default function Footer() {
               />
             </g>
           </svg>
-          Email: mohamedmallat40@gmail.com
+          {t("email")}
         </p>
         <Spacer y={2} />
         <p className="text-center text-small text-default-400 flex items-center gap-2">
@@ -55,7 +60,7 @@ export default function Footer() {
               fill="currentColor"
             />
           </svg>
-          WhatsApp: +216 58 891 477
+          {t("whatsapp")}
         </p>
       </div>
     </footer>

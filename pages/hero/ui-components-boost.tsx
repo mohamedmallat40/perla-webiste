@@ -13,7 +13,10 @@ export default function UIUXSection() {
   const isRTL = locale === "ar";
 
   return (
-    <section className="relative z-10 flex flex-col gap-2 w-full mt-2 lg:mt-2 mb-[8rem]  overflow-hidden bg-cover bg-center">
+    <section
+      id="technologies_id"
+      className="relative z-10 flex flex-col gap-2 w-full mt-2 lg:mt-2 mb-[8rem]  overflow-hidden bg-cover bg-center"
+    >
       <img
         alt="pattern"
         className="absolute w-full left-0  bounce-animation "
@@ -54,9 +57,6 @@ export default function UIUXSection() {
               <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl text-shadow">
                 {t("uiux_section_heading_4")}
               </h1>
-              {/* <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl text-shadow">
-                and Modern UI Libraries
-              </h1> */}
             </div>
           </div>
           <p className="w-full md:w-1/2 my-2 text-medium lg:text-large font-normal block max-w-full pr-12 text-foreground-500">
