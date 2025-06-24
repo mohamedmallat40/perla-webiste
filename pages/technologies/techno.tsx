@@ -112,7 +112,7 @@ const TechnoSection = () => {
           {/* Technology Orbits */}
           {technologies.map((tech, index) => {
             const angle = (index / technologies.length) * 2 * Math.PI;
-            const radius = 180 + (index % 3) * 40; // Varied orbit distances
+            const radius = 220 + (index % 3) * 60; // Varied orbit distances
             const x = Math.cos(angle) * radius;
             const y = Math.sin(angle) * radius;
 
