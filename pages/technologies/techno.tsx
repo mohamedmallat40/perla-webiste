@@ -70,7 +70,7 @@ const TechnoSection = () => {
     },
     {
       name: "AWS",
-      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg",
     },
     {
       name: "Google Cloud",
@@ -87,7 +87,7 @@ const TechnoSection = () => {
     <section className="relative w-full py-20 px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -123,7 +123,7 @@ const TechnoSection = () => {
                 y: -4,
               }}
             >
-              <div className="w-16 h-16 rounded-xl bg-content1 border border-divider/50 shadow-sm flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-primary/30 transition-all duration-200">
+              <div className="w-18 h-18 rounded-xl bg-content1 border border-divider/50 shadow-sm flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-primary/30 transition-all duration-200">
                 <img
                   src={tech.icon}
                   alt={tech.name}
