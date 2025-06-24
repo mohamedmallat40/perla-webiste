@@ -107,14 +107,24 @@ export default function UIUXSection() {
         </div>
 
         {/* Theme-aware Gradient Overlays */}
-        {theme === "dark" && (
+        {theme === "dark" ? (
           <>
             <div className="absolute md:hidden inset-0 pointer-events-none top-0 z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(255,255,255,_0)_5%,_rgba(0,0,0,_0.6)_50%,_rgba(0,0,0,0.9)_100%)]" />
+              <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(255,255,255,_0)_5%,_rgba(0,0,0,_0.8)_50%,_rgba(0,0,0,1)_100%)]" />
             </div>
 
             <div className="absolute hidden md:block md:inset-0 md:pointer-events-none md:top-0 md:z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(255,255,255,_0)_20%,_rgba(0,0,0,_0.6)_40%,_rgba(0,0,0,0.9)_100%)]" />
+              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(255,255,255,_0)_20%,_rgba(0,0,0,_0.8)_40%,_rgba(0,0,0,1)_100%)]" />
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="absolute md:hidden inset-0 pointer-events-none top-0 z-20">
+              <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(0,0,0,_0)_5%,_rgba(255,255,255,_0.8)_50%,_rgba(255,255,255,1)_100%)]" />
+            </div>
+
+            <div className="absolute hidden md:block md:inset-0 md:pointer-events-none md:top-0 md:z-20">
+              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(0,0,0,_0)_20%,_rgba(255,255,255,_0.8)_40%,_rgba(255,255,255,1)_100%)]" />
             </div>
           </>
         )}
