@@ -64,7 +64,7 @@ export default function UIUXSection() {
               }
             >
               <h1
-                className={`tracking-tight inline font-semibold text-4xl lg:text-6xl ${theme === "dark" ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" : "drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"}`}
+                className={`tracking-tight inline font-semibold text-4xl lg:text-6xl ${currentTheme === "dark" ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" : "drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"}`}
               >
                 {t("uiux_section_heading_4")}
               </h1>
