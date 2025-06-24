@@ -47,7 +47,10 @@ const TechnoSection = () => {
       name: "Django",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/django/django-plain.svg",
     },
-    { name: "NestJS", icon: "https://nestjs.com/img/logo-small.svg" },
+    {
+      name: "NestJS",
+      icon: "https://nestjs.com/img/logo-small.svg",
+    },
     {
       name: "Express.js",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg",
@@ -80,6 +83,7 @@ const TechnoSection = () => {
       name: "Docker",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     },
+  ];
 
   return (
     <section className="relative w-full py-20 px-6">
