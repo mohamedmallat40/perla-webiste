@@ -1,33 +1,33 @@
 "use client";
 
-import React from "react";
-import { motion } from "framer-motion";
-import { ArrowRight, Rocket, Zap } from "lucide-react";
+import { ArrowRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
 import { useLocale } from "@react-aria/i18n";
+import { motion } from "framer-motion";
 import clsx from "clsx";
 
 import { title, subtitle } from "@/components/primitives";
 import { useTranslations } from "@/hooks/use-translation";
 
-export default function EnhancedHeroSection() {
+export default function HeroSection() {
   const { t } = useTranslations();
   const { locale } = useLocale();
   const isRTL = locale === "ar";
+  const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
 
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       },
     },
   };
 
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 },
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
@@ -35,201 +35,192 @@ export default function EnhancedHeroSection() {
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, scale: 0.9 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
   return (
     <motion.section
       className={clsx(
-        "relative z-10 min-h-[80vh] flex items-center",
-        "bg-gradient-to-br from-background via-background to-background/80",
-        "overflow-hidden",
+        "relative z-10 flex-col gap-2 bg-transparent dark:bg-transparent mt-60",
+        "before:bg-background/10 before:content-[''] before:block before:z-[-1]",
+        "before:absolute before:inset-0 before:backdrop-blur-md before:backdrop-saturate-200",
+        "border-t border-b border-divider px-8 flex justify-center items-center",
       )}
       variants={containerVariants}
       initial="hidden"
       animate="visible"
     >
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-secondary/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--heroui-primary-100)_0%,_transparent_50%)] opacity-20" />
-
-      <div className="w-full max-w-7xl mx-auto px-6 lg:px-8">
-        <div
+      <div
+        dir={isRTL ? "ltr" : "ltr"}
+        className={clsx("w-full py-10 grid grid-cols-12 gap-6 md:gap-0 z-20")}
+      >
+        <motion.div
           className={clsx(
-            "grid grid-cols-1 lg:grid-cols-2 gap-12 items-center",
-            isRTL && "lg:grid-flow-col-dense",
+            "flex flex-col gap-2 col-span-12 md:col-span-6",
+            isRTL
+              ? "md:col-start-7 md:order-last items-end text-right"
+              : "md:col-start-1",
           )}
+          variants={itemVariants}
         >
-          {/* Left Content */}
-          <motion.div
-            className={clsx(
-              "space-y-8",
-              isRTL ? "lg:col-start-2 text-right" : "text-left",
-            )}
-            variants={itemVariants}
-          >
-            <div className="space-y-4">
-              <motion.div
-                className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium"
-                variants={itemVariants}
-                whileHover={{ scale: 1.05 }}
-              >
-                <Zap className="w-4 h-4" />
-                Web Development Experts
-              </motion.div>
-
-              <motion.h1
-                className={clsx(
-                  "text-4xl md:text-5xl lg:text-6xl font-bold leading-tight",
-                  isRTL && "text-right",
-                )}
-                variants={itemVariants}
-              >
-                Build. Scale.{" "}
-                <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                  Succeed.
-                </span>
-              </motion.h1>
-
-              <motion.p
-                className={clsx(
-                  "text-lg md:text-xl text-default-600 max-w-2xl",
-                  isRTL && "text-right",
-                )}
-                variants={itemVariants}
-              >
-                Transform your vision into powerful web solutions. Fast,
-                reliable, and built to grow with your business.
-              </motion.p>
-            </div>
-
-            <motion.div
+          <div className={clsx("flex flex-col", isRTL && "items-end")}>
+            <motion.h1
               className={clsx(
-                "flex flex-col sm:flex-row gap-4",
-                isRTL ? "sm:flex-row-reverse" : "",
+                "tracking-tight font-semibold text-[clamp(1rem,10vw,2rem)] sm:text-[clamp(1rem,10vw,3rem)] lg:text-5xl inline",
+                isRTL && "w-full text-right",
               )}
               variants={itemVariants}
             >
-              <Link
-                href="https://calendly.com/mohamedmallat40"
-                className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-primary text-primary-foreground font-medium transition-all duration-300 hover:bg-primary/90 hover:scale-105 shadow-lg hover:shadow-xl"
+              Expert Web Development for{" "}
+            </motion.h1>
+            <div className={clsx("w-full", isRTL && "flex flex-col items-end")}>
+              <motion.h1
+                className={title({ color: "violet", size: "md" })}
+                variants={itemVariants}
               >
-                Start Your Project
-                <ArrowRight
-                  className={clsx(
-                    "w-4 h-4 transition-transform group-hover:translate-x-1",
-                    isRTL && "rotate-180 group-hover:-translate-x-1",
-                  )}
-                />
-              </Link>
+                Business Growth&nbsp;
+              </motion.h1>
+            </div>
+          </div>
+          <motion.p className={subtitle()} variants={itemVariants}>
+            Custom web solutions that drive results and maximize your online
+            potential.
+          </motion.p>
+        </motion.div>
 
-              <button className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full border-2 border-default-200 text-foreground font-medium transition-all duration-300 hover:border-primary hover:text-primary hover:scale-105">
-                View Portfolio
-              </button>
-            </motion.div>
-          </motion.div>
-
-          {/* Right Cards */}
-          <motion.div
-            className={clsx("space-y-6", isRTL ? "lg:col-start-1" : "")}
-            variants={itemVariants}
-          >
-            {/* Quick Start Card */}
-            <motion.div
-              className="relative group"
-              variants={cardVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-secondary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative bg-content1/80 backdrop-blur-xl border border-divider/50 rounded-2xl p-6 transition-all duration-300 group-hover:border-primary/30">
-                <div
-                  className={clsx(
-                    "flex items-center gap-3 mb-4",
-                    isRTL && "flex-row-reverse",
-                  )}
-                >
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-primary/10 text-primary">
-                    <Rocket className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-lg font-semibold">Quick Launch</h3>
-                </div>
-                <p
-                  className={clsx(
-                    "text-default-600 text-sm leading-relaxed",
-                    isRTL && "text-right",
-                  )}
-                >
-                  Get your project live in weeks, not months. Our streamlined
-                  process delivers results fast.
-                </p>
-              </div>
-            </motion.div>
-
-            {/* Innovation Card */}
-            <motion.div
-              className="relative group"
-              variants={cardVariants}
-              whileHover={{ y: -8, scale: 1.02 }}
-              transition={{ duration: 0.3, delay: 0.1 }}
-            >
-              <div className="absolute inset-0 bg-gradient-to-r from-secondary/20 to-primary/20 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="relative bg-content1/80 backdrop-blur-xl border border-divider/50 rounded-2xl p-6 transition-all duration-300 group-hover:border-secondary/30">
-                <div
-                  className={clsx(
-                    "flex items-center gap-3 mb-4",
-                    isRTL && "flex-row-reverse",
-                  )}
-                >
-                  <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-secondary/10 text-secondary">
-                    <Zap className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-lg font-semibold">Modern Tech</h3>
-                </div>
-                <p
-                  className={clsx(
-                    "text-default-600 text-sm leading-relaxed",
-                    isRTL && "text-right",
-                  )}
-                >
-                  Built with cutting-edge technologies for performance,
-                  security, and scalability.
-                </p>
-              </div>
-            </motion.div>
-          </motion.div>
-        </div>
-
-        {/* Stats */}
         <motion.div
-          className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8"
+          className={clsx(
+            "col-span-12 md:col-span-6",
+            isRTL ? "md:order-first" : "",
+          )}
           variants={itemVariants}
         >
-          {[
-            { number: "50+", label: "Projects" },
-            { number: "99%", label: "Success Rate" },
-            { number: "24/7", label: "Support" },
-            { number: "5+", label: "Years Experience" },
-          ].map((stat, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {/* Card 1 */}
             <motion.div
-              key={stat.label}
-              className="text-center"
-              variants={cardVariants}
-              whileHover={{ scale: 1.05 }}
-              transition={{ delay: index * 0.1 }}
+              className={clsx(
+                "flex flex-col relative overflow-hidden h-auto",
+                "text-foreground shadow-medium rounded-large cursor-pointer",
+                "transition-all duration-300 motion-reduce:transition-none",
+                "hover:scale-[1.02] hover:-translate-y-1 border-transparent bg-white/5",
+                "dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]",
+              )}
+              whileHover={{
+                scale: 1.02,
+                y: -4,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+              }}
+              transition={{ duration: 0.3 }}
             >
-              <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
-                {stat.number}
+              <div
+                className={clsx(
+                  "flex p-3 z-10 w-full items-center shrink-0",
+                  "overflow-inherit color-inherit subpixel-antialiased",
+                  "rounded-t-large gap-2 pb-0",
+                  isRTL && "flex-row-reverse",
+                )}
+              >
+                <motion.div
+                  className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500"
+                  whileHover={{ scale: 1.1, rotate: 360 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="text-pink-500"
+                    fill="none"
+                    focusable="false"
+                    height="24"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                    width="24"
+                  >
+                    <g
+                      fill="none"
+                      stroke="currentColor"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="1.5"
+                    >
+                      <path d="M8 2v3" />
+                      <path d="M16 2v3" />
+                      <path d="M7 13h8" />
+                      <path d="M7 17h5" />
+                      <path d="M16 3.5c3.33.18 5 1.45 5 6.15v6.18c0 4.12-1 6.18-6 6.18H9c-5 0-6-2.06-6-6.18V9.65c0-4.7 1.67-5.96 5-6.15z" />
+                    </g>
+                  </svg>
+                </motion.div>
+                <p className="text-base font-semibold">Ready to Grow?</p>
               </div>
-              <div className="text-sm text-default-600">{stat.label}</div>
+              <div
+                className={clsx(
+                  "relative flex w-full p-3 flex-auto flex-col",
+                  "place-content-inherit align-items-inherit h-auto break-words",
+                  "overflow-y-auto subpixel-antialiased",
+                  isRTL ? "text-right items-end" : "text-left items-start",
+                )}
+              >
+                <p className="font-normal text-medium text-default-500">
+                  Let's discuss your vision and turn it into reality.
+                </p>
+              </div>
             </motion.div>
-          ))}
+
+            {/* Card 2 */}
+            <motion.div
+              className={clsx(
+                "flex flex-col relative overflow-hidden h-auto",
+                "text-foreground shadow-medium rounded-large cursor-pointer",
+                "transition-all duration-300 motion-reduce:transition-none",
+                "hover:scale-[1.02] hover:-translate-y-1 border-transparent bg-white/5",
+                "dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]",
+              )}
+              whileHover={{
+                scale: 1.02,
+                y: -4,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+              }}
+              transition={{ duration: 0.3, delay: 0.1 }}
+            >
+              <div
+                className={clsx(
+                  "flex p-3 z-10 w-full items-center shrink-0",
+                  "overflow-inherit color-inherit subpixel-antialiased",
+                  "rounded-t-large gap-2 pb-0",
+                  isRTL && "flex-row-reverse",
+                )}
+              >
+                <motion.div
+                  className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500"
+                  whileHover={{ scale: 1.1, rotate: -360 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <svg
+                    aria-hidden="true"
+                    className="text-pink-500"
+                    height="24"
+                    viewBox="0 0 256 256"
+                    width="24"
+                  >
+                    <path
+                      d="M119.617.069c-.55.05-2.302.225-3.879.35-36.36 3.278-70.419 22.894-91.99 53.044-12.012 16.764-19.694 35.78-22.597 55.922C.125 116.415 0 118.492 0 128.025c0 9.533.125 11.61 1.151 18.64 6.957 48.065 41.165 88.449 87.56 103.411 8.309 2.678 17.067 4.504 27.027 5.605 3.879.425 20.645.425 24.524 0 17.192-1.902 31.756-6.155 46.12-13.486 2.202-1.126 2.628-1.426 2.327-1.677-.2-.15-9.584-12.735-20.845-27.948l-20.47-27.648-25.65-37.956c-14.114-20.868-25.725-37.932-25.825-37.932-.1-.025-.2 16.84-.25 37.431-.076 36.055-.1 37.506-.551 38.357-.65 1.226-1.151 1.727-2.202 2.277-.801.4-1.502.475-5.28.475h-4.33l-1.15-.725a4.679 4.679 0 0 1-1.677-1.827l-.526-1.126.05-50.166.075-50.192.776-.976c.4-.525 1.251-1.2 1.852-1.526 1.026-.5 1.426-.55 5.755-.55 5.105 0 5.956.2 7.282 1.651.376.4 14.264 21.318 30.88 46.514 16.617 25.195 39.34 59.599 50.5 76.488l20.27 30.7 1.026-.675c9.084-5.905 18.693-14.312 26.3-23.07 16.191-18.59 26.626-41.258 30.13-65.428 1.026-7.031 1.151-9.108 1.151-18.64 0-9.534-.125-11.61-1.151-18.641-6.957-48.065-41.165-88.449-87.56-103.411-8.184-2.652-16.892-4.479-26.652-5.58-2.402-.25-18.943-.525-21.02-.325zm52.401 77.414c1.201.6 2.177 1.752 2.527 2.953.2.65.25 14.562.2 45.913l-.074 44.987-7.933-12.16-7.958-12.16v-32.702c0-21.143.1-33.028.25-33.603.4-1.401 1.277-2.502 2.478-3.153 1.026-.525 1.401-.575 5.33-.575 3.704 0 4.354.05 5.18.5z"
+                      fill="currentColor"
+                    />
+                  </svg>
+                </motion.div>
+                <p className="text-base font-semibold">Modern & Fast</p>
+              </div>
+              <div
+                className={clsx(
+                  "relative flex w-full p-3 flex-auto flex-col",
+                  "place-content-inherit align-items-inherit h-auto break-words",
+                  "overflow-y-auto subpixel-antialiased",
+                  isRTL && "text-right",
+                )}
+              >
+                <p className="font-normal text-medium text-default-500">
+                  Built with cutting-edge tech for optimal performance.
+                </p>
+              </div>
+            </motion.div>
+          </div>
         </motion.div>
       </div>
     </motion.section>
