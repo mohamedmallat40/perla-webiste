@@ -15,61 +15,98 @@ export default function HeroSection() {
   const isRTL = locale === "ar";
   const ArrowIcon = isRTL ? ArrowLeft : ArrowRight;
 
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 0.1,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
-    <section
+    <motion.section
       className={clsx(
         "relative z-10 flex-col gap-2 bg-transparent dark:bg-transparent mt-60",
         "before:bg-background/10 before:content-[''] before:block before:z-[-1]",
         "before:absolute before:inset-0 before:backdrop-blur-md before:backdrop-saturate-200",
         "border-t border-b border-divider px-8 flex justify-center items-center",
       )}
+      variants={containerVariants}
+      initial="hidden"
+      animate="visible"
     >
       <div
         dir={isRTL ? "ltr" : "ltr"}
         className={clsx("w-full py-10 grid grid-cols-12 gap-6 md:gap-0 z-20")}
       >
-        <div
+        <motion.div
           className={clsx(
             "flex flex-col gap-2 col-span-12 md:col-span-6",
             isRTL
               ? "md:col-start-7 md:order-last items-end text-right"
               : "md:col-start-1",
           )}
+          variants={itemVariants}
         >
           <div className={clsx("flex flex-col", isRTL && "items-end")}>
-            <h1
+            <motion.h1
               className={clsx(
                 "tracking-tight font-semibold text-[clamp(1rem,10vw,2rem)] sm:text-[clamp(1rem,10vw,3rem)] lg:text-5xl inline",
                 isRTL && "w-full text-right",
               )}
+              variants={itemVariants}
             >
-              {t("home_hero_line1") + " "}
-            </h1>
+              Build. Scale.{" "}
+            </motion.h1>
             <div className={clsx("w-full", isRTL && "flex flex-col items-end")}>
-              <h1 className={title({ color: "violet", size: "md" })}>
-                {t("home_hero_line2")}&nbsp;
-              </h1>
+              <motion.h1
+                className={title({ color: "violet", size: "md" })}
+                variants={itemVariants}
+              >
+                Succeed.&nbsp;
+              </motion.h1>
             </div>
           </div>
-          <p className={subtitle()}>{t("home_hero_description")}</p>
-        </div>
+          <motion.p className={subtitle()} variants={itemVariants}>
+            Custom web solutions that drive results fast.
+          </motion.p>
+        </motion.div>
 
-        <div
+        <motion.div
           className={clsx(
             "col-span-12 md:col-span-6",
             isRTL ? "md:order-first" : "",
           )}
+          variants={itemVariants}
         >
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Card 1 */}
-            <div
+            <motion.div
               className={clsx(
                 "flex flex-col relative overflow-hidden h-auto",
                 "text-foreground shadow-medium rounded-large cursor-pointer",
-                "transition-transform-background motion-reduce:transition-none",
-                "hover:scale-[1.01] border-transparent bg-white/5",
+                "transition-all duration-300 motion-reduce:transition-none",
+                "hover:scale-[1.02] hover:-translate-y-1 border-transparent bg-white/5",
                 "dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]",
               )}
+              whileHover={{
+                scale: 1.02,
+                y: -4,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+              }}
+              transition={{ duration: 0.3 }}
             >
               <div
                 className={clsx(
@@ -79,7 +116,11 @@ export default function HeroSection() {
                   isRTL && "flex-row-reverse",
                 )}
               >
-                <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
+                <motion.div
+                  className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500"
+                  whileHover={{ scale: 1.1, rotate: 360 }}
+                  transition={{ duration: 0.4 }}
+                >
                   <svg
                     aria-hidden="true"
                     className="text-pink-500"
@@ -104,10 +145,8 @@ export default function HeroSection() {
                       <path d="M16 3.5c3.33.18 5 1.45 5 6.15v6.18c0 4.12-1 6.18-6 6.18H9c-5 0-6-2.06-6-6.18V9.65c0-4.7 1.67-5.96 5-6.15z" />
                     </g>
                   </svg>
-                </div>
-                <p className="text-base font-semibold">
-                  {t("home_hero_getting_started_title")}
-                </p>
+                </motion.div>
+                <p className="text-base font-semibold">Ready to Grow?</p>
               </div>
               <div
                 className={clsx(
@@ -118,20 +157,26 @@ export default function HeroSection() {
                 )}
               >
                 <p className="font-normal text-medium text-default-500">
-                  {t("home_hero_getting_started_description")}
+                  Let's turn your vision into reality.
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Card 2 */}
-            <div
+            <motion.div
               className={clsx(
                 "flex flex-col relative overflow-hidden h-auto",
                 "text-foreground shadow-medium rounded-large cursor-pointer",
-                "transition-transform-background motion-reduce:transition-none",
-                "hover:scale-[1.01] border-transparent bg-white/5",
+                "transition-all duration-300 motion-reduce:transition-none",
+                "hover:scale-[1.02] hover:-translate-y-1 border-transparent bg-white/5",
                 "dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8]",
               )}
+              whileHover={{
+                scale: 1.02,
+                y: -4,
+                boxShadow: "0 20px 40px rgba(0,0,0,0.1)",
+              }}
+              transition={{ duration: 0.3, delay: 0.1 }}
             >
               <div
                 className={clsx(
@@ -141,7 +186,11 @@ export default function HeroSection() {
                   isRTL && "flex-row-reverse",
                 )}
               >
-                <div className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500">
+                <motion.div
+                  className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500"
+                  whileHover={{ scale: 1.1, rotate: -360 }}
+                  transition={{ duration: 0.4 }}
+                >
                   <svg
                     aria-hidden="true"
                     className="text-pink-500"
@@ -154,10 +203,8 @@ export default function HeroSection() {
                       fill="currentColor"
                     />
                   </svg>
-                </div>
-                <p className="text-base font-semibold">
-                  {t("home_hero_heroui_title")}
-                </p>
+                </motion.div>
+                <p className="text-base font-semibold">Fast & Modern</p>
               </div>
               <div
                 className={clsx(
@@ -168,13 +215,13 @@ export default function HeroSection() {
                 )}
               >
                 <p className="font-normal text-medium text-default-500">
-                  {t("home_hero_heroui_description")}
+                  Built with cutting-edge tech for peak performance.
                 </p>
               </div>
-            </div>
+            </motion.div>
           </div>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
