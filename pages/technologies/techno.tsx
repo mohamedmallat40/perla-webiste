@@ -147,7 +147,7 @@ const TechnoSection = () => {
                     transform: "translate(-50%, -50%)",
                   }}
                 >
-                  <span className="text-2xl">{tech.icon}</span>
+                  <img src={tech.icon} alt={tech.name} className="w-12 h-12 object-contain" />
 
                   {/* Connection Line to Center */}
                   <div
