@@ -24,7 +24,10 @@ import TachnoSection from "./technologies/techno";
 import DefaultLayout from "@/layouts/default";
 
 export default function IndexPage() {
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
+
+  // Get the actual current theme, accounting for system theme
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   const logos = [
     {
