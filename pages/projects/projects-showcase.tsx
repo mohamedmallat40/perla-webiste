@@ -24,7 +24,6 @@ interface Project {
   gradient: string;
   technologies: string[];
   status: "completed" | "in-progress" | "planning";
-  link?: string;
 }
 
 const projects: Project[] = [
@@ -245,18 +244,16 @@ const ProjectsShowcase: React.FC = () => {
                     View Details
                   </Button>
 
-                  {project.link && (
-                    <Button
-                      as={Link}
-                      href={project.link}
-                      isIconOnly
-                      variant="light"
-                      size="sm"
-                      className="text-default-500 hover:text-white transition-colors duration-300"
-                    >
-                      <ExternalLink className="w-4 h-4" />
-                    </Button>
-                  )}
+                  <Button
+                    as={Link}
+                    href="#"
+                    isIconOnly
+                    variant="light"
+                    size="sm"
+                    className="text-default-500 hover:text-white transition-colors duration-300"
+                  >
+                    <ExternalLink className="w-4 h-4" />
+                  </Button>
                 </motion.div>
               </div>
 
