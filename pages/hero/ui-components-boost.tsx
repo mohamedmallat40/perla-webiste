@@ -23,7 +23,7 @@ export default function UIUXSection() {
       <img
         alt="pattern"
         className="absolute w-full left-0  bounce-animation "
-        src={`/logos/hero-background${currentTheme === "dark" ? "-white" : ""}.webp`}
+        src={`/logos/hero-background${currentTheme === "dark" ? "" : "-white"}.webp`}
       />
 
       <div className="flex flex-col gap-8 min-h-[480px]">
