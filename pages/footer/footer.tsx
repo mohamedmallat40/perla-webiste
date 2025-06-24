@@ -28,7 +28,6 @@ const footerNavigation = {
     { name: "Our Story", href: "#" },
     { name: "Team", href: "#" },
     { name: "Careers", href: "#" },
-    { name: "News", href: "#" },
     { name: "Contact", href: "#" },
   ],
   legal: [
@@ -153,7 +152,7 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Divider */}
+        {/* Divider and Bottom Section */}
         <div className="mt-16 border-t border-divider pt-8 sm:mt-20 lg:mt-24">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-small text-default-400">
@@ -168,15 +167,13 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-4">
-              <div className="flex items-center gap-4 text-small text-default-400">
-                <Link
-                  href={`mailto:${t("email") || "contact@perla.dev"}`}
-                  className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors"
-                >
-                  <Icon icon="mdi:email" className="w-4 h-4" />
-                  {t("email") || "contact@perla.dev"}
-                </Link>
-              </div>
+              <Link
+                href={`mailto:${t("email") || "contact@perla.dev"}`}
+                className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
+              >
+                <Icon icon="mdi:email" className="w-4 h-4" />
+                {t("email") || "contact@perla.dev"}
+              </Link>
               <ThemeSwitch />
             </div>
           </div>
