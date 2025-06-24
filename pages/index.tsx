@@ -22,7 +22,6 @@ import UIUXSection from "./hero/ui-components-boost";
 import TachnoSection from "./technologies/techno";
 import TestimonialsSection from "./testimonials/testimonials";
 import ProjectsShowcase from "./projects/projects-showcase";
-import ProjectsShowcase from "./projects/projects-showcase";
 
 import DefaultLayout from "@/layouts/default";
 
