@@ -99,7 +99,7 @@ const TechnoSection = () => {
         </motion.div>
 
         {/* Orbital Constellation */}
-        <div className="relative w-full h-[600px] flex items-center justify-center">
+        <div className="relative w-full h-[700px] flex items-center justify-center">
           {/* Center Core */}
           <motion.div
             className="absolute w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl font-bold text-white shadow-2xl z-10"
@@ -181,7 +181,7 @@ const TechnoSection = () => {
           })}
 
           {/* Orbital Rings */}
-          {[180, 220, 260].map((radius, index) => (
+          {[220, 280, 340].map((radius, index) => (
             <motion.div
               key={radius}
               className="absolute border border-divider rounded-full opacity-20"
