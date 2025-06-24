@@ -173,25 +173,25 @@ export default function TestimonialsSection() {
         {[
           {
             label: t("stats_clients"),
-            value: "150+",
+            value: "9",
             icon: "lucide:users",
             color: "text-pink-500",
           },
           {
             label: t("stats_projects"),
-            value: "500+",
+            value: "14",
             icon: "lucide:briefcase",
             color: "text-blue-500",
           },
           {
-            label: t("stats_satisfaction"),
-            value: "99%",
-            icon: "lucide:smile",
+            label: t("stats_experience"),
+            value: "5+",
+            icon: "lucide:calendar",
             color: "text-green-500",
           },
           {
             label: t("stats_countries"),
-            value: "25+",
+            value: "5",
             icon: "lucide:globe",
             color: "text-purple-500",
           },
