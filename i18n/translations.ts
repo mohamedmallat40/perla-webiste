@@ -69,23 +69,19 @@ export const translations = {
     testimonials_badge: "Client Love",
     testimonials_heading_1: "What Our",
     testimonials_heading_2: "Clients Say",
-    testimonials_subtitle:
-      "Don't just take our word for it. Here's what our satisfied clients have to say about working with us.",
+    testimonials_subtitle: "Don't just take our word for it. Here's what our satisfied clients have to say about working with us.",
     testimonial_1_name: "Ahmed Al-Rashid",
     testimonial_1_role: "CTO",
     testimonial_1_company: "Saudi Aramco",
-    testimonial_1_content:
-      "Perla IT delivered exceptional AI integration that transformed our operations. Their expertise in machine learning and automation saved us 40% in processing time.",
+    testimonial_1_content: "Perla IT delivered exceptional AI integration that transformed our operations. Their expertise in machine learning and automation saved us 40% in processing time.",
     testimonial_2_name: "Sarah Johnson",
     testimonial_2_role: "Product Manager",
     testimonial_2_company: "TechStartup Inc",
-    testimonial_2_content:
-      "The mobile app they built exceeded all expectations. Beautiful design, smooth performance, and delivered on time. Highly recommend their team!",
+    testimonial_2_content: "The mobile app they built exceeded all expectations. Beautiful design, smooth performance, and delivered on time. Highly recommend their team!",
     testimonial_3_name: "Mohamed Ben Ali",
     testimonial_3_role: "Founder",
     testimonial_3_company: "Digital Solutions",
-    testimonial_3_content:
-      "Outstanding web development service. They understood our vision perfectly and created a platform that boosted our sales by 60%.",
+    testimonial_3_content: "Outstanding web development service. They understood our vision perfectly and created a platform that boosted our sales by 60%.",
     stats_clients: "Happy Clients",
     stats_projects: "Projects Completed",
     stats_satisfaction: "Satisfaction Rate",
@@ -161,23 +157,19 @@ export const translations = {
     testimonials_badge: "Amour Client",
     testimonials_heading_1: "Ce Que Nos",
     testimonials_heading_2: "Clients Disent",
-    testimonials_subtitle:
-      "Ne nous croyez pas sur parole. Voici ce que nos clients satisfaits disent de notre collaboration.",
+    testimonials_subtitle: "Ne nous croyez pas sur parole. Voici ce que nos clients satisfaits disent de notre collaboration.",
     testimonial_1_name: "Ahmed Al-Rashid",
     testimonial_1_role: "CTO",
     testimonial_1_company: "Saudi Aramco",
-    testimonial_1_content:
-      "Perla IT a livré une intégration IA exceptionnelle qui a transformé nos opérations. Leur expertise en machine learning et automatisation nous a fait économiser 40% du temps de traitement.",
+    testimonial_1_content: "Perla IT a livré une intégration IA exceptionnelle qui a transformé nos opérations. Leur expertise en machine learning et automatisation nous a fait économiser 40% du temps de traitement.",
     testimonial_2_name: "Sarah Johnson",
     testimonial_2_role: "Chef de Produit",
     testimonial_2_company: "TechStartup Inc",
-    testimonial_2_content:
-      "L'application mobile qu'ils ont créée a dépassé toutes nos attentes. Design magnifique, performance fluide, et livrée à temps. Je recommande vivement leur équipe !",
+    testimonial_2_content: "L'application mobile qu'ils ont créée a dépassé toutes nos attentes. Design magnifique, performance fluide, et livrée à temps. Je recommande vivement leur équipe !",
     testimonial_3_name: "Mohamed Ben Ali",
     testimonial_3_role: "Fondateur",
     testimonial_3_company: "Digital Solutions",
-    testimonial_3_content:
-      "Service de développement web exceptionnel. Ils ont parfaitement compris notre vision et créé une plateforme qui a augmenté nos ventes de 60%.",
+    testimonial_3_content: "Service de développement web exceptionnel. Ils ont parfaitement compris notre vision et créé une plateforme qui a augmenté nos ventes de 60%.",
     stats_clients: "Clients Satisfaits",
     stats_projects: "Projets Complétés",
     stats_satisfaction: "Taux de Satisfaction",
@@ -202,7 +194,7 @@ export const translations = {
     description_ai_automation:
       "استثمر قوة الأتمتة الذكية لتبسيط عملياتك التجارية وزيادة إنتاجيتك.",
     description_ai_integration:
-      "نُدمج أحدث تقنيات الذكاء الاصطناعي مثل ChatGPT وDeepSeek وGemini لجعل تطبيقاتك أكثر ذكاءً وتفاعلية.",
+      "نُدمج أحدث تقنيا�� الذكاء الاصطناعي مثل ChatGPT وDeepSeek وGemini لجعل تطبيقاتك أكثر ذكاءً وتفاعلية.",
     description_mobile_development:
       "تصميم وتطوير تطبيقات جوال أصلية عالية الأداء لنظامي iOS و Android لتجربة مستخدم استثنائية.",
     description_web_development:
@@ -237,7 +229,7 @@ export const translations = {
     uiux_section_paragraph:
       "تطوير عالي الجودة بكفاءة. باستخدام أفضل مكتبات واجهات المستخدم مثل Hero UI وMUI وantd وغيرها، فإننا نبسط عملية تطوير الواجهة الأمامية لتقليل وقت طرح تطبيقاتك في السوق.",
     uiux_section_benefit_1:
-      "أطلق مشروعك بسرعة – مكونات جاهزة وقابلة للتخصيص تسرّع عملية التطوير.",
+      "أطلق مشروعك بسرعة – مكو��ات جاهزة وقابلة للتخصيص تسرّع عملية التطوير.",
     uiux_section_benefit_2:
       "واجهة وتجربة مستخدم متناسقة – تصميمات عصرية ومتجاوبة تعزز تجربة المستخدم.",
     uiux_section_benefit_3: "حلول تتطور معك – مرونة وتوسع بلا حدود.",
@@ -250,23 +242,19 @@ export const translations = {
     testimonials_badge: "حب العملاء",
     testimonials_heading_1: "ماذا يقول",
     testimonials_heading_2: "عملاؤنا",
-    testimonials_subtitle:
-      "لا تصدق كلامنا فقط. إليك ما يقوله عملاؤنا الراضون عن العمل معنا.",
+    testimonials_subtitle: "لا تصدق كلامنا فقط. إليك ما يقوله عملاؤنا الراضون عن العمل معنا.",
     testimonial_1_name: "أحمد الراشد",
     testimonial_1_role: "مدير التقنية",
     testimonial_1_company: "أرامكو السعودية",
-    testimonial_1_content:
-      "قدمت شركة بيرلا آي تي تكاملاً استثنائياً للذكاء الاصطناعي حوّل عملياتنا. خبرتهم في التعلم الآلي والأتمتة وفرت لنا 40% من وقت المعالجة.",
+    testimonial_1_content: "قدمت شركة بيرلا آي تي تكاملاً استثنائياً للذكاء الاصطناعي حوّل عملياتنا. خبرتهم في ا��تعلم الآلي والأتمتة وفرت لنا 40% من وقت المعالجة.",
     testimonial_2_name: "سارة جونسون",
     testimonial_2_role: "مديرة المنتج",
     testimonial_2_company: "تك ستارت أب",
-    testimonial_2_content:
-      "تطبيق الجوال الذي طوروه فاق كل التوقعات. تصميم جميل، أداء سلس، وتم تسليمه في الوقت المحدد. أنصح بفريقهم بشدة!",
+    testimonial_2_content: "تطبيق الجوال الذي طوروه فاق كل التوقعات. تصميم جميل، أداء سلس، وتم تسليمه في الوقت المحدد. أنصح بفريقهم بشدة!",
     testimonial_3_name: "محمد بن علي",
     testimonial_3_role: "المؤسس",
     testimonial_3_company: "الحلول الرقمية",
-    testimonial_3_content:
-      "خدمة تطوير ويب متميزة. فهموا رؤيتنا بشكل مثالي وأنشأوا منصة زادت مبيعاتنا بنسبة 60%.",
+    testimonial_3_content: "خدمة تطوير ويب متميزة. فهموا رؤيتنا بشكل مثالي وأنشأوا منصة زادت مبيعاتنا بنسبة 60%.",
     stats_clients: "عملاء سعداء",
     stats_projects: "مشاريع مكتملة",
     stats_satisfaction: "نسبة الرضا",
@@ -338,7 +326,32 @@ export const translations = {
     address: "AV Hedi Khfacha 2023. Ariana, Tunis, Tunesië",
     email: "E-mail: mo.mallat@perla-it.com ",
     whatsapp: "WhatsApp: +216 58 891 477 ",
+    // Testimonials
+    testimonials_badge: "Klant Liefde",
+    testimonials_heading_1: "Wat Onze",
+    testimonials_heading_2: "Klanten Zeggen",
+    testimonials_subtitle: "Geloof ons niet op ons woord. Hier is wat onze tevreden klanten zeggen over samenwerken met ons.",
+    testimonial_1_name: "Ahmed Al-Rashid",
+    testimonial_1_role: "CTO",
+    testimonial_1_company: "Saudi Aramco",
+    testimonial_1_content: "Perla IT leverde uitzonderlijke AI-integratie die onze activiteiten transformeerde. Hun expertise in machine learning en automatisering bespaarde ons 40% verwerkingstijd.",
+    testimonial_2_name: "Sarah Johnson",
+    testimonial_2_role: "Product Manager",
+    testimonial_2_company: "TechStartup Inc",
+    testimonial_2_content: "De mobiele app die ze bouwden overtrof alle verwachtingen. Prachtig ontwerp, soepele prestaties, en op tijd geleverd. Raad hun team ten zeerste aan!",
+    testimonial_3_name: "Mohamed Ben Ali",
+    testimonial_3_role: "Oprichter",
+    testimonial_3_company: "Digital Solutions",
+    testimonial_3_content: "Uitstekende webontwikkelingsservice. Ze begrepen onze visie perfect en creëerden een platform dat onze verkoop met 60% verhoogde.",
+    stats_clients: "Tevreden Klanten",
+    stats_projects: "Voltooide Projecten",
+    stats_satisfaction: "Tevredenheidspercentage",
+    stats_countries: "Landen Bediend",
   },
+};
+
+export type Language = keyof typeof translations;
+export type TranslationKey = keyof typeof translations.en;
 };
 
 export type Language = keyof typeof translations;
