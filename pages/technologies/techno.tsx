@@ -14,18 +14,66 @@ const TechnoSection = () => {
   const [selectedTech, setSelectedTech] = useState(null);
 
   const technologies = [
-    { name: "React", icon: "⚛️", color: "#61DAFB" },
-    { name: "Next.js", icon: "▲", color: "#000000" },
-    { name: "TypeScript", icon: "📘", color: "#3178C6" },
-    { name: "Python", icon: "🐍", color: "#3776AB" },
-    { name: "Node.js", icon: "🟢", color: "#339933" },
-    { name: "PostgreSQL", icon: "🐘", color: "#336791" },
-    { name: "MongoDB", icon: "🍃", color: "#47A248" },
-    { name: "Docker", icon: "🐳", color: "#2496ED" },
-    { name: "AWS", icon: "☁️", color: "#FF9900" },
-    { name: "GraphQL", icon: "◆", color: "#E10098" },
-    { name: "Redis", icon: "🔴", color: "#DC382D" },
-    { name: "Git", icon: "📋", color: "#F05032" },
+    {
+      name: "React",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      color: "#61DAFB",
+    },
+    {
+      name: "Next.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      color: "#000000",
+    },
+    {
+      name: "TypeScript",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+      color: "#3178C6",
+    },
+    {
+      name: "Python",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      color: "#3776AB",
+    },
+    {
+      name: "Node.js",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg",
+      color: "#339933",
+    },
+    {
+      name: "PostgreSQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg",
+      color: "#336791",
+    },
+    {
+      name: "MongoDB",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg",
+      color: "#47A248",
+    },
+    {
+      name: "Docker",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+      color: "#2496ED",
+    },
+    {
+      name: "AWS",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg",
+      color: "#FF9900",
+    },
+    {
+      name: "GraphQL",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/graphql/graphql-plain.svg",
+      color: "#E10098",
+    },
+    {
+      name: "Redis",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg",
+      color: "#DC382D",
+    },
+    {
+      name: "Git",
+      icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+      color: "#F05032",
+    },
   ];
 
   return (
