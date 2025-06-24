@@ -126,11 +126,10 @@ const TechnoSection = () => {
               }}
             >
               <motion.div
-                className="w-18 h-18 rounded-xl bg-content1/50 backdrop-blur-sm flex items-center justify-center mb-3 transition-all duration-300"
+                className="w-18 h-18 rounded-xl bg-content1/50 backdrop-blur-sm flex items-center justify-center mb-3"
                 whileHover={{
                   scale: 1.1,
-                  backgroundColor: "rgba(var(--heroui-content1), 0.8)",
-                  boxShadow: "0 8px 25px rgba(var(--heroui-primary), 0.15)",
+                  boxShadow: "0 8px 25px rgba(0, 0, 0, 0.1)",
                 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, scale: 0.8 }}
@@ -149,7 +148,7 @@ const TechnoSection = () => {
                   className="w-10 h-10 object-contain"
                   whileHover={{
                     scale: 1.1,
-                    rotate: [0, -10, 10, 0],
+                    rotate: [0, -5, 5, 0],
                   }}
                   transition={{
                     scale: { duration: 0.2 },
