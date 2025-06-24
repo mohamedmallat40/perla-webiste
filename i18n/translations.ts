@@ -212,7 +212,7 @@ export const translations = {
     line2b: "بخبرتنا",
     line2a: "في تحقيق النجاح",
     description_tech_we_use:
-      "نمتلك خبرة واسعة في أكثر من 15 تقنية متقدمة لتقديم حلول آمنة وفعالة ومصممة خصيصًا لتحديات وأهداف عملك.",
+      "نمتلك خبرة واسعة في أكثر من 15 تقنية متقدمة لتق��يم حلول آمنة وفعالة ومصممة خصيصًا لتحديات وأهداف عملك.",
     title_tech_we_use: "مهارات نتقنها ",
     home_hero_line1: "نطور حلولا مبتكرة",
     home_hero_line2: "لتعزيز نجاحك",
@@ -264,7 +264,7 @@ export const translations = {
       "تطبيق الجوال الذي طوروه فاق كل التوقعات. تصميم جميل، أداء سلس، وتم تسليمه في الوقت المحدد. أنصح بفريقهم بشدة!",
     testimonial_3_name: "محمد بن علي",
     testimonial_3_role: "المؤسس",
-    testimonial_3_company: "الحلول الرقمية",
+    testimonial_3_company: "الحلول الرقم��ة",
     testimonial_3_content:
       "خدمة تطوير ويب متميزة. فهموا رؤيتنا بشكل مثالي وأنشأوا منصة زادت مبيعاتنا بنسبة 60%.",
     stats_clients: "عملاء سعداء",
@@ -361,7 +361,7 @@ export const translations = {
       "Uitstekende webontwikkelingsservice. Ze begrepen onze visie perfect en creëerden een platform dat onze verkoop met 60% verhoogde.",
     stats_clients: "Tevreden Klanten",
     stats_projects: "Voltooide Projecten",
-    stats_satisfaction: "Tevredenheidspercentage",
+    stats_experience: "Jaren Ervaring",
     stats_countries: "Landen Bediend",
   },
 };
