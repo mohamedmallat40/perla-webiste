@@ -79,6 +79,7 @@ export default function IndexPage() {
       </ScrollingBanner>
       <UIUXSection />
       <TachnoSection />
+      <ProjectsShowcase />
       <TestimonialsSection />
       <AdditionalDetails />
       <Footer />
