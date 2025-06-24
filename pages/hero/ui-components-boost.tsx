@@ -110,7 +110,7 @@ export default function UIUXSection() {
         </div>
 
         {/* Theme-aware Gradient Overlays */}
-        {theme === "dark" ? (
+        {currentTheme === "dark" ? (
           <>
             <div className="absolute md:hidden inset-0 pointer-events-none top-0 z-20">
               <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(255,255,255,_0)_5%,_rgba(0,0,0,_0.8)_50%,_rgba(0,0,0,1)_100%)]" />
