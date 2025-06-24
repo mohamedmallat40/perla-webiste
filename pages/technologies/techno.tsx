@@ -104,7 +104,7 @@ const TechnoSection = () => {
           <motion.div
             className="absolute w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl font-bold text-white shadow-2xl z-10"
             animate={{ rotate: 360 }}
-            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
           >
             <span className="text-white text-sm font-bold">PERLA</span>
           </motion.div>
@@ -130,13 +130,13 @@ const TechnoSection = () => {
                   rotate: -360,
                 }}
                 transition={{
-                  duration: 15 + index * 2,
+                  duration: 8 + index,
                   repeat: Infinity,
                   ease: "linear",
                 }}
               >
                 <motion.div
-                  className="relative w-16 h-16 rounded-2xl bg-white dark:bg-content1 shadow-lg border border-divider flex items-center justify-center cursor-pointer group"
+                  className="relative w-20 h-20 rounded-2xl bg-white dark:bg-content1 shadow-lg border border-divider flex items-center justify-center cursor-pointer group"
                   whileHover={{
                     scale: 1.2,
                     zIndex: 20,
