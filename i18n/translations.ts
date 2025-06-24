@@ -246,6 +246,31 @@ export const translations = {
     address: "شارع الهادي خفاشا 2023. أريانة، تونس",
     email: "mo.mallat@perla-it.com : البريد الإلكتروني",
     whatsapp: "+216 58 891 477 واتساب",
+    // Testimonials
+    testimonials_badge: "حب العملاء",
+    testimonials_heading_1: "ماذا يقول",
+    testimonials_heading_2: "عملاؤنا",
+    testimonials_subtitle:
+      "لا تصدق كلامنا فقط. إليك ما يقوله عملاؤنا الراضون عن العمل معنا.",
+    testimonial_1_name: "أحمد الراشد",
+    testimonial_1_role: "مدير التقنية",
+    testimonial_1_company: "أرامكو السعودية",
+    testimonial_1_content:
+      "قدمت شركة بيرلا آي تي تكاملاً استثنائياً للذكاء الاصطناعي حوّل عملياتنا. خبرتهم في التعلم الآلي والأتمتة وفرت لنا 40% من وقت المعالجة.",
+    testimonial_2_name: "سارة جونسون",
+    testimonial_2_role: "مديرة المنتج",
+    testimonial_2_company: "تك ستارت أب",
+    testimonial_2_content:
+      "تطبيق الجوال الذي طوروه فاق كل التوقعات. تصميم جميل، أداء سلس، وتم تسليمه في الوقت المحدد. أنصح بفريقهم بشدة!",
+    testimonial_3_name: "محمد بن علي",
+    testimonial_3_role: "المؤسس",
+    testimonial_3_company: "الحلول الرقمية",
+    testimonial_3_content:
+      "خدمة تطوير ويب متميزة. فهموا رؤيتنا بشكل مثالي وأنشأوا منصة زادت مبيعاتنا بنسبة 60%.",
+    stats_clients: "عملاء سعداء",
+    stats_projects: "مشاريع مكتملة",
+    stats_satisfaction: "نسبة الرضا",
+    stats_countries: "دول نخدمها",
   },
   nl: {
     navbar_solgon: "Creativiteit brengt ons naar het hoogste niveau",
