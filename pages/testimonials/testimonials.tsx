@@ -46,7 +46,6 @@ export default function TestimonialsSection() {
         "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face",
       location: "Saudi Arabia",
       projectType: "AI Integration",
-      featured: true,
     },
     {
       id: 2,
@@ -412,7 +411,7 @@ export default function TestimonialsSection() {
           className="flex justify-center mb-12"
         >
           <div className="flex flex-wrap gap-2 p-1 bg-white/5 dark:bg-default-400/10 backdrop-blur-lg rounded-full border border-default-200/50">
-            {["all", "AI", "Mobile", "Web"].map((filter) => (
+            {["all", "AI", "Mobile", "Web", "Full Stack"].map((filter) => (
               <button
                 key={filter}
                 onClick={() => setActiveTab(filter)}
