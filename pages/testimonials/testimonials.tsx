@@ -98,6 +98,20 @@ export default function TestimonialsSection() {
       location: "Spain",
       projectType: "Full Stack",
     },
+    {
+      id: 6,
+      name: "Lode Schoors",
+      role: "Founder",
+      company: "extraexpertise.be",
+      content:
+        "Without a doubt the best team I have worked with here at Upwork. Team of talented developers with great potentials. Able to solve complex technical issues with good understanding of various range of techniques and development languages.",
+      rating: 5,
+      avatar:
+        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
+      location: "Belgium",
+      projectType: "Full Stack",
+      featured: true,
+    },
   ];
 
   // Auto-slide functionality
