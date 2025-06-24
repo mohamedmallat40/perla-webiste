@@ -65,6 +65,31 @@ export const translations = {
     address: "AV Hedi Khfacha 2023. Ariana, Tunis, Tunisia",
     email: "E-mail: mo.mallat@perla-it.com ",
     whatsapp: "WhatsApp: +216 58 891 477 ",
+    // Testimonials
+    testimonials_badge: "Client Love",
+    testimonials_heading_1: "What Our",
+    testimonials_heading_2: "Clients Say",
+    testimonials_subtitle:
+      "Don't just take our word for it. Here's what our satisfied clients have to say about working with us.",
+    testimonial_1_name: "Ahmed Al-Rashid",
+    testimonial_1_role: "CTO",
+    testimonial_1_company: "Saudi Aramco",
+    testimonial_1_content:
+      "Perla IT delivered exceptional AI integration that transformed our operations. Their expertise in machine learning and automation saved us 40% in processing time.",
+    testimonial_2_name: "Sarah Johnson",
+    testimonial_2_role: "Product Manager",
+    testimonial_2_company: "TechStartup Inc",
+    testimonial_2_content:
+      "The mobile app they built exceeded all expectations. Beautiful design, smooth performance, and delivered on time. Highly recommend their team!",
+    testimonial_3_name: "Mohamed Ben Ali",
+    testimonial_3_role: "Founder",
+    testimonial_3_company: "Digital Solutions",
+    testimonial_3_content:
+      "Outstanding web development service. They understood our vision perfectly and created a platform that boosted our sales by 60%.",
+    stats_clients: "Happy Clients",
+    stats_projects: "Projects Completed",
+    stats_satisfaction: "Satisfaction Rate",
+    stats_countries: "Countries Served",
   },
   fr: {
     navbar_slogon: "La créativité est au cœur de notre excellence",
