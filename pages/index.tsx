@@ -40,7 +40,7 @@ export default function IndexPage() {
     },
     {
       key: "dnext",
-      logo: theme === "dark" ? dnextLight : dnextDark,
+      logo: currentTheme === "dark" ? dnextLight : dnextDark,
     },
     {
       key: "aramco",
