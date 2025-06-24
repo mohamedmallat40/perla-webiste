@@ -6,11 +6,14 @@ import { useTheme } from "next-themes";
 import { useTranslations } from "@/hooks/use-translation";
 
 export default function UIUXSection() {
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
   const { t } = useTranslations();
   const { locale } = useLocale();
 
   const isRTL = locale === "ar";
+
+  // Get the actual current theme, accounting for system theme
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <section
