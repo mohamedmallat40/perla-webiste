@@ -56,7 +56,7 @@ export default function IndexPage() {
     },
     {
       key: "tawazi",
-      logo: theme === "dark" ? tawazi : tawazi_dark,
+      logo: currentTheme === "dark" ? tawazi : tawazi_dark,
     },
   ];
 
