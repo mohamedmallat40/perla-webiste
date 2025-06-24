@@ -180,7 +180,7 @@ export const translations = {
       "Service de développement web exceptionnel. Ils ont parfaitement compris notre vision et créé une plateforme qui a augmenté nos ventes de 60%.",
     stats_clients: "Clients Satisfaits",
     stats_projects: "Projets Complétés",
-    stats_satisfaction: "Taux de Satisfaction",
+    stats_experience: "Années d'Expérience",
     stats_countries: "Pays Servis",
   },
   ar: {
@@ -204,7 +204,7 @@ export const translations = {
     description_ai_integration:
       "نُدمج أحدث تقنيات الذكاء الاصطناعي مثل ChatGPT وDeepSeek وGemini لجعل تطبيقاتك أكثر ذكاءً وتفاعلية.",
     description_mobile_development:
-      "تصميم وتط��ير تطبيقات جوال أصلية عالية الأداء لنظامي iOS و Android لتجربة مستخدم استثنائية.",
+      "تصميم وتطوير تطبيقات جوال أصلية عالية الأداء لنظامي iOS و Android لتجربة مستخدم استثنائية.",
     description_web_development:
       "نطوّر حلول ويب عصرية بواجهات متجاوبة تضمن تجربة سلسة على كل الأجهزة.",
     line1b: "شركات",
@@ -212,7 +212,7 @@ export const translations = {
     line2b: "بخبرتنا",
     line2a: "في تحقيق النجاح",
     description_tech_we_use:
-      "نمتلك خبرة واسعة في أكثر من 15 تقنية متقدمة لتقديم حلول آمنة وفعالة ومصممة خصيصًا لتحديات وأهداف عملك.",
+      "نمتلك خبرة واسعة في أكثر من 15 تقنية متقدمة ل��قديم حلول آمنة وفعالة ومصممة خصيصًا لتحديات وأهداف عملك.",
     title_tech_we_use: "مهارات نتقنها ",
     home_hero_line1: "نطور حلولا مبتكرة",
     home_hero_line2: "لتعزيز نجاحك",
