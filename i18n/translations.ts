@@ -88,7 +88,7 @@ export const translations = {
       "Outstanding web development service. They understood our vision perfectly and created a platform that boosted our sales by 60%.",
     stats_clients: "Happy Clients",
     stats_projects: "Projects Completed",
-    stats_satisfaction: "Satisfaction Rate",
+    stats_experience: "Years of Experience",
     stats_countries: "Countries Served",
   },
   fr: {
@@ -204,7 +204,7 @@ export const translations = {
     description_ai_integration:
       "نُدمج أحدث تقنيات الذكاء الاصطناعي مثل ChatGPT وDeepSeek وGemini لجعل تطبيقاتك أكثر ذكاءً وتفاعلية.",
     description_mobile_development:
-      "تصميم وتطوير تطبيقات جوال أصلية عالية الأداء لنظامي iOS و Android لتجربة مستخدم استثنائية.",
+      "تصميم وتط��ير تطبيقات جوال أصلية عالية الأداء لنظامي iOS و Android لتجربة مستخدم استثنائية.",
     description_web_development:
       "نطوّر حلول ويب عصرية بواجهات متجاوبة تضمن تجربة سلسة على كل الأجهزة.",
     line1b: "شركات",
