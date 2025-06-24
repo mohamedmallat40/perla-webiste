@@ -104,7 +104,7 @@ const TechnoSection = () => {
           <motion.div
             className="absolute w-20 h-20 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-2xl font-bold text-white shadow-2xl z-10"
             animate={{ rotate: 360 }}
-            transition={{ duration: 12, repeat: Infinity, ease: "linear" }}
+            transition={{ duration: 12, repeat: Infinity, repeatType: "loop", ease: "linear", repeatType: "loop" }}
           >
             <span className="text-white text-sm font-bold">PERLA</span>
           </motion.div>
@@ -131,8 +131,8 @@ const TechnoSection = () => {
                 }}
                 transition={{
                   duration: 8 + index,
-                  repeat: Infinity,
-                  ease: "linear",
+                  repeat: Infinity, repeatType: "loop",
+                  ease: "linear", repeatType: "loop",
                 }}
               >
                 <motion.div
@@ -195,8 +195,8 @@ const TechnoSection = () => {
               animate={{ rotate: 360 }}
               transition={{
                 duration: 30 + index * 10,
-                repeat: Infinity,
-                ease: "linear",
+                repeat: Infinity, repeatType: "loop",
+                ease: "linear", repeatType: "loop",
               }}
             />
           ))}
@@ -217,7 +217,7 @@ const TechnoSection = () => {
               }}
               transition={{
                 duration: 3 + Math.random() * 2,
-                repeat: Infinity,
+                repeat: Infinity, repeatType: "loop",
                 delay: Math.random() * 2,
               }}
             />
