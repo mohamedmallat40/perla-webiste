@@ -36,7 +36,7 @@ export default function IndexPage() {
     },
     {
       key: "proxym-it",
-      logo: theme === "dark" ? proxymLight : proxymDark,
+      logo: currentTheme === "dark" ? proxymDark : proxymLight,
     },
     {
       key: "dnext",
