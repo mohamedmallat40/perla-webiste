@@ -316,11 +316,17 @@ export default function ProjectsShowcase() {
           </div>
         </motion.div>
 
-        {/* Projects Grid */}
-        <motion.div
-          variants={containerVariants}
-          className="grid grid-cols-1 md:grid-cols-2 gap-6"
-        >
+        {/* Projects Grid - HeroUI Style */}
+        <motion.div variants={containerVariants}>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={activeCategory}
+              className="grid grid-cols-1 md:grid-cols-2 gap-6"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.4 }}
+            >
           <AnimatePresence>
             {filteredProjects.map((project, index) => (
               <motion.div
