@@ -5,9 +5,6 @@ import {
   ShoppingCart,
   Heart,
   TrendingUp,
-  Monitor,
-  Smartphone,
-  ExternalLink,
   ArrowRight,
 } from "lucide-react";
 import { Button } from "@heroui/button";
@@ -21,90 +18,69 @@ interface Project {
   description: string;
   category: string;
   icon: React.ReactNode;
-  gradient: string;
   technologies: string[];
-  status: "completed" | "in-progress" | "planning";
+  status: "Live" | "Beta" | "Coming Soon";
 }
 
 const projects: Project[] = [
   {
     id: "ai-workflow",
-    title: "AI Workflow Automator",
+    title: "AI Workflow Platform",
     description:
-      "Revolutionary AI-powered platform that transforms business operations through intelligent automation and predictive analytics.",
+      "Intelligent automation platform that streamlines business operations with advanced AI capabilities.",
     category: "AI & Machine Learning",
-    icon: <Sparkles className="w-6 h-6" />,
-    gradient: "from-purple-500 to-pink-500",
-    technologies: ["Python", "TensorFlow", "React", "Node.js"],
-    status: "completed",
+    icon: <Sparkles className="w-5 h-5" />,
+    technologies: ["Python", "TensorFlow", "React"],
+    status: "Live",
   },
   {
     id: "ecommerce-platform",
-    title: "Next-Gen E-commerce",
+    title: "E-commerce Suite",
     description:
-      "Comprehensive e-commerce solution with AI-driven recommendations, real-time inventory, and seamless payment integration.",
+      "Complete e-commerce solution with AI recommendations and real-time analytics.",
     category: "E-commerce",
-    icon: <ShoppingCart className="w-6 h-6" />,
-    gradient: "from-blue-500 to-cyan-500",
-    technologies: ["Next.js", "Stripe", "PostgreSQL", "Redis"],
-    status: "completed",
+    icon: <ShoppingCart className="w-5 h-5" />,
+    technologies: ["Next.js", "Stripe", "PostgreSQL"],
+    status: "Live",
   },
   {
     id: "healthcare-system",
-    title: "Digital Health Platform",
+    title: "Health Management",
     description:
-      "Comprehensive healthcare management system with telemedicine capabilities, patient records, and appointment scheduling.",
+      "Digital healthcare platform with telemedicine and patient management features.",
     category: "Healthcare",
-    icon: <Heart className="w-6 h-6" />,
-    gradient: "from-green-500 to-emerald-500",
-    technologies: ["React", "Node.js", "MongoDB", "WebRTC"],
-    status: "in-progress",
+    icon: <Heart className="w-5 h-5" />,
+    technologies: ["React", "Node.js", "MongoDB"],
+    status: "Beta",
   },
   {
     id: "fintech-platform",
-    title: "FinTech Trading Hub",
+    title: "Trading Platform",
     description:
-      "Advanced real-time trading platform with comprehensive analytics, risk management, and portfolio optimization tools.",
-    category: "Finance",
-    icon: <TrendingUp className="w-6 h-6" />,
-    gradient: "from-orange-500 to-red-500",
-    technologies: ["React", "WebSocket", "GraphQL", "Docker"],
-    status: "completed",
-  },
-  {
-    id: "web-platform",
-    title: "Enterprise Web Suite",
-    description:
-      "Scalable web application suite for enterprise resource planning with advanced analytics and reporting capabilities.",
-    category: "Web Development",
-    icon: <Monitor className="w-6 h-6" />,
-    gradient: "from-indigo-500 to-purple-500",
-    technologies: ["Vue.js", "Laravel", "MySQL", "AWS"],
-    status: "planning",
-  },
-  {
-    id: "mobile-app",
-    title: "Cross-Platform Mobile App",
-    description:
-      "Feature-rich mobile application with offline capabilities, push notifications, and seamless cloud synchronization.",
-    category: "Mobile Development",
-    icon: <Smartphone className="w-6 h-6" />,
-    gradient: "from-teal-500 to-blue-500",
-    technologies: ["React Native", "Firebase", "Redux", "TypeScript"],
-    status: "in-progress",
+      "Real-time trading platform with advanced analytics and risk management tools.",
+    category: "FinTech",
+    icon: <TrendingUp className="w-5 h-5" />,
+    technologies: ["React", "WebSocket", "GraphQL"],
+    status: "Coming Soon",
   },
 ];
 
-const statusColors = {
-  completed: "bg-success/20 text-success border-success/30",
-  "in-progress": "bg-warning/20 text-warning border-warning/30",
-  planning: "bg-default/20 text-default-600 border-default/30",
-};
-
-const statusLabels = {
-  completed: "Completed",
-  "in-progress": "In Progress",
-  planning: "Planning",
+const statusConfig = {
+  Live: {
+    color:
+      "bg-success-100 text-success-700 dark:bg-success-50 dark:text-success-800",
+    dot: "bg-success-500",
+  },
+  Beta: {
+    color:
+      "bg-warning-100 text-warning-700 dark:bg-warning-50 dark:text-warning-800",
+    dot: "bg-warning-500",
+  },
+  "Coming Soon": {
+    color:
+      "bg-default-100 text-default-600 dark:bg-default-100 dark:text-default-700",
+    dot: "bg-default-400",
+  },
 };
 
 const containerVariants = {
@@ -112,8 +88,8 @@ const containerVariants = {
   visible: {
     opacity: 1,
     transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
+      staggerChildren: 0.15,
+      delayChildren: 0.1,
     },
   },
 };
@@ -121,169 +97,137 @@ const containerVariants = {
 const itemVariants = {
   hidden: {
     opacity: 0,
-    y: 30,
-    scale: 0.95,
+    y: 20,
   },
   visible: {
     opacity: 1,
     y: 0,
-    scale: 1,
     transition: {
-      type: "spring",
-      stiffness: 100,
-      damping: 12,
+      duration: 0.5,
+      ease: "easeOut",
     },
   },
 };
 
 const ProjectsShowcase: React.FC = () => {
   return (
-    <section className="mx-auto w-full max-w-7xl px-6 py-20 lg:px-8">
-      {/* Header Section */}
-      <motion.div
-        className="text-center mb-16"
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-      >
-        <h2 className={title({ size: "lg", class: "mb-4" })}>
-          Featured{" "}
-          <span className={title({ color: "pink", size: "lg" })}>Projects</span>
-        </h2>
-        <p className={subtitle({ class: "text-lg max-w-2xl mx-auto" })}>
-          Explore our innovative solutions that push the boundaries of
-          technology and deliver exceptional user experiences
-        </p>
-      </motion.div>
-
-      {/* Projects Grid */}
-      <motion.div
-        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
-        variants={containerVariants}
-        initial="hidden"
-        animate="visible"
-      >
-        {projects.map((project) => (
-          <motion.div
-            key={project.id}
-            variants={itemVariants}
-            whileHover={{
-              y: -8,
-              transition: { type: "spring", stiffness: 300, damping: 20 },
-            }}
-            className="group"
-          >
-            <div className="relative flex flex-col h-full overflow-hidden rounded-2xl bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8] border border-white/10 dark:border-default-400/20 transition-all duration-300 group-hover:bg-white/10 dark:group-hover:bg-default-400/15 group-hover:border-white/20 dark:group-hover:border-default-400/30">
-              {/* Status Badge */}
-              <div className="absolute top-4 right-4 z-10">
-                <div
-                  className={`px-3 py-1 rounded-full text-xs font-medium border ${statusColors[project.status]}`}
-                >
-                  {statusLabels[project.status]}
-                </div>
-              </div>
-
-              {/* Header with Icon and Gradient */}
-              <div className="relative p-6 pb-4">
-                <div
-                  className={`inline-flex p-3 rounded-2xl bg-gradient-to-br ${project.gradient} shadow-lg transition-transform duration-300 group-hover:scale-110`}
-                >
-                  <div className="text-white">{project.icon}</div>
-                </div>
-
-                <div className="mt-4">
-                  <h3 className="text-xl font-bold text-foreground group-hover:text-white transition-colors duration-300">
-                    {project.title}
-                  </h3>
-                  <p className="text-sm text-default-500 mt-1 font-medium">
-                    {project.category}
-                  </p>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="flex-1 px-6 pb-4">
-                <p className="text-default-600 text-sm leading-relaxed group-hover:text-default-300 transition-colors duration-300">
-                  {project.description}
-                </p>
-
-                {/* Technologies */}
-                <div className="mt-4 flex flex-wrap gap-2">
-                  {project.technologies.slice(0, 3).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-1 text-xs rounded-lg bg-default-100/80 dark:bg-default-800/60 text-default-700 dark:text-default-300 border border-default-200/50 dark:border-default-700/50"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {project.technologies.length > 3 && (
-                    <span className="px-2 py-1 text-xs rounded-lg bg-default-100/80 dark:bg-default-800/60 text-default-500 border border-default-200/50 dark:border-default-700/50">
-                      +{project.technologies.length - 3}
-                    </span>
-                  )}
-                </div>
-              </div>
-
-              {/* Footer with Action */}
-              <div className="p-6 pt-0">
-                <motion.div
-                  whileHover={{ x: 4 }}
-                  className="flex items-center justify-between"
-                >
-                  <Button
-                    as={Link}
-                    href="#"
-                    variant="light"
-                    size="sm"
-                    className="text-default-600 group-hover:text-white transition-colors duration-300 p-0 h-auto bg-transparent"
-                    endContent={
-                      <ArrowRight className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
-                    }
-                  >
-                    View Details
-                  </Button>
-
-                  <Button
-                    as={Link}
-                    href="#"
-                    isIconOnly
-                    variant="light"
-                    size="sm"
-                    className="text-default-500 hover:text-white transition-colors duration-300"
-                  >
-                    <ExternalLink className="w-4 h-4" />
-                  </Button>
-                </motion.div>
-              </div>
-
-              {/* Hover Gradient Overlay */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-2xl`}
-              />
-            </div>
-          </motion.div>
-        ))}
-      </motion.div>
-
-      {/* Call to Action */}
-      <motion.div
-        className="text-center mt-16"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6, delay: 0.8 }}
-      >
-        <Button
-          as={Link}
-          href="#"
-          variant="bordered"
-          size="lg"
-          className="border-pink-500/50 text-pink-500 hover:bg-pink-500/10 transition-all duration-300"
-          endContent={<ExternalLink className="w-5 h-5" />}
+    <section className="w-full bg-background">
+      <div className="mx-auto max-w-6xl px-6 py-20 lg:px-8">
+        {/* Header */}
+        <motion.div
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
         >
-          View All Projects
-        </Button>
-      </motion.div>
+          <h2 className={title({ size: "lg", class: "mb-4" })}>
+            Featured{" "}
+            <span className={title({ color: "pink", size: "lg" })}>
+              Projects
+            </span>
+          </h2>
+          <p className={subtitle({ class: "max-w-2xl mx-auto" })}>
+            Innovative solutions that drive business growth and enhance user
+            experiences
+          </p>
+        </motion.div>
+
+        {/* Projects Grid */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 gap-6"
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+        >
+          {projects.map((project) => (
+            <motion.div
+              key={project.id}
+              variants={itemVariants}
+              whileHover={{ y: -4 }}
+              className="group"
+            >
+              <div className="relative p-6 rounded-2xl border border-divider bg-content1 shadow-small transition-all duration-300 hover:shadow-medium hover:border-default-300 dark:hover:border-default-600">
+                {/* Status Badge */}
+                <div className="absolute top-6 right-6">
+                  <div
+                    className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-medium ${statusConfig[project.status].color}`}
+                  >
+                    <div
+                      className={`w-1.5 h-1.5 rounded-full ${statusConfig[project.status].dot}`}
+                    />
+                    {project.status}
+                  </div>
+                </div>
+
+                {/* Icon */}
+                <div className="inline-flex p-3 rounded-xl bg-primary-50 text-primary dark:bg-primary-100 dark:text-primary-700 mb-4">
+                  {project.icon}
+                </div>
+
+                {/* Content */}
+                <div className="space-y-3 mb-6">
+                  <div>
+                    <h3 className="text-xl font-semibold text-foreground mb-1">
+                      {project.title}
+                    </h3>
+                    <p className="text-sm text-primary font-medium">
+                      {project.category}
+                    </p>
+                  </div>
+
+                  <p className="text-default-600 leading-relaxed">
+                    {project.description}
+                  </p>
+
+                  {/* Technologies */}
+                  <div className="flex flex-wrap gap-2 pt-2">
+                    {project.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2.5 py-1 text-xs font-medium rounded-md bg-default-100 text-default-700 dark:bg-default-200 dark:text-default-800"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Action */}
+                <Button
+                  as={Link}
+                  href="#"
+                  variant="light"
+                  color="primary"
+                  size="sm"
+                  className="font-medium group-hover:translate-x-1 transition-transform duration-200"
+                  endContent={<ArrowRight className="w-4 h-4" />}
+                >
+                  View Project
+                </Button>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+
+        {/* Call to Action */}
+        <motion.div
+          className="text-center mt-12"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <Button
+            as={Link}
+            href="#"
+            variant="bordered"
+            color="primary"
+            size="lg"
+            className="font-medium"
+          >
+            View All Projects
+          </Button>
+        </motion.div>
+      </div>
     </section>
   );
 };
