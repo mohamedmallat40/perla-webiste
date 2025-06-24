@@ -125,13 +125,38 @@ const TechnoSection = () => {
                 y: -4,
               }}
             >
-              <div className="w-18 h-18 rounded-xl bg-content1 border border-divider/50 shadow-sm flex items-center justify-center mb-3 group-hover:shadow-md group-hover:border-primary/30 transition-all duration-200">
-                <img
+              <motion.div
+                className="w-18 h-18 rounded-xl bg-content1/50 backdrop-blur-sm flex items-center justify-center mb-3 transition-all duration-300"
+                whileHover={{
+                  scale: 1.1,
+                  backgroundColor: "rgba(var(--heroui-content1), 0.8)",
+                  boxShadow: "0 8px 25px rgba(var(--heroui-primary), 0.15)",
+                }}
+                whileTap={{ scale: 0.95 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{
+                  duration: 0.3,
+                  delay: index * 0.05,
+                  type: "spring",
+                  stiffness: 200,
+                  damping: 15,
+                }}
+              >
+                <motion.img
                   src={tech.icon}
                   alt={tech.name}
                   className="w-10 h-10 object-contain"
+                  whileHover={{
+                    scale: 1.1,
+                    rotate: [0, -10, 10, 0],
+                  }}
+                  transition={{
+                    scale: { duration: 0.2 },
+                    rotate: { duration: 0.6, ease: "easeInOut" },
+                  }}
                 />
-              </div>
+              </motion.div>
 
               <span className="text-xs font-medium text-default-600 group-hover:text-foreground transition-colors duration-200">
                 {tech.name}
