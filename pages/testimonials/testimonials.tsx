@@ -78,7 +78,7 @@ export default function TestimonialsSection() {
 
   return (
     <section
-      className="mx-auto w-full max-w-6xl px-6 py-20 lg:px-8"
+      className="mx-auto w-full max-w-6xl px-6 py-20 lg:px-8 mt-5"
       dir={isRTL ? "rtl" : "ltr"}
     >
       {/* Header Section */}
