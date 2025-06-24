@@ -80,8 +80,6 @@ const TechnoSection = () => {
       name: "Docker",
       icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
     },
-    {
-  ];
 
   return (
     <section className="relative w-full py-20 px-6">
