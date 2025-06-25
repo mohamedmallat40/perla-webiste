@@ -246,3 +246,4 @@ html[dir="rtl"] ::-webkit-scrollbar {
 html {
   scroll-behavior: smooth;
 }
+/* Force Arabic font for all content when Arabic is selected */
