@@ -2,19 +2,16 @@ import { Html, Head, Main, NextScript } from "next/document";
 import clsx from "clsx";
 
 import { fontSans, fontArabic } from "@/config/fonts";
-import { siteConfig } from "@/config/site";
 
 export default function Document() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "SoftwareCompany",
-    name: siteConfig.company,
+    name: "PERLA Code Innovators",
     alternateName: ["PERLA CI", "PERLA IT", "PERLA Group"],
-    description: siteConfig.metaDescription,
-    url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
-    image: `${siteConfig.url}${siteConfig.ogImage}`,
-    foundingDate: siteConfig.business.foundingYear,
+    description:
+      "Leading software development company specializing in AI integration, web development, and mobile apps.",
+    url: "https://perla-it.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "AV Hedi Khfacha 2023",
@@ -24,127 +21,57 @@ export default function Document() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: siteConfig.contact.phone,
-      email: siteConfig.contact.email,
+      telephone: "+216 58 891 477",
+      email: "mo.mallat@perla-it.com",
       contactType: "customer service",
-      availableLanguage: siteConfig.business.languages,
     },
-    sameAs: [siteConfig.links.linkedin],
-    serviceType: siteConfig.business.specialties,
-    areaServed: siteConfig.business.serviceAreas,
-    numberOfEmployees: siteConfig.business.employees,
-    knowsAbout: [
-      "Web Development",
-      "AI Integration",
-      "Mobile Development",
-      "Next.js",
-      "React",
-      "Node.js",
-      "TypeScript",
-      "TailwindCSS",
-    ],
-  };
-
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      {
-        "@type": "ListItem",
-        position: 1,
-        name: "Home",
-        item: siteConfig.url,
-      },
-      {
-        "@type": "ListItem",
-        position: 2,
-        name: "Services",
-        item: `${siteConfig.url}#services_id`,
-      },
-      {
-        "@type": "ListItem",
-        position: 3,
-        name: "Technologies",
-        item: `${siteConfig.url}#technologies_id`,
-      },
-    ],
   };
 
   return (
     <Html lang="en">
       <Head>
-        {/* Enhanced Meta Tags */}
+        {/* Core Metadata */}
         <meta charSet="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-        {/* SEO Meta Tags */}
-        <title>{siteConfig.name}</title>
-        <meta name="description" content={siteConfig.metaDescription} />
-        <meta name="keywords" content={siteConfig.keywords.join(", ")} />
-        <meta name="author" content={siteConfig.company} />
         <meta
-          name="robots"
-          content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"
+          name="description"
+          content="PERLA Code Innovators delivers expert web development, AI integration, and mobile app solutions. 5+ years experience serving clients globally."
         />
-        <meta name="googlebot" content="index, follow" />
+        <meta
+          name="keywords"
+          content="web development, AI integration, mobile app development, Next.js, React, Tunisia, PERLA Code Innovators"
+        />
 
-        {/* Canonical URL */}
-        <link rel="canonical" href={siteConfig.url} />
-
-        {/* Enhanced Open Graph */}
+        {/* Open Graph */}
+        <meta
+          property="og:title"
+          content="PERLA Code Innovators - Expert Web Development & AI Solutions"
+        />
+        <meta
+          property="og:description"
+          content="Leading software development company specializing in AI integration, web development, and mobile apps."
+        />
+        <meta property="og:image" content="/og-image.png" />
+        <meta property="og:site_name" content="PERLA Code Innovators" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content={siteConfig.name} />
-        <meta property="og:description" content={siteConfig.metaDescription} />
-        <meta
-          property="og:image"
-          content={`${siteConfig.url}${siteConfig.ogImage}`}
-        />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
-        <meta property="og:image:alt" content={siteConfig.tagline} />
-        <meta property="og:url" content={siteConfig.url} />
-        <meta property="og:site_name" content={siteConfig.company} />
-        <meta property="og:locale" content="en_US" />
-        <meta property="og:locale:alternate" content="fr_FR" />
-        <meta property="og:locale:alternate" content="ar_TN" />
+        <meta property="og:url" content="https://perla-it.com" />
 
-        {/* Enhanced Twitter Cards */}
+        {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={siteConfig.name} />
-        <meta name="twitter:description" content={siteConfig.metaDescription} />
         <meta
-          name="twitter:image"
-          content={`${siteConfig.url}${siteConfig.ogImage}`}
+          name="twitter:title"
+          content="PERLA Code Innovators - Expert Web Development"
         />
-        <meta name="twitter:image:alt" content={siteConfig.tagline} />
-        <meta name="twitter:site" content={siteConfig.twitterHandle} />
-        <meta name="twitter:creator" content={siteConfig.twitterHandle} />
-
-        {/* Business Information */}
-        <meta name="geo.region" content="TN" />
-        <meta name="geo.placename" content="Tunis, Tunisia" />
-        <meta name="geo.position" content="36.8065;10.1815" />
-        <meta name="ICBM" content="36.8065, 10.1815" />
-
-        {/* Mobile & App */}
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <meta
-          name="apple-mobile-web-app-title"
-          content={siteConfig.shortName}
+          name="twitter:description"
+          content="Leading software development company specializing in AI integration and web development."
         />
+        <meta name="twitter:image" content="/og-image.png" />
 
-        {/* Theme & Colors */}
+        {/* Theme */}
         <meta name="theme-color" content="#ffffff" />
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="color-scheme" content="light dark" />
 
         {/* Favicons */}
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-        <link rel="manifest" href="/site.webmanifest" />
+        <link rel="icon" href="/favicon.ico" />
 
         {/* Preconnect for Performance */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -153,7 +80,6 @@ export default function Document() {
           href="https://fonts.gstatic.com"
           crossOrigin=""
         />
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
 
         {/* Cairo Font for Arabic */}
         <link
@@ -166,22 +92,6 @@ export default function Document() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-        />
-
-        {/* Additional SEO Meta Tags */}
-        <meta name="rating" content="general" />
-        <meta name="distribution" content="global" />
-        <meta name="revisit-after" content="1 days" />
-        <meta name="language" content="English" />
-        <meta name="classification" content="Business" />
-        <meta name="category" content="Software Development" />
-        <meta name="coverage" content="Worldwide" />
-        <meta name="target" content="all" />
-        <meta name="HandheldFriendly" content="True" />
-        <meta name="MobileOptimized" content="320" />
       </Head>
       <body
         className={clsx(
