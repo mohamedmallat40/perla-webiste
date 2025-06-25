@@ -531,3 +531,9 @@ html[lang=ar] *,
 html[dir=rtl] *,
 .arabic-locale * {
 }
+
+/* RTL Flex Fix */
+html[dir=rtl] .flex:not(.flex-col) {
+}
+
+/* RTL Text Fix */
