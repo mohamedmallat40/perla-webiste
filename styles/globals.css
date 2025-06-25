@@ -523,3 +523,5 @@ html[lang="ar"] [data-loading],
 html[lang="ar"] .spinner-label {
   font-family: var(--font-arabic), "Cairo", sans-serif !important;
 }
+
+/* Arabic Font Critical Fix */
