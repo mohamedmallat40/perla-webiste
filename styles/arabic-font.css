@@ -1,0 +1,29 @@
+/* Apply Cairo font for all Arabic content */
+.font-arabic,
+[lang="ar"],
+[lang="ar"] *,
+.arabic-text {
+  font-family: var(--font-arabic), "Cairo", sans-serif !important;
+}
+
+/* Apply Cairo font when Arabic locale is active */
+html[lang="ar"],
+html[lang="ar"] body,
+html[lang="ar"] * {
+  font-family: var(--font-arabic), "Cairo", sans-serif !important;
+}
+
+/* Apply to RTL content */
+html[dir="rtl"],
+html[dir="rtl"] body,
+html[dir="rtl"] * {
+  font-family: var(--font-arabic), "Cairo", sans-serif !important;
+}
+
+/* Force Cairo font for Arabic locale class */
+body.arabic-locale,
+body.arabic-locale *,
+.locale-ar,
+.locale-ar * {
+  font-family: var(--font-arabic), "Cairo", sans-serif !important;
+}
