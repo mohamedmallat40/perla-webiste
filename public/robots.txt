@@ -1,3 +1,6 @@
+# Advanced Robots.txt for PERLA Code Innovators
+# Optimized for maximum SEO performance
+
 User-agent: *
 Allow: /
 
@@ -6,26 +9,72 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /_next/
 Disallow: /api/
+Disallow: *.json$
+Disallow: /404
+Disallow: /500
 
-# Allow important assets
+# Allow important assets and pages
 Allow: /favicon.ico
 Allow: /og-image*.png
 Allow: /logo.png
-Allow: /*.css
-Allow: /*.js
+Allow: /*.css$
+Allow: /*.js$
+Allow: /fonts/
+Allow: /images/
+Allow: /static/
 
-# Sitemap location
-Sitemap: https://perla-it.com/sitemap.xml
-
-# Crawl delay (optional)
-Crawl-delay: 1
-
-# Specific bot instructions
+# Specific bot instructions for better crawling
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 2
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 2
 
 User-agent: LinkedInBot
 Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: TwitterBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+# Block bad bots
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# Sitemap locations
+Sitemap: https://perla-it.com/sitemap.xml
+Sitemap: https://perla-it.com/sitemap-images.xml
+
+# Global crawl delay
+Crawl-delay: 1
+
+# Cache directive
+# Request-rate: 1/10s

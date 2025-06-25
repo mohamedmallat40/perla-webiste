@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  
+  <!-- Homepage Images -->
+  <url>
+    <loc>https://perla-it.com/</loc>
+    <image:image>
+      <image:loc>https://perla-it.com/og-image-enhanced.png</image:loc>
+      <image:title>PERLA Code Innovators - Expert Web Development & AI Solutions</image:title>
+      <image:caption>Leading software development company in Tunisia with 5+ years experience</image:caption>
+      <image:geo_location>Ariana, Tunis, Tunisia</image:geo_location>
+      <image:license>https://perla-it.com/license</image:license>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/hero-background.webp</image:loc>
+      <image:title>Modern Web Development Workspace</image:title>
+      <image:caption>Professional development environment for creating cutting-edge web solutions</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/team-photo.webp</image:loc>
+      <image:title>PERLA Code Innovators Development Team</image:title>
+      <image:caption>Expert developers specializing in AI integration and web development</image:caption>
+      <image:geo_location>Ariana, Tunis, Tunisia</image:geo_location>
+    </image:image>
+  </url>
+  
+  <!-- Client Logos -->
+  <url>
+    <loc>https://perla-it.com/#clients</loc>
+    <image:image>
+      <image:loc>https://perla-it.com/clients/aramco-logo.svg</image:loc>
+      <image:title>Saudi Aramco - Enterprise Client</image:title>
+      <image:caption>Saudi Aramco logo - PERLA Code Innovators enterprise client</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/clients/proxym-logo.svg</image:loc>
+      <image:title>Proxym IT - Technology Partner</image:title>
+      <image:caption>Proxym IT logo - Technology partner of PERLA Code Innovators</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/clients/extraexpertise-logo.svg</image:loc>
+      <image:title>Extra Expertise - Client Partner</image:title>
+      <image:caption>Extra Expertise logo - Belgian client partner</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Technology Stack Images -->
+  <url>
+    <loc>https://perla-it.com/#technologies_id</loc>
+    <image:image>
+      <image:loc>https://perla-it.com/technologies/nextjs-logo.svg</image:loc>
+      <image:title>Next.js - React Framework</image:title>
+      <image:caption>Next.js logo - Modern React framework for web development</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/technologies/react-logo.svg</image:loc>
+      <image:title>React - JavaScript Library</image:title>
+      <image:caption>React logo - JavaScript library for building user interfaces</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/technologies/typescript-logo.svg</image:loc>
+      <image:title>TypeScript - Programming Language</image:title>
+      <image:caption>TypeScript logo - Strongly typed programming language</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/technologies/ai-technologies.png</image:loc>
+      <image:title>AI Technologies - ChatGPT, DeepSeek, Gemini</image:title>
+      <image:caption>AI technologies used by PERLA Code Innovators for AI integration</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services Images -->
+  <url>
+    <loc>https://perla-it.com/#services_id</loc>
+    <image:image>
+      <image:loc>https://perla-it.com/services/ai-development-illustration.webp</image:loc>
+      <image:title>AI Development Services Illustration</image:title>
+      <image:caption>Custom AI solutions and machine learning implementations</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/services/web-development-illustration.webp</image:loc>
+      <image:title>Web Development Services Illustration</image:title>
+      <image:caption>Modern web applications using Next.js, React, and cutting-edge technologies</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/services/mobile-apps-illustration.webp</image:loc>
+      <image:title>Mobile App Development Illustration</image:title>
+      <image:caption>Native mobile applications for iOS and Android platforms</image:caption>
+    </image:image>
+  </url>
+
+</urlset>
