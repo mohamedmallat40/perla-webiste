@@ -545,3 +545,6 @@ html[dir=rtl] .justify-start {
   justify-content: flex-end
 }
 html[dir=rtl] .text-left { text-align: right }
+/* CSS is working - now handle JS */
+html[dir=rtl] img { transform: none }
+/* Add font-family to Arabic selectors */
