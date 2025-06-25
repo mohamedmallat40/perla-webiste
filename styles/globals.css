@@ -52,11 +52,98 @@
 body {
   overflow: hidden;
 }
+
+/* Cairo Font Classes for Arabic */
+.font-arabic {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-thin {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-light {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-regular {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-medium {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-semibold {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-bold {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-extrabold {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-black {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
 /* RTL Overrides CSS */
 
 /* General direction overrides */
 html[dir="rtl"] body {
   text-align: right;
+}
+
+/* Apply Arabic font to RTL content */
+html[dir="rtl"] body,
+html[dir="rtl"] h1,
+html[dir="rtl"] h2,
+html[dir="rtl"] h3,
+html[dir="rtl"] h4,
+html[dir="rtl"] h5,
+html[dir="rtl"] h6,
+html[dir="rtl"] p,
+html[dir="rtl"] span,
+html[dir="rtl"] div {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
 }
 
 /* Flip margins and paddings for RTL */
