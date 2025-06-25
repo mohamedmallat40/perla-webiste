@@ -8,7 +8,7 @@ import { useLocale } from "@react-aria/i18n";
 const languages: { key: Language; label: string; icon: string }[] = [
   { key: "en", label: "English", icon: "twemoji:flag-united-kingdom" },
   { key: "fr", label: "Français", icon: "twemoji:flag-france" },
-  { key: "ar", label: "العربية", icon: "twemoji:flag-saudi-arabia" },
+  // { key: "ar", label: "العربية", icon: "twemoji:flag-saudi-arabia" },
   { key: "nl", label: "Nederlands", icon: "twemoji:flag-netherlands" },
 ];
 
