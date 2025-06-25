@@ -537,3 +537,7 @@ html[dir=rtl] .flex:not(.flex-col) {
 }
 
 /* RTL Text Fix */
+
+html[dir=rtl] .flex:not(.flex-col) {
+  flex-direction: row-reverse
+}
