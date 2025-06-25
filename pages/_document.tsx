@@ -1,7 +1,7 @@
 import { Html, Head, Main, NextScript } from "next/document";
 import clsx from "clsx";
 
-import { fontSans } from "@/config/fonts";
+import { fontSans, fontArabic } from "@/config/fonts";
 
 export default function Document() {
   return (
@@ -17,7 +17,10 @@ export default function Document() {
           name="description"
           content="Perla Code Innovators (Perla CI, Perla IT, Perla Group) accelerates startup MVP development using cutting-edge web technology."
         />
-        <meta name="keywords" content="Perla Code Innovators, Perla CI, Perla IT, Perla Group, startup studio, MVP, web development, Next.js, NestJS, TailwindCSS" />
+        <meta
+          name="keywords"
+          content="Perla Code Innovators, Perla CI, Perla IT, Perla Group, startup studio, MVP, web development, Next.js, NestJS, TailwindCSS"
+        />
 
         {/* Open Graph */}
         <meta property="og:title" content="Perla Code Innovators" />
@@ -46,6 +49,7 @@ export default function Document() {
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
           fontSans.variable,
+          fontArabic.variable,
         )}
       >
         <Main />
