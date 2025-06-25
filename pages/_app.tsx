@@ -39,26 +39,15 @@ export default function App({ Component, pageProps }: AppProps) {
       html.setAttribute("dir", "rtl");
       html.setAttribute("lang", "ar");
 
-      // Apply Arabic font classes
-      body.classList.add("font-arabic", "arabic-locale");
-      body.classList.remove("font-sans");
-
-      // Force Arabic font through CSS variables
-      body.style.setProperty(
-        "--font-family-override",
-        'var(--font-arabic), "Cairo", sans-serif',
-      );
+      // Apply Arabic font
+      body.style.fontFamily = 'var(--font-arabic), "Cairo", sans-serif';
     } else {
       // Set LTR for other languages
       html.setAttribute("dir", "ltr");
       html.setAttribute("lang", locale);
 
-      // Remove Arabic font classes
-      body.classList.remove("font-arabic", "arabic-locale");
-      body.classList.add("font-sans");
-
-      // Reset font override
-      body.style.removeProperty("--font-family-override");
+      // Reset to default font
+      body.style.fontFamily = "var(--font-sans), system-ui, sans-serif";
     }
   }, [locale, mounted]);
 
