@@ -65,6 +65,31 @@ export const translations = {
     address: "AV Hedi Khfacha 2023. Ariana, Tunis, Tunisia",
     email: "E-mail: mo.mallat@perla-it.com ",
     whatsapp: "WhatsApp: +216 58 891 477 ",
+    // Testimonials
+    testimonials_badge: "Client Love",
+    testimonials_heading_1: "What Our",
+    testimonials_heading_2: "Clients Say",
+    testimonials_subtitle:
+      "Don't just take our word for it. Here's what our satisfied clients have to say about working with us.",
+    testimonial_1_name: "Ahmed Al-Rashid",
+    testimonial_1_role: "CTO",
+    testimonial_1_company: "Saudi Aramco",
+    testimonial_1_content:
+      "Perla IT delivered exceptional AI integration that transformed our operations. Their expertise in machine learning and automation saved us 40% in processing time.",
+    testimonial_2_name: "Sarah Johnson",
+    testimonial_2_role: "Product Manager",
+    testimonial_2_company: "TechStartup Inc",
+    testimonial_2_content:
+      "The mobile app they built exceeded all expectations. Beautiful design, smooth performance, and delivered on time. Highly recommend their team!",
+    testimonial_3_name: "Mohamed Ben Ali",
+    testimonial_3_role: "Founder",
+    testimonial_3_company: "Digital Solutions",
+    testimonial_3_content:
+      "Outstanding web development service. They understood our vision perfectly and created a platform that boosted our sales by 60%.",
+    stats_clients: "Happy Clients",
+    stats_projects: "Projects Completed",
+    stats_experience: "Years of Experience",
+    stats_countries: "Countries Served",
   },
   fr: {
     navbar_slogon: "La créativité est au cœur de notre excellence",
@@ -132,6 +157,31 @@ export const translations = {
     address: "AV Hedi Khfacha 2023. Ariana, Tunis, Tunisie",
     email: "E-mail: mo.mallat@perla-it.com ",
     whatsapp: "WhatsApp: +216 58 891 477 ",
+    // Testimonials
+    testimonials_badge: "Amour Client",
+    testimonials_heading_1: "Ce Que Nos",
+    testimonials_heading_2: "Clients Disent",
+    testimonials_subtitle:
+      "Ne nous croyez pas sur parole. Voici ce que nos clients satisfaits disent de notre collaboration.",
+    testimonial_1_name: "Ahmed Al-Rashid",
+    testimonial_1_role: "CTO",
+    testimonial_1_company: "Saudi Aramco",
+    testimonial_1_content:
+      "Perla IT a livré une intégration IA exceptionnelle qui a transformé nos opérations. Leur expertise en machine learning et automatisation nous a fait économiser 40% du temps de traitement.",
+    testimonial_2_name: "Sarah Johnson",
+    testimonial_2_role: "Chef de Produit",
+    testimonial_2_company: "TechStartup Inc",
+    testimonial_2_content:
+      "L'application mobile qu'ils ont créée a dépassé toutes nos attentes. Design magnifique, performance fluide, et livrée à temps. Je recommande vivement leur équipe !",
+    testimonial_3_name: "Mohamed Ben Ali",
+    testimonial_3_role: "Fondateur",
+    testimonial_3_company: "Digital Solutions",
+    testimonial_3_content:
+      "Service de développement web exceptionnel. Ils ont parfaitement compris notre vision et créé une plateforme qui a augmenté nos ventes de 60%.",
+    stats_clients: "Clients Satisfaits",
+    stats_projects: "Projets Complétés",
+    stats_experience: "Années d'Expérience",
+    stats_countries: "Pays Servis",
   },
   ar: {
     navbar_slogon: "الإبداع طريقنا للتميّز",
@@ -162,7 +212,7 @@ export const translations = {
     line2b: "بخبرتنا",
     line2a: "في تحقيق النجاح",
     description_tech_we_use:
-      "نمتلك خبرة واسعة في أكثر من 15 تقنية متقدمة لتقديم حلول آمنة وفعالة ومصممة خصيصًا لتحديات وأهداف عملك.",
+      "نمتلك خبرة واسعة في أكثر من 15 تقنية متقدمة لتق��يم حلول آمنة وفعالة ومصممة خصيصًا لتحديات وأهداف عملك.",
     title_tech_we_use: "مهارات نتقنها ",
     home_hero_line1: "نطور حلولا مبتكرة",
     home_hero_line2: "لتعزيز نجاحك",
@@ -196,6 +246,31 @@ export const translations = {
     address: "شارع الهادي خفاشا 2023. أريانة، تونس",
     email: "mo.mallat@perla-it.com : البريد الإلكتروني",
     whatsapp: "+216 58 891 477 واتساب",
+    // Testimonials
+    testimonials_badge: "حب العملاء",
+    testimonials_heading_1: "ماذا يقول",
+    testimonials_heading_2: "عملاؤنا",
+    testimonials_subtitle:
+      "لا تصدق كلامنا فقط. إليك ما يقوله عملاؤنا الراضون عن العمل معنا.",
+    testimonial_1_name: "أحمد الراشد",
+    testimonial_1_role: "مدير التقنية",
+    testimonial_1_company: "أرامكو السعودية",
+    testimonial_1_content:
+      "قدمت شركة بيرلا آي تي تكاملاً استثنائياً للذكاء الاصطناعي حوّل عملياتنا. خبرتهم في التعلم الآلي والأتمتة وفرت لنا 40% من وقت المعالجة.",
+    testimonial_2_name: "سارة جونسون",
+    testimonial_2_role: "مديرة المنتج",
+    testimonial_2_company: "تك ستارت أب",
+    testimonial_2_content:
+      "تطبيق الجوال الذي طوروه فاق كل التوقعات. تصميم جميل، أداء سلس، وتم تسليمه في الوقت المحدد. أنصح بفريقهم بشدة!",
+    testimonial_3_name: "محمد بن علي",
+    testimonial_3_role: "المؤسس",
+    testimonial_3_company: "الحلول الرقم��ة",
+    testimonial_3_content:
+      "خدمة تطوير ويب متميزة. فهموا رؤيتنا بشكل مثالي وأنشأوا منصة زادت مبيعاتنا بنسبة 60%.",
+    stats_clients: "عملاء سعداء",
+    stats_projects: "مشاريع مكتملة",
+    stats_experience: "سنوات الخبرة",
+    stats_countries: "دول نخدمها",
   },
   nl: {
     navbar_solgon: "Creativiteit brengt ons naar het hoogste niveau",
@@ -263,6 +338,31 @@ export const translations = {
     address: "AV Hedi Khfacha 2023. Ariana, Tunis, Tunesië",
     email: "E-mail: mo.mallat@perla-it.com ",
     whatsapp: "WhatsApp: +216 58 891 477 ",
+    // Testimonials
+    testimonials_badge: "Klant Liefde",
+    testimonials_heading_1: "Wat Onze",
+    testimonials_heading_2: "Klanten Zeggen",
+    testimonials_subtitle:
+      "Geloof ons niet op ons woord. Hier is wat onze tevreden klanten zeggen over samenwerken met ons.",
+    testimonial_1_name: "Ahmed Al-Rashid",
+    testimonial_1_role: "CTO",
+    testimonial_1_company: "Saudi Aramco",
+    testimonial_1_content:
+      "Perla IT leverde uitzonderlijke AI-integratie die onze activiteiten transformeerde. Hun expertise in machine learning en automatisering bespaarde ons 40% verwerkingstijd.",
+    testimonial_2_name: "Sarah Johnson",
+    testimonial_2_role: "Product Manager",
+    testimonial_2_company: "TechStartup Inc",
+    testimonial_2_content:
+      "De mobiele app die ze bouwden overtrof alle verwachtingen. Prachtig ontwerp, soepele prestaties, en op tijd geleverd. Raad hun team ten zeerste aan!",
+    testimonial_3_name: "Mohamed Ben Ali",
+    testimonial_3_role: "Oprichter",
+    testimonial_3_company: "Digital Solutions",
+    testimonial_3_content:
+      "Uitstekende webontwikkelingsservice. Ze begrepen onze visie perfect en creëerden een platform dat onze verkoop met 60% verhoogde.",
+    stats_clients: "Tevreden Klanten",
+    stats_projects: "Voltooide Projecten",
+    stats_experience: "Jaren Ervaring",
+    stats_countries: "Landen Bediend",
   },
 };
 

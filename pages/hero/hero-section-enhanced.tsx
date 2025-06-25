@@ -20,8 +20,8 @@ export default function HeroSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
-        delayChildren: 0.1,
+        staggerChildren: 0.15,
+        delayChildren: 0.2,
       },
     },
   };
@@ -68,19 +68,20 @@ export default function HeroSection() {
               )}
               variants={itemVariants}
             >
-              Build. Scale.{" "}
+              Expert Web Development for{" "}
             </motion.h1>
             <div className={clsx("w-full", isRTL && "flex flex-col items-end")}>
               <motion.h1
                 className={title({ color: "violet", size: "md" })}
                 variants={itemVariants}
               >
-                Succeed.&nbsp;
+                Business Growth&nbsp;
               </motion.h1>
             </div>
           </div>
           <motion.p className={subtitle()} variants={itemVariants}>
-            Custom web solutions that drive results fast.
+            Custom web solutions that drive results and maximize your online
+            potential.
           </motion.p>
         </motion.div>
 
@@ -119,7 +120,7 @@ export default function HeroSection() {
                 <motion.div
                   className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500"
                   whileHover={{ scale: 1.1, rotate: 360 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <svg
                     aria-hidden="true"
@@ -157,7 +158,7 @@ export default function HeroSection() {
                 )}
               >
                 <p className="font-normal text-medium text-default-500">
-                  Let's turn your vision into reality.
+                  Let's discuss your vision and turn it into reality.
                 </p>
               </div>
             </motion.div>
@@ -189,7 +190,7 @@ export default function HeroSection() {
                 <motion.div
                   className="flex justify-center p-2 rounded-full items-center bg-secondary-100/80 text-pink-500"
                   whileHover={{ scale: 1.1, rotate: -360 }}
-                  transition={{ duration: 0.4 }}
+                  transition={{ duration: 0.3 }}
                 >
                   <svg
                     aria-hidden="true"
@@ -204,7 +205,7 @@ export default function HeroSection() {
                     />
                   </svg>
                 </motion.div>
-                <p className="text-base font-semibold">Fast & Modern</p>
+                <p className="text-base font-semibold">Modern & Fast</p>
               </div>
               <div
                 className={clsx(
@@ -215,7 +216,7 @@ export default function HeroSection() {
                 )}
               >
                 <p className="font-normal text-medium text-default-500">
-                  Built with cutting-edge tech for peak performance.
+                  Built with cutting-edge tech for optimal performance.
                 </p>
               </div>
             </motion.div>

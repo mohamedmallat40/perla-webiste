@@ -40,7 +40,7 @@ const footerNavigation = {
   ],
 };
 
-export default function Footer() {
+export default function UpdatedFooter() {
   const { t } = useTranslations();
 
   const renderList = React.useCallback(

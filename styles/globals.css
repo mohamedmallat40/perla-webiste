@@ -52,14 +52,441 @@
 body {
   overflow: hidden;
 }
-/* RTL Overrides CSS */
 
-/* General direction overrides */
-html[dir="rtl"] body {
+/* Cairo Font Classes for Arabic */
+.font-arabic,
+.arabic-locale,
+.arabic-locale * {
+  font-family: var(--font-arabic), "Cairo", sans-serif !important;
+}
+
+.cairo-thin {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-light {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-regular {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-medium {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-semibold {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-bold {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-extrabold {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.cairo-black {
+  font-family: var(--font-arabic), "Cairo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+/* Apply Arabic font to RTL content */
+html[dir="rtl"],
+html[dir="rtl"] *,
+html[lang="ar"],
+html[lang="ar"] *,
+.rtl-layout,
+.rtl-layout * {
+  font-family: var(--font-arabic), "Cairo", sans-serif !important;
+}
+
+/* Comprehensive RTL Layout Fixes */
+
+/* Base RTL setup */
+html[dir="rtl"] {
+  direction: rtl;
   text-align: right;
 }
 
-/* Flip margins and paddings for RTL */
+html[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Fix flex layouts for RTL */
+html[dir="rtl"] .flex:not(.flex-col):not(.flex-col-reverse) {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .flex-row {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .flex-row-reverse {
+  flex-direction: row;
+}
+
+/* Preserve column layouts */
+html[dir="rtl"] .flex-col {
+  flex-direction: column;
+}
+
+html[dir="rtl"] .flex-col-reverse {
+  flex-direction: column-reverse;
+}
+
+/* Fix justify content for RTL */
+html[dir="rtl"] .justify-start {
+  justify-content: flex-end;
+}
+
+html[dir="rtl"] .justify-end {
+  justify-content: flex-start;
+}
+
+html[dir="rtl"] .justify-between {
+  justify-content: space-between; /* This stays the same */
+}
+
+/* Fix text alignment */
+html[dir="rtl"] .text-left {
+  text-align: right;
+}
+
+html[dir="rtl"] .text-right {
+  text-align: left;
+}
+
+html[dir="rtl"] .text-center {
+  text-align: center; /* Center stays center */
+}
+
+/* Fix positioning */
+html[dir="rtl"] .left-0 {
+  left: unset;
+  right: 0;
+}
+html[dir="rtl"] .right-0 {
+  right: unset;
+  left: 0;
+}
+html[dir="rtl"] .left-1 {
+  left: unset;
+  right: 0.25rem;
+}
+html[dir="rtl"] .right-1 {
+  right: unset;
+  left: 0.25rem;
+}
+html[dir="rtl"] .left-2 {
+  left: unset;
+  right: 0.5rem;
+}
+html[dir="rtl"] .right-2 {
+  right: unset;
+  left: 0.5rem;
+}
+html[dir="rtl"] .left-4 {
+  left: unset;
+  right: 1rem;
+}
+html[dir="rtl"] .right-4 {
+  right: unset;
+  left: 1rem;
+}
+html[dir="rtl"] .left-6 {
+  left: unset;
+  right: 1.5rem;
+}
+html[dir="rtl"] .right-6 {
+  right: unset;
+  left: 1.5rem;
+}
+html[dir="rtl"] .left-8 {
+  left: unset;
+  right: 2rem;
+}
+html[dir="rtl"] .right-8 {
+  right: unset;
+  left: 2rem;
+}
+
+/* Fix margins for RTL */
+html[dir="rtl"] .ml-auto {
+  margin-left: unset;
+  margin-right: auto;
+}
+html[dir="rtl"] .mr-auto {
+  margin-right: unset;
+  margin-left: auto;
+}
+html[dir="rtl"] .ml-1 {
+  margin-left: unset;
+  margin-right: 0.25rem;
+}
+html[dir="rtl"] .mr-1 {
+  margin-right: unset;
+  margin-left: 0.25rem;
+}
+html[dir="rtl"] .ml-2 {
+  margin-left: unset;
+  margin-right: 0.5rem;
+}
+html[dir="rtl"] .mr-2 {
+  margin-right: unset;
+  margin-left: 0.5rem;
+}
+html[dir="rtl"] .ml-3 {
+  margin-left: unset;
+  margin-right: 0.75rem;
+}
+html[dir="rtl"] .mr-3 {
+  margin-right: unset;
+  margin-left: 0.75rem;
+}
+html[dir="rtl"] .ml-4 {
+  margin-left: unset;
+  margin-right: 1rem;
+}
+html[dir="rtl"] .mr-4 {
+  margin-right: unset;
+  margin-left: 1rem;
+}
+html[dir="rtl"] .ml-6 {
+  margin-left: unset;
+  margin-right: 1.5rem;
+}
+html[dir="rtl"] .mr-6 {
+  margin-right: unset;
+  margin-left: 1.5rem;
+}
+html[dir="rtl"] .ml-8 {
+  margin-left: unset;
+  margin-right: 2rem;
+}
+html[dir="rtl"] .mr-8 {
+  margin-right: unset;
+  margin-left: 2rem;
+}
+
+/* Fix padding for RTL */
+html[dir="rtl"] .pl-1 {
+  padding-left: unset;
+  padding-right: 0.25rem;
+}
+html[dir="rtl"] .pr-1 {
+  padding-right: unset;
+  padding-left: 0.25rem;
+}
+html[dir="rtl"] .pl-2 {
+  padding-left: unset;
+  padding-right: 0.5rem;
+}
+html[dir="rtl"] .pr-2 {
+  padding-right: unset;
+  padding-left: 0.5rem;
+}
+html[dir="rtl"] .pl-3 {
+  padding-left: unset;
+  padding-right: 0.75rem;
+}
+html[dir="rtl"] .pr-3 {
+  padding-right: unset;
+  padding-left: 0.75rem;
+}
+html[dir="rtl"] .pl-4 {
+  padding-left: unset;
+  padding-right: 1rem;
+}
+html[dir="rtl"] .pr-4 {
+  padding-right: unset;
+  padding-left: 1rem;
+}
+html[dir="rtl"] .pl-6 {
+  padding-left: unset;
+  padding-right: 1.5rem;
+}
+html[dir="rtl"] .pr-6 {
+  padding-right: unset;
+  padding-left: 1.5rem;
+}
+html[dir="rtl"] .pl-8 {
+  padding-left: unset;
+  padding-right: 2rem;
+}
+html[dir="rtl"] .pr-8 {
+  padding-right: unset;
+  padding-left: 2rem;
+}
+
+/* Fix borders */
+html[dir="rtl"] .border-l {
+  border-left: unset;
+  border-right: 1px solid;
+}
+html[dir="rtl"] .border-r {
+  border-right: unset;
+  border-left: 1px solid;
+}
+html[dir="rtl"] .border-l-2 {
+  border-left: unset;
+  border-right: 2px solid;
+}
+html[dir="rtl"] .border-r-2 {
+  border-right: unset;
+  border-left: 2px solid;
+}
+
+/* Fix rounded corners */
+html[dir="rtl"] .rounded-l {
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+html[dir="rtl"] .rounded-r {
+  border-radius: 0.25rem 0 0 0.25rem;
+}
+html[dir="rtl"] .rounded-tl {
+  border-top-left-radius: unset;
+  border-top-right-radius: 0.25rem;
+}
+html[dir="rtl"] .rounded-tr {
+  border-top-right-radius: unset;
+  border-top-left-radius: 0.25rem;
+}
+html[dir="rtl"] .rounded-bl {
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: 0.25rem;
+}
+html[dir="rtl"] .rounded-br {
+  border-bottom-right-radius: unset;
+  border-bottom-left-radius: 0.25rem;
+}
+
+/* Fix transforms - be careful with icons */
+html[dir="rtl"] .transform:not(.preserve-transform) {
+  transform: scaleX(-1);
+}
+
+/* Preserve certain elements from being flipped */
+html[dir="rtl"] img,
+html[dir="rtl"] video,
+html[dir="rtl"] iframe,
+html[dir="rtl"] canvas,
+html[dir="rtl"] .preserve-transform,
+html[dir="rtl"] [data-preserve-transform],
+html[dir="rtl"] .no-flip {
+  transform: none !important;
+  direction: ltr;
+}
+
+/* Fix navbar and navigation specific issues */
+html[dir="rtl"] nav .flex {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .navbar-content {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .navbar-brand {
+  order: 2;
+}
+
+html[dir="rtl"] .navbar-menu {
+  order: 1;
+}
+
+/* Fix grid layouts */
+html[dir="rtl"] .grid {
+  direction: rtl;
+}
+
+/* Fix scrolling elements */
+html[dir="rtl"] .scrolling-horizontal {
+  animation-direction: reverse;
+}
+
+/* Fix input and form elements */
+html[dir="rtl"]
+  input:not([type="range"]):not([type="checkbox"]):not([type="radio"]),
+html[dir="rtl"] textarea,
+html[dir="rtl"] select {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Fix buttons and interactive elements */
+html[dir="rtl"] .btn-group {
+  flex-direction: row-reverse;
+}
+
+/* Fix dropdowns and modals */
+html[dir="rtl"] .dropdown-menu {
+  left: unset;
+  right: 0;
+}
+
+/* Fix tooltip positioning */
+html[dir="rtl"] .tooltip-left {
+  left: unset;
+  right: 100%;
+}
+
+html[dir="rtl"] .tooltip-right {
+  right: unset;
+  left: 100%;
+}
+
+/* Specific component fixes */
+html[dir="rtl"] .hero-section .flex {
+  flex-direction: row-reverse;
+}
+
+html[dir="rtl"] .services-grid .grid {
+  direction: rtl;
+}
+
+/* Fix any absolute positioning issues */
+html[dir="rtl"] .absolute.left-1\/2 {
+  left: unset;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+/* Additional text and content direction fixes */
 html[dir="rtl"] .md\:text-left {
   text-align: right;
 }
@@ -68,90 +495,15 @@ html[dir="rtl"] .md\:text-right {
   text-align: left;
 }
 
-/* Flip margin and padding directions */
-html[dir="rtl"] .mr-auto {
-  margin-right: unset;
-  margin-left: auto;
-}
-
-html[dir="rtl"] .ml-auto {
-  margin-left: unset;
-  margin-right: auto;
-}
-
-html[dir="rtl"] .pr-8 {
-  padding-right: unset;
-  padding-left: 2rem; /* 8 in tailwind */
-}
-
-html[dir="rtl"] .pl-8 {
-  padding-left: unset;
-  padding-right: 2rem; /* 8 in tailwind */
-}
-
-/* Fix flexbox ordering for RTL */
-html[dir="rtl"] .md\:flex-row {
-  flex-direction: row-reverse;
-}
-
-html[dir="rtl"] .md\:flex-row-reverse {
-  flex-direction: row;
-}
-
-/* Fix icon directions */
-html[dir="rtl"] svg[aria-hidden="true"] {
-  transform: scaleX(-1);
-}
-
-/* Fix scrolling banner direction */
-html[dir="rtl"] [data-scrolling-banner] {
-  direction: ltr; /* Usually scrolling banners need to maintain ltr for proper animation */
-}
-
-/* Fix search inputs and other specific components */
-html[dir="rtl"] input[type="search"],
-html[dir="rtl"] input[type="text"] {
+html[dir="rtl"] .lg\:text-left {
   text-align: right;
-  direction: rtl;
 }
 
-/* Adjust borders for RTL */
-html[dir="rtl"] .border-l {
-  border-left: unset;
-  border-right: 1px solid;
+html[dir="rtl"] .lg\:text-right {
+  text-align: left;
 }
 
-html[dir="rtl"] .border-r {
-  border-right: unset;
-  border-left: 1px solid;
-}
-
-/* Fix any absolute positioning for RTL */
-html[dir="rtl"] .left-0 {
-  left: unset;
-  right: 0;
-}
-
-html[dir="rtl"] .right-0 {
-  right: unset;
-  left: 0;
-}
-
-/* Adjust any transformations */
-html[dir="rtl"] .rotate-\[223deg\] {
-  transform: rotate(43deg);
-}
-
-/* Fix dropdown menus and other positioned elements */
-html[dir="rtl"] .dropdown-menu {
-  left: unset;
-  right: 0;
-}
-
-/* Fix any scrollbars position */
-html[dir="rtl"] ::-webkit-scrollbar {
-  direction: rtl;
-}
+/* Fix any remaining layout issues */
 .reverse header {
   flex-direction: row-reverse;
 }
@@ -159,3 +511,45 @@ html[dir="rtl"] ::-webkit-scrollbar {
 html {
   scroll-behavior: smooth;
 }
+
+/* Ensure proper font loading */
+html[dir="rtl"] ::-webkit-scrollbar {
+  direction: rtl;
+}
+
+/* Force Arabic font for loading and other hardcoded text */
+html[lang="ar"] .loading-text,
+html[lang="ar"] [data-loading],
+html[lang="ar"] .spinner-label {
+  font-family: var(--font-arabic), "Cairo", sans-serif !important;
+}
+
+/* Arabic Font Critical Fix */
+
+/* Force Arabic font everywhere */
+html[lang=ar] *,
+html[dir=rtl] *,
+.arabic-locale * {
+}
+
+/* RTL Flex Fix */
+html[dir=rtl] .flex:not(.flex-col) {
+}
+
+/* RTL Text Fix */
+
+html[dir=rtl] .flex:not(.flex-col) {
+  flex-direction: row-reverse
+}
+html[dir=rtl] .justify-start {
+  justify-content: flex-end
+}
+html[dir=rtl] .text-left { text-align: right }
+/* CSS is working - now handle JS */
+html[dir=rtl] img { transform: none }
+/* Add font-family to Arabic selectors */
+html[lang=ar] * { font-family: var(--font-arabic), Cairo, sans-serif !important }
+.arabic-locale * { font-family: var(--font-arabic), Cairo, sans-serif !important }
+html[dir=rtl] * { font-family: var(--font-arabic), Cairo, sans-serif !important }
+.rtl-layout * { font-family: var(--font-arabic), Cairo, sans-serif !important }
+/* Complete RTL fixes */

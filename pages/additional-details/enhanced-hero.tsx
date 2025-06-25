@@ -9,7 +9,7 @@ import clsx from "clsx";
 import { title, subtitle } from "@/components/primitives";
 import { useTranslations } from "@/hooks/use-translation";
 
-export default function HeroSection() {
+export default function EnhancedHeroSection() {
   const { t } = useTranslations();
   const { locale } = useLocale();
   const isRTL = locale === "ar";

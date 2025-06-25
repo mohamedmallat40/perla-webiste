@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <!-- Homepage - Highest Priority -->
+  <url>
+    <loc>https://perla-it.com/</loc>
+    <lastmod>2024-12-25T12:00:00+01:00</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://perla-it.com/" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://perla-it.com/?lang=fr" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://perla-it.com/?lang=ar" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://perla-it.com/" />
+    <image:image>
+      <image:loc>https://perla-it.com/og-image-enhanced.png</image:loc>
+      <image:title>PERLA Code Innovators - Expert Web Development Team</image:title>
+      <image:caption>Leading software development company in Tunisia specializing in AI integration and web development</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/hero-image.webp</image:loc>
+      <image:title>Modern Web Development Solutions</image:title>
+      <image:caption>Cutting-edge web development and AI solutions</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Services Section -->
+  <url>
+    <loc>https://perla-it.com/#services_id</loc>
+    <lastmod>2024-12-25T10:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://perla-it.com/#services_id" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://perla-it.com/?lang=fr#services_id" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://perla-it.com/?lang=ar#services_id" />
+  </url>
+  
+  <!-- AI Development Service -->
+  <url>
+    <loc>https://perla-it.com/services/ai-development</loc>
+    <lastmod>2024-12-25T09:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://perla-it.com/services/ai-development.png</image:loc>
+      <image:title>AI Development Services</image:title>
+      <image:caption>Custom AI solutions and machine learning implementations</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- AI Integration Service -->
+  <url>
+    <loc>https://perla-it.com/services/ai-integration</loc>
+    <lastmod>2024-12-25T09:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://perla-it.com/services/ai-integration.png</image:loc>
+      <image:title>AI Integration Services</image:title>
+      <image:caption>Integration of ChatGPT, DeepSeek, and other AI technologies</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Web Development Service -->
+  <url>
+    <loc>https://perla-it.com/services/web-development</loc>
+    <lastmod>2024-12-25T09:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://perla-it.com/services/web-development.png</image:loc>
+      <image:title>Web Development Services</image:title>
+      <image:caption>Modern web applications using Next.js and React</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Mobile App Development Service -->
+  <url>
+    <loc>https://perla-it.com/services/mobile-apps</loc>
+    <lastmod>2024-12-25T09:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://perla-it.com/services/mobile-apps.png</image:loc>
+      <image:title>Mobile App Development</image:title>
+      <image:caption>Native iOS and Android mobile applications</image:caption>
+    </image:image>
+  </url>
+  
+  <!-- Technologies Section -->
+  <url>
+    <loc>https://perla-it.com/#technologies_id</loc>
+    <lastmod>2024-12-25T08:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://perla-it.com/#technologies_id" />
+    <xhtml:link rel="alternate" hreflang="fr" href="https://perla-it.com/?lang=fr#technologies_id" />
+    <xhtml:link rel="alternate" hreflang="ar" href="https://perla-it.com/?lang=ar#technologies_id" />
+  </url>
+  
+  <!-- Projects/Portfolio Section -->
+  <url>
+    <loc>https://perla-it.com/#projects</loc>
+    <lastmod>2024-12-25T07:00:00+01:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  
+  <!-- Testimonials Section -->
+  <url>
+    <loc>https://perla-it.com/#testimonials</loc>
+    <lastmod>2024-12-25T06:00:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- About/Contact Section -->
+  <url>
+    <loc>https://perla-it.com/#footer_id</loc>
+    <lastmod>2024-12-25T05:00:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  
+  <!-- Contact Page -->
+  <url>
+    <loc>https://perla-it.com/contact</loc>
+    <lastmod>2024-12-25T04:00:00+01:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://perla-it.com/privacy-policy</loc>
+    <lastmod>2024-12-20T00:00:00+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  
+  <!-- Terms of Service -->
+  <url>
+    <loc>https://perla-it.com/terms-of-service</loc>
+    <lastmod>2024-12-20T00:00:00+01:00</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
