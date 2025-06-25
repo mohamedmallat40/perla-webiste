@@ -14,20 +14,15 @@ type SocialIconProps = Omit<IconProps, "icon">;
 const footerNavigation = {
   services: [
     { name: "AI Development", href: "#" },
+    { name: "AI Integration", href: "#" },
     { name: "Web Development", href: "#" },
     { name: "Mobile Apps", href: "#" },
-    { name: "E-commerce Solutions", href: "#" },
   ],
-  supportOptions: [
-    { name: "Documentation", href: "#" },
-    { name: "API Reference", href: "#" },
-    { name: "Community", href: "#" },
-    { name: "Service Status", href: "#" },
-  ],
-  aboutUs: [
-    { name: "Our Story", href: "#" },
-    { name: "Team", href: "#" },
-    { name: "Careers", href: "#" },
+  company: [
+    { name: "Technologies", href: "#" },
+    { name: "Projects", href: "#" },
+    { name: "Testimonials", href: "#" },
+    { name: "About Us", href: "#" },
     { name: "Contact", href: "#" },
   ],
   legal: [
@@ -41,23 +36,6 @@ const footerNavigation = {
       name: "LinkedIn",
       href: "#",
       icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:linkedin" />,
-    },
-    {
-      name: "Twitter",
-      href: "#",
-      icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:twitter" />,
-    },
-    {
-      name: "GitHub",
-      href: "#",
-      icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:github" />,
-    },
-    {
-      name: "Instagram",
-      href: "#",
-      icon: (props: SocialIconProps) => (
-        <Icon {...props} icon="mdi:instagram" />
-      ),
     },
   ],
 };
@@ -133,19 +111,13 @@ export default function Footer() {
               </div>
               <div className="mt-10 md:mt-0">
                 {renderList({
-                  title: "Support",
-                  items: footerNavigation.supportOptions,
+                  title: "Company",
+                  items: footerNavigation.company,
                 })}
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>
-                {renderList({
-                  title: "Company",
-                  items: footerNavigation.aboutUs,
-                })}
-              </div>
-              <div className="mt-10 md:mt-0">
                 {renderList({ title: "Legal", items: footerNavigation.legal })}
               </div>
             </div>
@@ -167,6 +139,14 @@ export default function Footer() {
               </p>
             </div>
             <div className="flex items-center gap-4">
+              <Link
+                href="https://calendly.com/mohamedmallat40"
+                isExternal
+                className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
+              >
+                <Icon icon="mdi:calendar" className="w-4 h-4" />
+                Schedule Meeting
+              </Link>
               <Link
                 href={`mailto:${t("email") || "contact@perla.dev"}`}
                 className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
