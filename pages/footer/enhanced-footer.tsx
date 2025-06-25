@@ -14,21 +14,15 @@ type SocialIconProps = Omit<IconProps, "icon">;
 const footerNavigation = {
   services: [
     { name: "AI Development", href: "#" },
+    { name: "AI Integration", href: "#" },
     { name: "Web Development", href: "#" },
     { name: "Mobile Apps", href: "#" },
-    { name: "E-commerce Solutions", href: "#" },
   ],
-  supportOptions: [
-    { name: "Documentation", href: "#" },
-    { name: "API Reference", href: "#" },
-    { name: "Community", href: "#" },
-    { name: "Service Status", href: "#" },
-  ],
-  aboutUs: [
-    { name: "Our Story", href: "#" },
-    { name: "Team", href: "#" },
-    { name: "Careers", href: "#" },
-    { name: "News", href: "#" },
+  company: [
+    { name: "Technologies", href: "#" },
+    { name: "Projects", href: "#" },
+    { name: "Testimonials", href: "#" },
+    { name: "About Us", href: "#" },
     { name: "Contact", href: "#" },
   ],
   legal: [
@@ -43,22 +37,11 @@ const footerNavigation = {
       href: "#",
       icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:linkedin" />,
     },
+  ],
+  links: [
     {
-      name: "Twitter",
-      href: "#",
-      icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:twitter" />,
-    },
-    {
-      name: "GitHub",
-      href: "#",
-      icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:github" />,
-    },
-    {
-      name: "Instagram",
-      href: "#",
-      icon: (props: SocialIconProps) => (
-        <Icon {...props} icon="mdi:instagram" />
-      ),
+      name: "Schedule Meeting",
+      href: "https://calendly.com/mohamedmallat40",
     },
   ],
 };
