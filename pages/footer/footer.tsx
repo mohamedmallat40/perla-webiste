@@ -82,8 +82,9 @@ export default function Footer() {
               <span className="text-lg font-bold text-foreground">PERLA</span>
             </div>
             <p className="text-small text-default-500 max-w-md">
-              {t("footer_description") ||
-                "Innovative software solutions that transform ideas into digital reality. We specialize in AI, web development, and cutting-edge technology."}
+              Innovative software solutions that transform ideas into digital
+              reality. We specialize in AI, web development, and cutting-edge
+              technology.
             </p>
             <div className="flex space-x-6">
               {footerNavigation.social.map((item) => (
