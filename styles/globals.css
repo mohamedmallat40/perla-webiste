@@ -525,3 +525,9 @@ html[lang="ar"] .spinner-label {
 }
 
 /* Arabic Font Critical Fix */
+
+/* Force Arabic font everywhere */
+html[lang=ar] *,
+html[dir=rtl] *,
+.arabic-locale * {
+}
