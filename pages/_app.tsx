@@ -39,8 +39,10 @@ export default function App({ Component, pageProps }: AppProps) {
       html.setAttribute("dir", "rtl");
       html.setAttribute("lang", "ar");
 
-      // Apply Arabic font
+      // Apply Arabic font to body and all elements
       body.style.fontFamily = 'var(--font-arabic), "Cairo", sans-serif';
+      body.classList.add("arabic-locale", "rtl-layout");
+      body.classList.remove("ltr-layout");
     } else {
       // Set LTR for other languages
       html.setAttribute("dir", "ltr");
@@ -48,13 +50,26 @@ export default function App({ Component, pageProps }: AppProps) {
 
       // Reset to default font
       body.style.fontFamily = "var(--font-sans), system-ui, sans-serif";
+      body.classList.remove("arabic-locale", "rtl-layout");
+      body.classList.add("ltr-layout");
     }
   }, [locale, mounted]);
 
   if (!mounted) {
     return (
-      <div className="flex items-center justify-center h-screen">
-        <Spinner color="warning" label="Loading..." />
+      <div
+        className="flex items-center justify-center h-screen"
+        style={{
+          fontFamily:
+            locale === "ar"
+              ? 'var(--font-arabic), "Cairo", sans-serif'
+              : "var(--font-sans), system-ui, sans-serif",
+        }}
+      >
+        <Spinner
+          color="warning"
+          label={locale === "ar" ? "جاري التحميل..." : "Loading..."}
+        />
       </div>
     );
   }
@@ -64,9 +79,9 @@ export default function App({ Component, pageProps }: AppProps) {
       <HeroUIProvider navigate={router.push}>
         <NextThemesProvider>
           <div
-            className={`${fontSans.variable} ${fontMono.variable} ${fontArabic.variable}`}
+            className={`${fontSans.variable} ${fontMono.variable} ${fontArabic.variable} ${locale === "ar" ? "rtl-layout arabic-locale" : "ltr-layout"}`}
           >
-            <Navbar setLocale={setLocale} /> {/* Pass setLocale to Navbar */}
+            <Navbar setLocale={setLocale} />
             <Component {...pageProps} />
           </div>
         </NextThemesProvider>
