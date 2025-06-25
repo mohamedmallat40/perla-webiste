@@ -38,12 +38,6 @@ const footerNavigation = {
       icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:linkedin" />,
     },
   ],
-  links: [
-    {
-      name: "Schedule Meeting",
-      href: "https://calendly.com/mohamedmallat40",
-    },
-  ],
 };
 
 export default function EnhancedFooter() {
@@ -118,19 +112,13 @@ export default function EnhancedFooter() {
               </div>
               <div className="mt-10 md:mt-0">
                 {renderList({
-                  title: "Support",
-                  items: footerNavigation.supportOptions,
+                  title: "Company",
+                  items: footerNavigation.company,
                 })}
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            <div className="md:grid md:grid-cols-1 md:gap-8">
               <div>
-                {renderList({
-                  title: "Company",
-                  items: footerNavigation.aboutUs,
-                })}
-              </div>
-              <div className="mt-10 md:mt-0">
                 {renderList({ title: "Legal", items: footerNavigation.legal })}
               </div>
             </div>
@@ -152,6 +140,14 @@ export default function EnhancedFooter() {
               </p>
             </div>
             <div className="flex items-center gap-4">
+              <Link
+                href="https://calendly.com/mohamedmallat40"
+                isExternal
+                className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
+              >
+                <Icon icon="mdi:calendar" className="w-4 h-4" />
+                Schedule Meeting
+              </Link>
               <Link
                 href={`mailto:${t("email") || "contact@perla.dev"}`}
                 className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
