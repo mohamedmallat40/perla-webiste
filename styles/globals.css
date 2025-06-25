@@ -541,3 +541,7 @@ html[dir=rtl] .flex:not(.flex-col) {
 html[dir=rtl] .flex:not(.flex-col) {
   flex-direction: row-reverse
 }
+html[dir=rtl] .justify-start {
+  justify-content: flex-end
+}
+html[dir=rtl] .text-left { text-align: right }
