@@ -66,7 +66,7 @@ export default function TestimonialsSection() {
       role: "Tech Lead",
       company: "Swiss Tech Solutions",
       content:
-        "If you're thinking of automating something on the web and need a top team, Perla is who I would refer you to. They are great programmers. I've already hired them for three separate projects and I'm constantly thinking of new ways to work with them. With Nidhal, you can share your idea with all the details, and he will still find ways to help improve what you're trying to do. If you're still thinking about hiring them, stop thinking and hire them already. You'll thank yourself later.",
+        "If you're thinking of automating something on the web and need a top team, Perla is who I would refer you to. They are great programmers. I've already hired them for three separate projects and I'm constantly thinking of new ways to work with them.",
       rating: 5,
       avatar:
         "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&h=150&fit=crop&crop=face",
