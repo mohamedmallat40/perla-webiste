@@ -56,7 +56,7 @@ export default function TestimonialsSection() {
         "Perla solved all our Angular issues very fast and in a professional way. Their expertise and quick turnaround time were exactly what we needed.",
       rating: 5,
       avatar:
-        "https://media.licdn.com/dms/image/v2/C4D03AQH8DsNrNNq4aA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1631295677056?e=1756944000&v=beta&t=U3yO-YqRNLnQoJPINKOcgZQsjXC8BSEMGTu6FTwisKg",
+        "https://cdn.builder.io/api/v1/image/assets%2F14c1ca08871e4f80a1054797b1e2a6eb%2Fcfcb877a88904094aca43653bbeb6582?format=webp&width=800",
       location: "Canada",
       projectType: "Angular Development",
     },
