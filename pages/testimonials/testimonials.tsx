@@ -49,16 +49,16 @@ export default function TestimonialsSection() {
     },
     {
       id: 2,
-      name: "Lisa Chen",
-      role: "Product Director",
-      company: "InnovateTech",
+      name: "Julie Massicotte",
+      role: "Owner",
+      company: "Repro-Net",
       content:
-        "Their AI solutions revolutionized our workflow. The team's attention to detail and innovative approach exceeded our expectations.",
+        "Perla solved all our Angular issues very fast and in a professional way. Their expertise and quick turnaround time were exactly what we needed.",
       rating: 5,
       avatar:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150&h=150&fit=crop&crop=face",
-      location: "Singapore",
-      projectType: "AI Automation",
+        "https://images.unsplash.com/photo-1494790108755-2616b612b167?w=150&h=150&fit=crop&crop=face",
+      location: "Canada",
+      projectType: "Angular Development",
     },
     {
       id: 3,
