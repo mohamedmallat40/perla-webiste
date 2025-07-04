@@ -232,10 +232,6 @@ export default function TestimonialsSection() {
                     className={`${isRTL ? "lg:order-2" : ""} space-y-4 sm:space-y-6`}
                   >
                     <div className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
-                      <StarRating
-                        rating={testimonials[currentSlide].rating}
-                        size="lg"
-                      />
                       <span className="text-sm text-default-500">
                         {testimonials[currentSlide].projectType}
                       </span>
