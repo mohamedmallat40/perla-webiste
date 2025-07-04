@@ -37,31 +37,20 @@ export default function TestimonialsSection() {
   const testimonials: Testimonial[] = [
     {
       id: 1,
-      name: t("testimonial_3_name"),
-      role: t("testimonial_3_role"),
-      company: t("testimonial_3_company"),
-      content: t("testimonial_3_content"),
+      name: "Lode Schoors",
+      role: "Founder",
+      company: "extraexpertise.be",
+      content:
+        "Without a doubt the best team I have worked with here at Upwork. Team of talented developers with great potentials. Able to solve complex technical issues with good understanding of various range of techniques and development languages.",
       rating: 5,
       avatar:
-        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
-      location: "Tunisia",
-      projectType: "Web Platform",
+        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
+      location: "Belgium",
+      projectType: "Full Stack",
+      featured: true,
     },
     {
       id: 2,
-      name: "Julie Massicotte",
-      role: "Owner",
-      company: "Repro-Net",
-      content:
-        "Perla solved all our Angular issues very fast and in a professional way. Their expertise and quick turnaround time were exactly what we needed.",
-      rating: 5,
-      avatar:
-        "https://cdn.builder.io/api/v1/image/assets%2F14c1ca08871e4f80a1054797b1e2a6eb%2Fcfcb877a88904094aca43653bbeb6582?format=webp&width=800",
-      location: "Canada",
-      projectType: "Angular Development",
-    },
-    {
-      id: 3,
       name: "Nils",
       role: "Tech Lead",
       company: "Swiss Tech Solutions",
@@ -74,18 +63,29 @@ export default function TestimonialsSection() {
       projectType: "Web Automation",
     },
     {
-      id: 4,
-      name: "Lode Schoors",
-      role: "Founder",
-      company: "extraexpertise.be",
+      id: 3,
+      name: "Julie Massicotte",
+      role: "Owner",
+      company: "Repro-Net",
       content:
-        "Without a doubt the best team I have worked with here at Upwork. Team of talented developers with great potentials. Able to solve complex technical issues with good understanding of various range of techniques and development languages.",
+        "Perla solved all our Angular issues very fast and in a professional way. Their expertise and quick turnaround time were exactly what we needed.",
       rating: 5,
       avatar:
-        "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=150&h=150&fit=crop&crop=face",
-      location: "Belgium",
-      projectType: "Full Stack",
-      featured: true,
+        "https://cdn.builder.io/api/v1/image/assets%2F14c1ca08871e4f80a1054797b1e2a6eb%2Fcfcb877a88904094aca43653bbeb6582?format=webp&width=800",
+      location: "Canada",
+      projectType: "Angular Development",
+    },
+    {
+      id: 4,
+      name: t("testimonial_3_name"),
+      role: t("testimonial_3_role"),
+      company: t("testimonial_3_company"),
+      content: t("testimonial_3_content"),
+      rating: 5,
+      avatar:
+        "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face",
+      location: "Tunisia",
+      projectType: "Web Platform",
     },
   ];
 
