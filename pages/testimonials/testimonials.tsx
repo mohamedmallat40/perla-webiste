@@ -48,7 +48,7 @@ export default function TestimonialsSection() {
       projectType: "Web Platform",
     },
     {
-      id: 4,
+      id: 2,
       name: "Lisa Chen",
       role: "Product Director",
       company: "InnovateTech",
@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
       projectType: "AI Automation",
     },
     {
-      id: 5,
+      id: 3,
       name: "David Rodriguez",
       role: "Startup Founder",
       company: "NextGen Solutions",
@@ -74,7 +74,7 @@ export default function TestimonialsSection() {
       projectType: "Full Stack",
     },
     {
-      id: 6,
+      id: 4,
       name: "Lode Schoors",
       role: "Founder",
       company: "extraexpertise.be",
