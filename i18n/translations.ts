@@ -71,16 +71,7 @@ export const translations = {
     testimonials_heading_2: "Clients Say",
     testimonials_subtitle:
       "Don't just take our word for it. Here's what our satisfied clients have to say about working with us.",
-    testimonial_1_name: "Ahmed Al-Rashid",
-    testimonial_1_role: "CTO",
-    testimonial_1_company: "Saudi Aramco",
-    testimonial_1_content:
-      "Perla IT delivered exceptional AI integration that transformed our operations. Their expertise in machine learning and automation saved us 40% in processing time.",
-    testimonial_2_name: "Sarah Johnson",
-    testimonial_2_role: "Product Manager",
-    testimonial_2_company: "TechStartup Inc",
-    testimonial_2_content:
-      "The mobile app they built exceeded all expectations. Beautiful design, smooth performance, and delivered on time. Highly recommend their team!",
+
     testimonial_3_name: "Mohamed Ben Ali",
     testimonial_3_role: "Founder",
     testimonial_3_company: "Digital Solutions",
@@ -163,16 +154,7 @@ export const translations = {
     testimonials_heading_2: "Clients Disent",
     testimonials_subtitle:
       "Ne nous croyez pas sur parole. Voici ce que nos clients satisfaits disent de notre collaboration.",
-    testimonial_1_name: "Ahmed Al-Rashid",
-    testimonial_1_role: "CTO",
-    testimonial_1_company: "Saudi Aramco",
-    testimonial_1_content:
-      "Perla IT a livré une intégration IA exceptionnelle qui a transformé nos opérations. Leur expertise en machine learning et automatisation nous a fait économiser 40% du temps de traitement.",
-    testimonial_2_name: "Sarah Johnson",
-    testimonial_2_role: "Chef de Produit",
-    testimonial_2_company: "TechStartup Inc",
-    testimonial_2_content:
-      "L'application mobile qu'ils ont créée a dépassé toutes nos attentes. Design magnifique, performance fluide, et livrée à temps. Je recommande vivement leur équipe !",
+
     testimonial_3_name: "Mohamed Ben Ali",
     testimonial_3_role: "Fondateur",
     testimonial_3_company: "Digital Solutions",
@@ -209,7 +191,7 @@ export const translations = {
       "نطوّر حلول ويب عصرية بواجهات متجاوبة تضمن تجربة سلسة على كل الأجهزة.",
     line1b: "شركات",
     line1a: "تثق",
-    line2b: "بخبرتنا",
+    line2b: "��خبرتنا",
     line2a: "في تحقيق النجاح",
     description_tech_we_use:
       "نمتلك خبرة واسعة في أكثر من 15 تقنية متقدمة لتق��يم حلول آمنة وفعالة ومصممة خصيصًا لتحديات وأهداف عملك.",
@@ -225,7 +207,7 @@ export const translations = {
     home_hero_heroui_description:
       "نستفيد من خبرتنا العميقة وأحدث التقنيات لتقديم حلول ويب مخصصة تدفع النمو وتحقق نتائج ملموسة لأعمالك.",
     service_hero_section_title_1: "تواصل معنا",
-    service_hero_section_title_2: "منصتنا المذهلة",
+    service_hero_section_title_2: "منصتن�� المذهلة",
     service_hero_section_title_3: "انضم إلينا الآن",
     service_hero_section_subtitle: "ابدأ رحلتك اليوم مع منصتنا.",
     service_hero_section_slogan: "npm install amazing-platform",
@@ -252,16 +234,7 @@ export const translations = {
     testimonials_heading_2: "عملاؤنا",
     testimonials_subtitle:
       "لا تصدق كلامنا فقط. إليك ما يقوله عملاؤنا الراضون عن العمل معنا.",
-    testimonial_1_name: "أحمد الراشد",
-    testimonial_1_role: "مدير التقنية",
-    testimonial_1_company: "أرامكو السعودية",
-    testimonial_1_content:
-      "قدمت شركة بيرلا آي تي تكاملاً استثنائياً للذكاء الاصطناعي حوّل عملياتنا. خبرتهم في التعلم الآلي والأتمتة وفرت لنا 40% من وقت المعالجة.",
-    testimonial_2_name: "سارة جونسون",
-    testimonial_2_role: "مديرة المنتج",
-    testimonial_2_company: "تك ستارت أب",
-    testimonial_2_content:
-      "تطبيق الجوال الذي طوروه فاق كل التوقعات. تصميم جميل، أداء سلس، وتم تسليمه في الوقت المحدد. أنصح بفريقهم بشدة!",
+
     testimonial_3_name: "محمد بن علي",
     testimonial_3_role: "المؤسس",
     testimonial_3_company: "الحلول الرقم��ة",
@@ -344,16 +317,7 @@ export const translations = {
     testimonials_heading_2: "Klanten Zeggen",
     testimonials_subtitle:
       "Geloof ons niet op ons woord. Hier is wat onze tevreden klanten zeggen over samenwerken met ons.",
-    testimonial_1_name: "Ahmed Al-Rashid",
-    testimonial_1_role: "CTO",
-    testimonial_1_company: "Saudi Aramco",
-    testimonial_1_content:
-      "Perla IT leverde uitzonderlijke AI-integratie die onze activiteiten transformeerde. Hun expertise in machine learning en automatisering bespaarde ons 40% verwerkingstijd.",
-    testimonial_2_name: "Sarah Johnson",
-    testimonial_2_role: "Product Manager",
-    testimonial_2_company: "TechStartup Inc",
-    testimonial_2_content:
-      "De mobiele app die ze bouwden overtrof alle verwachtingen. Prachtig ontwerp, soepele prestaties, en op tijd geleverd. Raad hun team ten zeerste aan!",
+
     testimonial_3_name: "Mohamed Ben Ali",
     testimonial_3_role: "Oprichter",
     testimonial_3_company: "Digital Solutions",
