@@ -36,7 +36,7 @@ export default function TestimonialsSection() {
 
   const testimonials: Testimonial[] = [
     {
-      id: 3,
+      id: 1,
       name: t("testimonial_3_name"),
       role: t("testimonial_3_role"),
       company: t("testimonial_3_company"),
