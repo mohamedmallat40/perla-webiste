@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // Remove output: export to allow normal development
-  // output: 'export',
+  output: "export",
 
   // Disable ESLint during builds
   eslint: {
