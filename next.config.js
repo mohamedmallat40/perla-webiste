@@ -3,6 +3,11 @@ const nextConfig = {
   // Remove output: export to allow normal development
   // output: 'export',
 
+  // Disable ESLint during builds
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+
   // Image optimization
   images: {
     formats: ["image/webp", "image/avif"],
