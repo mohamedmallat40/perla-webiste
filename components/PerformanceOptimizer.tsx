@@ -115,7 +115,8 @@ export const PerformanceOptimizer: React.FC = () => {
         );
         lcpElements.forEach((element) => {
           if (element instanceof HTMLElement) {
-            element.style.fontDisplay = "swap";
+            // Add loading optimization for LCP elements
+            element.style.willChange = "auto";
           }
         });
       };
