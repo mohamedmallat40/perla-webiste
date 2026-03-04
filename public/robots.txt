@@ -1,4 +1,4 @@
-# Advanced Robots.txt for PERLA Code Innovators
+# Advanced Robots.txt for Perla AI
 # Optimized for maximum SEO performance
 
 User-agent: *
@@ -9,7 +9,6 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /_next/
 Disallow: /api/
-Disallow: *.json$
 Disallow: /404
 Disallow: /500
 
@@ -58,16 +57,6 @@ Allow: /
 
 User-agent: WhatsApp
 Allow: /
-
-# Block bad bots
-User-agent: SemrushBot
-Disallow: /
-
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
 
 # Sitemap locations
 Sitemap: https://perla-it.com/sitemap.xml

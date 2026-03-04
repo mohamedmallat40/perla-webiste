@@ -5,6 +5,14 @@
 /.pnp
 .pnp.js
 
+.agent
+.agents
+.claude
+.config
+.kiro
+.cscode
+null
+
 # testing
 /coverage
 

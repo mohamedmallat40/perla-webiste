@@ -1,33 +1,35 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "PERLA Code Innovators - Expert Web Development & AI Solutions",
+  name: "Perla AI - Expert Web Development & AI Solutions",
   description:
-    "Leading software development company specializing in AI integration, web development, and mobile apps. Transform your business with cutting-edge technology solutions.",
+    "Leading AI-first software company specializing in AI integration, web development, and mobile apps. Transform your business with cutting-edge AI technology solutions.",
   url: "https://perla-it.com",
-  company: "PERLA Code Innovators",
-  shortName: "PERLA",
-  tagline: "Expert Web Development to Drive Your Business Growth",
+  company: "Perla AI",
+  shortName: "Perla AI",
+  tagline: "AI-Powered Development to Drive Your Business Growth",
 
   // SEO optimized meta descriptions
   metaDescription:
-    "PERLA Code Innovators delivers expert web development, AI integration, and mobile app solutions. 5+ years experience, 14+ successful projects, serving clients globally.",
+    "Perla AI delivers expert AI integration, web development, and mobile app solutions. 10+ years experience, 9 successful projects, serving clients globally.",
 
   // Keywords for better search ranking
   keywords: [
+    "AI development company",
+    "AI integration services",
     "web development",
-    "AI integration",
     "mobile app development",
     "software development company",
     "Next.js development",
     "React development",
-    "custom web solutions",
+    "custom AI solutions",
     "business automation",
     "startup MVP development",
     "digital transformation",
     "Tunisia software company",
-    "PERLA Code Innovators",
-    "Cairo font development",
+    "Perla AI",
+    "ChatGPT integration",
+    "machine learning solutions",
     "responsive web design",
   ],
 
@@ -48,6 +50,10 @@ export const siteConfig = {
     {
       label: "navbar_technologies",
       href: "#technologies_id",
+    },
+    {
+      label: "navbar_portfolio",
+      href: "#portfolio_id",
     },
     {
       label: "navbar_about",
@@ -78,6 +84,6 @@ export const siteConfig = {
   },
 
   // Open Graph optimized
-  ogImage: "/og-image-enhanced.png",
+  ogImage: "/og-image.png",
   twitterHandle: "@perla_it",
 } as const;

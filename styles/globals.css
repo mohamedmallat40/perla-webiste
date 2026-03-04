@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
 .bounce-animation {
   animation: 10s animation-up infinite;
 }
@@ -49,9 +57,6 @@
   animation-duration: var(--duration);
 }
 
-body {
-  overflow: hidden;
-}
 
 /* Cairo Font Classes for Arabic */
 .font-arabic,

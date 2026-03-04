@@ -1,92 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
-  
-  <!-- Homepage Images -->
+
+  <!-- Homepage -->
   <url>
     <loc>https://perla-it.com/</loc>
     <image:image>
-      <image:loc>https://perla-it.com/og-image-enhanced.png</image:loc>
-      <image:title>PERLA Code Innovators - Expert Web Development & AI Solutions</image:title>
-      <image:caption>Leading software development company in Tunisia with 5+ years experience</image:caption>
-      <image:geo_location>Ariana, Tunis, Tunisia</image:geo_location>
-      <image:license>https://perla-it.com/license</image:license>
-    </image:image>
-    <image:image>
-      <image:loc>https://perla-it.com/hero-background.webp</image:loc>
-      <image:title>Modern Web Development Workspace</image:title>
-      <image:caption>Professional development environment for creating cutting-edge web solutions</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://perla-it.com/team-photo.webp</image:loc>
-      <image:title>PERLA Code Innovators Development Team</image:title>
-      <image:caption>Expert developers specializing in AI integration and web development</image:caption>
+      <image:loc>https://perla-it.com/og-image.png</image:loc>
+      <image:title>Perla AI - Expert Web Development &amp; AI Solutions</image:title>
+      <image:caption>Leading software development company in Tunisia specializing in AI integration and web development</image:caption>
       <image:geo_location>Ariana, Tunis, Tunisia</image:geo_location>
     </image:image>
-  </url>
-  
-  <!-- Client Logos -->
-  <url>
-    <loc>https://perla-it.com/#clients</loc>
     <image:image>
-      <image:loc>https://perla-it.com/clients/aramco-logo.svg</image:loc>
+      <image:loc>https://perla-it.com/logos/aramco-light.webp</image:loc>
       <image:title>Saudi Aramco - Enterprise Client</image:title>
-      <image:caption>Saudi Aramco logo - PERLA Code Innovators enterprise client</image:caption>
+      <image:caption>Saudi Aramco — Perla AI enterprise client logo</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://perla-it.com/clients/proxym-logo.svg</image:loc>
+      <image:loc>https://perla-it.com/logos/alwasaet.png</image:loc>
+      <image:title>Alwasaet - Client Logo</image:title>
+      <image:caption>Alwasaet — Perla AI client partner logo</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/logos/proxym.png</image:loc>
       <image:title>Proxym IT - Technology Partner</image:title>
-      <image:caption>Proxym IT logo - Technology partner of PERLA Code Innovators</image:caption>
+      <image:caption>Proxym IT — Technology partner of Perla AI</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://perla-it.com/clients/extraexpertise-logo.svg</image:loc>
+      <image:loc>https://perla-it.com/logos/ee.webp</image:loc>
       <image:title>Extra Expertise - Client Partner</image:title>
-      <image:caption>Extra Expertise logo - Belgian client partner</image:caption>
+      <image:caption>Extra Expertise — Belgian client partner of Perla AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/logos/tawazi.png</image:loc>
+      <image:title>Tawazi - Digital Solutions Client</image:title>
+      <image:caption>Tawazi — Digital solutions client of Perla AI</image:caption>
     </image:image>
   </url>
-  
-  <!-- Technology Stack Images -->
+
+  <!-- Project: LND E-learning Platform (Aramco) -->
   <url>
-    <loc>https://perla-it.com/#technologies_id</loc>
+    <loc>https://perla-it.com/projects/lnd-elearning-platform</loc>
     <image:image>
-      <image:loc>https://perla-it.com/technologies/nextjs-logo.svg</image:loc>
-      <image:title>Next.js - React Framework</image:title>
-      <image:caption>Next.js logo - Modern React framework for web development</image:caption>
+      <image:loc>https://perla-it.com/projects/lnd/dashboard.png</image:loc>
+      <image:title>LND E-learning Platform Dashboard — Saudi Aramco</image:title>
+      <image:caption>myLearning enterprise dashboard — learning management system built for Saudi Aramco by Perla AI</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://perla-it.com/technologies/react-logo.svg</image:loc>
-      <image:title>React - JavaScript Library</image:title>
-      <image:caption>React logo - JavaScript library for building user interfaces</image:caption>
+      <image:loc>https://perla-it.com/projects/lnd/services.png</image:loc>
+      <image:title>LND My Services Portal — Saudi Aramco</image:title>
+      <image:caption>Service request portal for Saudi Aramco L&amp;D platform — built with Directus and Node.js</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://perla-it.com/technologies/typescript-logo.svg</image:loc>
-      <image:title>TypeScript - Programming Language</image:title>
-      <image:caption>TypeScript logo - Strongly typed programming language</image:caption>
+      <image:loc>https://perla-it.com/projects/lnd/messages.png</image:loc>
+      <image:title>LND Messaging System — Saudi Aramco</image:title>
+      <image:caption>Integrated messaging system in the Aramco learning platform built by Perla AI</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://perla-it.com/technologies/ai-technologies.png</image:loc>
-      <image:title>AI Technologies - ChatGPT, DeepSeek, Gemini</image:title>
-      <image:caption>AI technologies used by PERLA Code Innovators for AI integration</image:caption>
+      <image:loc>https://perla-it.com/projects/lnd/request-review.png</image:loc>
+      <image:title>LND Request Review Workflow — Saudi Aramco</image:title>
+      <image:caption>Automated review request workflow in Aramco e-learning platform — powered by Directus Flows</image:caption>
     </image:image>
   </url>
-  
-  <!-- Services Images -->
+
+  <!-- Project: Wingman AI Matching Platform (Belgium) -->
   <url>
-    <loc>https://perla-it.com/#services_id</loc>
+    <loc>https://perla-it.com/projects/wingman-ai-matching</loc>
     <image:image>
-      <image:loc>https://perla-it.com/services/ai-development-illustration.webp</image:loc>
-      <image:title>AI Development Services Illustration</image:title>
-      <image:caption>Custom AI solutions and machine learning implementations</image:caption>
+      <image:loc>https://perla-it.com/projects/wingman/job-board.png</image:loc>
+      <image:title>Wingman AI Job Board — ExtraExpertise Belgium</image:title>
+      <image:caption>AI-powered freelancer job board with Professional DNA matching — ExtraExpertise platform built by Perla AI</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://perla-it.com/services/web-development-illustration.webp</image:loc>
-      <image:title>Web Development Services Illustration</image:title>
-      <image:caption>Modern web applications using Next.js, React, and cutting-edge technologies</image:caption>
+      <image:loc>https://perla-it.com/projects/wingman/talent-profiles.png</image:loc>
+      <image:title>Wingman Talent Profiles — ExtraExpertise</image:title>
+      <image:caption>Freelancer talent profile cards with skills and experience — AI matching SaaS by Perla AI</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://perla-it.com/services/mobile-apps-illustration.webp</image:loc>
-      <image:title>Mobile App Development Illustration</image:title>
-      <image:caption>Native mobile applications for iOS and Android platforms</image:caption>
+      <image:loc>https://perla-it.com/projects/wingman/community.png</image:loc>
+      <image:title>Wingman Community Feed — ExtraExpertise</image:title>
+      <image:caption>Community feed in the Wingman freelancer platform built with Next.js and NestJS by Perla AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/projects/wingman/dna-profile.png</image:loc>
+      <image:title>Wingman Professional DNA Profile Editor — ExtraExpertise</image:title>
+      <image:caption>Professional DNA profile builder for AI-powered freelancer matching — Wingman by Perla AI</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Project: DNEXT Analytics (Switzerland) -->
+  <url>
+    <loc>https://perla-it.com/projects/dnext-analytics</loc>
+    <image:image>
+      <image:loc>https://perla-it.com/og-image.png</image:loc>
+      <image:title>DNEXT Commodity Data Analytics — Perla AI Case Study</image:title>
+      <image:caption>Event-driven AWS analytics platform with Elasticsearch for DNEXT Switzerland built by Perla AI</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Project: Yoo Connect CRM (Saudi Arabia) -->
+  <url>
+    <loc>https://perla-it.com/projects/yoo-connect-crm</loc>
+    <image:image>
+      <image:loc>https://perla-it.com/projects/yooconnect/contacts.png</image:loc>
+      <image:title>Yoo Connect CRM Contacts View — Saudi Arabia</image:title>
+      <image:caption>GeoSight CRM contacts database with company and industry data — Yoo Connect built by Perla AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/projects/yooconnect/add-contact.png</image:loc>
+      <image:title>Yoo Connect Add Contact Modal — AI Business Card OCR</image:title>
+      <image:caption>Add contact modal with OCR business card scan, LinkedIn import and CSV upload — Yoo Connect CRM by Perla AI</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/projects/yooconnect/dashboard.png</image:loc>
+      <image:title>Yoo Connect CRM Dashboard — Saudi Arabia</image:title>
+      <image:caption>Yoo Connect CRM dashboard built with Next.js, NestJS and Mistral AI for the Saudi market</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://perla-it.com/projects/yooconnect/geo-view.png</image:loc>
+      <image:title>Yoo Connect Geo View — Contact Management</image:title>
+      <image:caption>Geographic contact view in Yoo Connect CRM — AI-powered business development platform by Perla AI</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Project: VVTIV Healthcare (Belgium) -->
+  <url>
+    <loc>https://perla-it.com/projects/vvtiv-healthcare</loc>
+    <image:image>
+      <image:loc>https://perla-it.com/og-image.png</image:loc>
+      <image:title>VVTIV Healthcare Platform for Therapists — Perla AI Case Study</image:title>
+      <image:caption>Secure patient management platform with GPT-4 AI support for Belgian therapists — built by Perla AI</image:caption>
     </image:image>
   </url>
 

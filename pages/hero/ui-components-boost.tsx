@@ -1,29 +1,31 @@
 "use client";
 
 import { useLocale } from "@react-aria/i18n";
-import { useTheme } from "next-themes";
 
 import { useTranslations } from "@/hooks/use-translation";
 
 export default function UIUXSection() {
-  const { theme, systemTheme } = useTheme();
   const { t } = useTranslations();
   const { locale } = useLocale();
 
   const isRTL = locale === "ar";
 
-  // Get the actual current theme, accounting for system theme
-  const currentTheme = theme === "system" ? systemTheme : theme;
-
   return (
     <section
       id="technologies_id"
-      className="relative z-10 flex flex-col gap-2 w-full mt-2 lg:mt-2 mb-[8rem]  overflow-hidden bg-cover bg-center"
+      className="relative z-10 flex flex-col gap-2 w-full mt-2 lg:mt-2 mb-[8rem] overflow-hidden bg-cover bg-center"
     >
+      {/* Light mode background — hidden in dark mode via CSS, no JS needed */}
       <img
         alt="pattern"
-        className="absolute w-full left-0  bounce-animation "
-        src={`/logos/hero-background${currentTheme === "dark" ? "" : "-white"}.webp`}
+        className="absolute w-full left-0 bounce-animation dark:hidden"
+        src="/logos/hero-background-white.webp"
+      />
+      {/* Dark mode background — only visible in dark mode */}
+      <img
+        alt="pattern"
+        className="absolute w-full left-0 bounce-animation hidden dark:block"
+        src="/logos/hero-background.webp"
       />
 
       <div className="flex flex-col gap-8 min-h-[480px]">
@@ -31,8 +33,8 @@ export default function UIUXSection() {
         <div
           className={
             isRTL
-              ? "items-end text-right z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4"
-              : "items-start z-30 flex w-full  h-full flex-col  justify-center leading-8 pt-4"
+              ? "items-end text-right z-30 flex w-full h-full flex-col justify-center leading-8 pt-4"
+              : "items-start z-30 flex w-full h-full flex-col justify-center leading-8 pt-4"
           }
         >
           <div className="relative max-w-fit min-w-min inline-flex items-center justify-between box-border whitespace-nowrap px-1 h-6 text-tiny rounded-full bg-primary text-primary-foreground ml-0.5 transition-colors bg-gradient-to-br from-cyan-600 to-blue-600">
@@ -40,39 +42,34 @@ export default function UIUXSection() {
               {t("uiux_section_pro_label")}
             </span>
           </div>
+
           <div className="flex-col gap-2 items-start justify-center w-full mt-2 inline md:block">
-            <h1
-              className={`tracking-tight inline font-semibold text-4xl lg:text-6xl ${currentTheme === "dark" ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" : "drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"}`}
-            >
+            <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {t("uiux_section_heading_1")}&nbsp;
-            </h1>
-            <h1
-              className={`tracking-tight inline font-semibold from-[#5EA2EF] to-[#0072F5] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b ${currentTheme === "dark" ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" : "drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"}`}
-            >
+            </h2>
+            <h2 className="tracking-tight inline font-semibold from-[#5EA2EF] to-[#0072F5] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {t("uiux_section_heading_2")}&nbsp;
-            </h1>
-            <h1
-              className={`tracking-tight inline font-semibold text-4xl lg:text-6xl ${currentTheme === "dark" ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" : "drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"}`}
-            >
+            </h2>
+            <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {t("uiux_section_heading_3")}&nbsp;
-            </h1>
+            </h2>
             <div
               className={
                 isRTL
                   ? "flex flex-col sm:flex-row justify-end"
-                  : "flex flex-col sm:flex-row "
+                  : "flex flex-col sm:flex-row"
               }
             >
-              <h1
-                className={`tracking-tight inline font-semibold text-4xl lg:text-6xl ${currentTheme === "dark" ? "drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" : "drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)]"}`}
-              >
+              <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 {t("uiux_section_heading_4")}
-              </h1>
+              </h2>
             </div>
           </div>
+
           <p className="w-full md:w-1/2 my-2 text-medium lg:text-large font-normal block max-w-full pr-12 text-foreground-500">
             {t("uiux_section_paragraph")}
           </p>
+
           <div className="mt-4 text-foreground-600 font-medium space-y-2">
             {[
               t("uiux_section_benefit_1"),
@@ -85,7 +82,7 @@ export default function UIUXSection() {
                 className={
                   isRTL
                     ? "flex gap-x-4 items-center flex-row-reverse"
-                    : "flex gap-x-4 items-center "
+                    : "flex gap-x-4 items-center"
                 }
               >
                 <svg
@@ -109,28 +106,15 @@ export default function UIUXSection() {
           </div>
         </div>
 
-        {/* Theme-aware Gradient Overlays */}
-        {currentTheme === "dark" ? (
-          <>
-            <div className="absolute md:hidden inset-0 pointer-events-none top-0 z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(255,255,255,_0)_5%,_rgba(0,0,0,_0.8)_50%,_rgba(0,0,0,1)_100%)]" />
-            </div>
-
-            <div className="absolute hidden md:block md:inset-0 md:pointer-events-none md:top-0 md:z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(255,255,255,_0)_20%,_rgba(0,0,0,_0.8)_40%,_rgba(0,0,0,1)_100%)]" />
-            </div>
-          </>
-        ) : (
-          <>
-            <div className="absolute md:hidden inset-0 pointer-events-none top-0 z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(0,0,0,_0)_5%,_rgba(255,255,255,_0.8)_50%,_rgba(255,255,255,1)_100%)]" />
-            </div>
-
-            <div className="absolute hidden md:block md:inset-0 md:pointer-events-none md:top-0 md:z-20">
-              <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(0,0,0,_0)_20%,_rgba(255,255,255,_0.8)_40%,_rgba(255,255,255,1)_100%)]" />
-            </div>
-          </>
-        )}
+        {/* Gradient overlays — CSS dark: handles both modes, zero JS, zero flash */}
+        {/* Mobile */}
+        <div className="absolute md:hidden inset-0 pointer-events-none top-0 z-20">
+          <div className="h-full w-full bg-[radial-gradient(at_40%_80%,_rgba(0,0,0,_0)_5%,_rgba(255,255,255,_0.8)_50%,_rgba(255,255,255,1)_100%)] dark:bg-[radial-gradient(at_40%_80%,_rgba(255,255,255,_0)_5%,_rgba(0,0,0,_0.8)_50%,_rgba(0,0,0,1)_100%)]" />
+        </div>
+        {/* Desktop */}
+        <div className="absolute hidden md:block inset-0 pointer-events-none top-0 z-20">
+          <div className="h-full w-full bg-[radial-gradient(at_80%_50%,_rgba(0,0,0,_0)_20%,_rgba(255,255,255,_0.8)_40%,_rgba(255,255,255,1)_100%)] dark:bg-[radial-gradient(at_80%_50%,_rgba(255,255,255,_0)_20%,_rgba(0,0,0,_0.8)_40%,_rgba(0,0,0,1)_100%)]" />
+        </div>
       </div>
     </section>
   );

@@ -13,28 +13,22 @@ type SocialIconProps = Omit<IconProps, "icon">;
 
 const footerNavigation = {
   services: [
-    { name: "AI Development", href: "#" },
-    { name: "AI Integration", href: "#" },
-    { name: "Web Development", href: "#" },
-    { name: "Mobile Apps", href: "#" },
+    { name: "AI Development", href: "/#services_id" },
+    { name: "AI Integration", href: "/#services_id" },
+    { name: "Web Development", href: "/#services_id" },
+    { name: "Mobile Apps", href: "/#services_id" },
   ],
   company: [
-    { name: "Technologies", href: "#" },
-    { name: "Projects", href: "#" },
-    { name: "Testimonials", href: "#" },
-    { name: "About Us", href: "#" },
-    { name: "Contact", href: "#" },
-  ],
-  legal: [
-    { name: "Privacy Policy", href: "#" },
-    { name: "Terms of Service", href: "#" },
-    { name: "Cookie Policy", href: "#" },
-    { name: "Legal Notice", href: "#" },
+    { name: "Technologies", href: "/#technologies_id" },
+    { name: "Projects", href: "/#portfolio_id" },
+    { name: "Testimonials", href: "/#testimonials" },
+    { name: "About Us", href: "/#footer_id" },
+    { name: "Contact", href: "mailto:mo.mallat@perla-it.com" },
   ],
   social: [
     {
       name: "LinkedIn",
-      href: "#",
+      href: "https://www.linkedin.com/company/100257723",
       icon: (props: SocialIconProps) => <Icon {...props} icon="mdi:linkedin" />,
     },
   ],
@@ -79,7 +73,7 @@ export default function Footer() {
           <div className="space-y-8 md:pr-8">
             <div className="flex items-center justify-start gap-2">
               <Logo size={40} />
-              <span className="text-lg font-bold text-foreground">PERLA</span>
+              <span className="text-lg font-bold text-foreground">Perla AI</span>
             </div>
             <p className="text-small text-default-500 max-w-md">
               Innovative software solutions that transform ideas into digital
@@ -117,11 +111,6 @@ export default function Footer() {
                 })}
               </div>
             </div>
-            <div className="md:grid md:grid-cols-1 md:gap-8">
-              <div>
-                {renderList({ title: "Legal", items: footerNavigation.legal })}
-              </div>
-            </div>
           </div>
         </div>
 
@@ -130,7 +119,7 @@ export default function Footer() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-small text-default-400">
               <p>
-                &copy; 2024 PERLA Code Innovators.{" "}
+                &copy; 2026 Perla AI.{" "}
                 {t("rights") || "All rights reserved."}
               </p>
               <div className="hidden sm:block">•</div>
@@ -149,11 +138,11 @@ export default function Footer() {
                 Schedule Meeting
               </Link>
               <Link
-                href={`mailto:${t("email") || "contact@perla.dev"}`}
+                href="mailto:mo.mallat@perla-it.com"
                 className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
               >
                 <Icon icon="mdi:email" className="w-4 h-4" />
-                {t("email") || "contact@perla.dev"}
+                mo.mallat@perla-it.com
               </Link>
               <ThemeSwitch />
             </div>

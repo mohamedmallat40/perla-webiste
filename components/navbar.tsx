@@ -81,7 +81,7 @@ export const Navbar = ({ setLocale }: any) => {
             href="/"
           >
             <Logo />
-            <p className="font-bold text-inherit">PERLA CI</p>
+            <p className="font-bold text-inherit">Perla AI</p>
           </NextLink>
         </NavbarBrand>
         <div
@@ -94,12 +94,12 @@ export const Navbar = ({ setLocale }: any) => {
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href}>
               <a
-                href={item.href}
+                href={`/${item.href}`}
                 onClick={(e) => {
-                  e.preventDefault();
                   const id = item.href.replace("#", "");
                   const el = document.getElementById(id);
                   if (el) {
+                    e.preventDefault();
                     el.scrollIntoView({ behavior: "smooth" });
                   }
                 }}

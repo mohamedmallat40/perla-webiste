@@ -23,15 +23,15 @@ import AdditionalDetails from "./additional-details/additional-details";
 import UIUXSection from "./hero/ui-components-boost";
 import TachnoSection from "./technologies/techno";
 import TestimonialsSection from "./testimonials/testimonials";
+import ProjectsShowcase from "./projects/projects-showcase";
 
 import DefaultLayout from "@/layouts/default";
-import { AdvancedSEO } from "@/components/AdvancedSEO";
-import { PerformanceOptimizer } from "@/components/PerformanceOptimizer";
+import { SEO } from "@/components/SEO";
+import { PageEffects } from "@/components/PageEffects";
 
 // Dynamic imports for better performance
 const LazyTestimonials = dynamic(() => import("./testimonials/testimonials"), {
   loading: () => <div className="h-96 animate-pulse bg-gray-200 rounded-lg" />,
-  ssr: false,
 });
 
 const LazyAdditionalDetails = dynamic(
@@ -40,7 +40,6 @@ const LazyAdditionalDetails = dynamic(
     loading: () => (
       <div className="h-64 animate-pulse bg-gray-200 rounded-lg" />
     ),
-    ssr: false,
   },
 );
 
@@ -49,7 +48,11 @@ export default function IndexPage() {
   const [mounted, setMounted] = useState(false);
 
   // Get the actual current theme, accounting for system theme
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  const currentTheme = mounted
+    ? theme === "system"
+      ? systemTheme
+      : theme
+    : "light";
 
   useEffect(() => {
     setMounted(true);
@@ -95,20 +98,16 @@ export default function IndexPage() {
 
   const breadcrumbs = [{ name: "Home", url: "https://perla-it.com" }];
 
-  if (!mounted) {
-    return null; // Prevent hydration mismatch
-  }
-
   return (
     <>
-      <AdvancedSEO
+      <SEO
         page="home"
-        title="PERLA Code Innovators - Expert Web Development & AI Solutions | Tunisia"
-        description="🚀 Leading software development company in Tunisia ⭐ 5+ years experience ⭐ AI integration, web development, mobile apps ⭐ Serving clients globally including Saudi Aramco ⭐ Next.js, React experts in Tunis"
+        title="Perla AI - Expert AI Development & Web Solutions | Tunisia"
+        description="Perla AI — AI integration, web & mobile development in Tunisia. 10+ years, 9 projects for MENA, Europe & North America. Book a free consultation."
         canonicalUrl="https://perla-it.com"
         breadcrumbs={breadcrumbs}
       />
-      <PerformanceOptimizer />
+      <PageEffects />
 
       <DefaultLayout>
         <main role="main" itemScope itemType="https://schema.org/WebPage">
@@ -119,7 +118,7 @@ export default function IndexPage() {
             itemType="https://schema.org/Organization"
             className="hero-section"
           >
-            <meta itemProp="name" content="PERLA Code Innovators" />
+            <meta itemProp="name" content="Perla AI" />
             <meta
               itemProp="description"
               content="Expert Web Development to Drive Your Business Growth"
@@ -134,6 +133,7 @@ export default function IndexPage() {
             id="services_id"
             itemScope
             itemType="https://schema.org/Service"
+            className="px-6 py-16 max-w-7xl mx-auto"
           >
             <h2 className="sr-only">
               Professional Software Development Services
@@ -166,6 +166,14 @@ export default function IndexPage() {
                 </div>
               ))}
             </ScrollingBanner>
+          </section>
+
+          {/* Portfolio Section */}
+          <section
+            aria-label="Portfolio — featured projects and case studies"
+            id="portfolio_id"
+          >
+            <ProjectsShowcase />
           </section>
 
           {/* UI/UX Section - Development capabilities */}
@@ -244,14 +252,14 @@ export default function IndexPage() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "WebPage",
-            name: "PERLA Code Innovators - Expert Web Development & AI Solutions",
+            name: "Perla AI - Expert Web Development & AI Solutions",
             description:
               "Leading software development company in Tunisia specializing in AI integration, web development, and mobile apps",
             url: "https://perla-it.com",
-            lastReviewed: "2024-12-25",
+            lastReviewed: "2026-03-04",
             reviewedBy: {
               "@type": "Organization",
-              name: "PERLA Code Innovators",
+              name: "Perla AI",
             },
             mainContentOfPage: {
               "@type": "WebPageElement",
@@ -259,7 +267,7 @@ export default function IndexPage() {
             },
             primaryImageOfPage: {
               "@type": "ImageObject",
-              url: "https://perla-it.com/og-image-enhanced.png",
+              url: "https://perla-it.com/og-image.png",
             },
           }),
         }}

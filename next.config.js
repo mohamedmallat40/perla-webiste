@@ -25,7 +25,7 @@ const nextConfig = {
   // Environment variables for SEO
   env: {
     SITE_URL: "https://perla-it.com",
-    SITE_NAME: "PERLA Code Innovators",
+    SITE_NAME: "Perla AI",
   },
 };
 

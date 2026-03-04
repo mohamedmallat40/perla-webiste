@@ -1,3 +1,4 @@
+import React from "react";
 import { useLocale } from "@react-aria/i18n";
 
 import { useTranslations } from "@/hooks/use-translation";

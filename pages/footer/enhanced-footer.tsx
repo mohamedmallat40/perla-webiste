@@ -130,7 +130,7 @@ export default function EnhancedFooter() {
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <div className="flex flex-col sm:flex-row items-center gap-4 text-small text-default-400">
               <p>
-                &copy; 2024 PERLA Code Innovators.{" "}
+                &copy; 2025 Perla AI.{" "}
                 {t("rights") || "All rights reserved."}
               </p>
               <div className="hidden sm:block">•</div>

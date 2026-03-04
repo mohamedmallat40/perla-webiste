@@ -3,6 +3,7 @@
 import { useTheme } from "next-themes";
 import { useLocale } from "@react-aria/i18n";
 import { Icon } from "@iconify/react";
+import { Users, Briefcase, CalendarDays, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -30,8 +31,12 @@ export default function TestimonialsSection() {
   const [activeTab, setActiveTab] = useState("all");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
+  const [mounted, setMounted] = useState(false);
 
-  const currentTheme = theme === "system" ? systemTheme : theme;
+  useEffect(() => setMounted(true), []);
+
+  // Only resolve theme after mount to avoid server/client mismatch
+  const currentTheme = mounted ? (theme === "system" ? systemTheme : theme) : "light";
   const isRTL = locale === "ar";
 
   const testimonials: Testimonial[] = [
@@ -95,7 +100,7 @@ export default function TestimonialsSection() {
 
     const interval = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % testimonials.length);
-    }, 5000);
+    }, 9000);
 
     return () => clearInterval(interval);
   }, [isAutoPlay, testimonials.length]);
@@ -125,7 +130,7 @@ export default function TestimonialsSection() {
             key={i}
             initial={{ scale: 0, rotate: -180 }}
             animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: i * 0.1, type: "spring", stiffness: 200 }}
+            transition={{ delay: i * 0.18, type: "spring", stiffness: 80, damping: 14 }}
           >
             <Icon
               icon="lucide:star"
@@ -146,8 +151,8 @@ export default function TestimonialsSection() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
+        staggerChildren: 0.2,
+        delayChildren: 0.3,
       },
     },
   };
@@ -158,7 +163,7 @@ export default function TestimonialsSection() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.6,
+        duration: 0.9,
         ease: "easeOut",
       },
     },
@@ -191,12 +196,12 @@ export default function TestimonialsSection() {
           </div>
 
           <div className="leading-7 sm:leading-8 md:leading-10 mb-4 sm:mb-6">
-            <h1 className={title({ size: "lg" })}>
+            <h2 className={title({ size: "lg" })}>
               {t("testimonials_heading_1")}&nbsp;
-            </h1>
-            <h1 className={title({ size: "lg", color: "pink" })}>
+            </h2>
+            <h2 className={title({ size: "lg", color: "pink" })}>
               {t("testimonials_heading_2")}
-            </h1>
+            </h2>
           </div>
 
           <h2
@@ -224,7 +229,7 @@ export default function TestimonialsSection() {
                   initial={{ opacity: 0, x: isRTL ? -50 : 50 }}
                   animate={{ opacity: 1, x: 0 }}
                   exit={{ opacity: 0, x: isRTL ? 50 : -50 }}
-                  transition={{ duration: 0.5 }}
+                  transition={{ duration: 0.8, ease: "easeInOut" }}
                   className="grid lg:grid-cols-2 gap-6 sm:gap-8 items-center"
                 >
                   {/* Content */}
@@ -379,7 +384,7 @@ export default function TestimonialsSection() {
           </div>
         </motion.div>
 
-        {/* Enhanced Stats Section */}
+        {/* Stats Section */}
         <motion.div
           variants={itemVariants}
           className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
@@ -387,42 +392,45 @@ export default function TestimonialsSection() {
           {[
             {
               label: t("stats_clients"),
-              value: "9",
-              icon: "lucide:users",
-              color: "from-pink-500 to-rose-500",
+              value: "6",
+              IconComp: Users,
+              color: "text-pink-500",
               bgColor: "from-pink-500/20 to-rose-500/20",
-              description: "Trusted Partners",
+              gradColor: "from-pink-500 to-rose-500",
+              description: "Happy Clients",
             },
             {
               label: t("stats_projects"),
-              value: "14",
-              icon: "lucide:briefcase",
-              color: "from-blue-500 to-cyan-500",
+              value: "9",
+              IconComp: Briefcase,
+              color: "text-cyan-500",
               bgColor: "from-blue-500/20 to-cyan-500/20",
+              gradColor: "from-blue-500 to-cyan-500",
               description: "Successfully Delivered",
             },
             {
               label: t("stats_experience"),
-              value: "5+",
-              icon: "lucide:calendar",
-              color: "from-green-500 to-emerald-500",
+              value: "10+",
+              IconComp: CalendarDays,
+              color: "text-emerald-500",
               bgColor: "from-green-500/20 to-emerald-500/20",
-              description: "Years of Innovation",
+              gradColor: "from-green-500 to-emerald-500",
+              description: "Years of Experience",
             },
             {
               label: t("stats_countries"),
               value: "5",
-              icon: "lucide:globe",
-              color: "from-purple-500 to-violet-500",
+              IconComp: Globe,
+              color: "text-violet-500",
               bgColor: "from-purple-500/20 to-violet-500/20",
-              description: "Global Reach",
+              gradColor: "from-purple-500 to-violet-500",
+              description: "Countries Served",
             },
           ].map((stat, index) => (
             <motion.div
               key={index}
               whileHover={{
                 scale: 1.05,
-                rotateY: 5,
                 transition: { duration: 0.2 },
               }}
               className="group relative overflow-hidden rounded-xl bg-white/5 dark:bg-default-400/10 backdrop-blur-lg backdrop-saturate-[1.8] border border-default-200/50 hover:border-default-300/50 transition-all duration-300 shadow-lg hover:shadow-xl"
@@ -438,15 +446,12 @@ export default function TestimonialsSection() {
                   <div
                     className={`inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-br ${stat.bgColor} group-hover:scale-110 transition-transform duration-300`}
                   >
-                    <Icon
-                      icon={stat.icon}
-                      className={`w-5 h-5 sm:w-6 sm:h-6 bg-gradient-to-br ${stat.color} bg-clip-text text-transparent`}
-                    />
+                    <stat.IconComp className={`w-5 h-5 sm:w-6 sm:h-6 ${stat.color}`} />
                   </div>
                 </div>
 
                 <motion.div
-                  className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2 bg-gradient-to-br ${stat.color} bg-clip-text text-transparent`}
+                  className={`text-2xl sm:text-3xl lg:text-4xl font-bold mb-1 sm:mb-2 bg-gradient-to-br ${stat.gradColor} bg-clip-text text-transparent`}
                   initial={{ scale: 1 }}
                   whileInView={{ scale: [1, 1.1, 1] }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -465,16 +470,9 @@ export default function TestimonialsSection() {
 
               {/* Floating decoration */}
               <motion.div
-                animate={{
-                  rotate: [0, 360],
-                  scale: [1, 1.1, 1],
-                }}
-                transition={{
-                  duration: 8,
-                  repeat: Infinity,
-                  ease: "linear",
-                }}
-                className={`absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br ${stat.color} rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300`}
+                animate={{ rotate: [0, 360], scale: [1, 1.1, 1] }}
+                transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+                className={`absolute -top-4 -right-4 w-8 h-8 bg-gradient-to-br ${stat.gradColor} rounded-full opacity-20 group-hover:opacity-40 transition-opacity duration-300`}
               />
             </motion.div>
           ))}

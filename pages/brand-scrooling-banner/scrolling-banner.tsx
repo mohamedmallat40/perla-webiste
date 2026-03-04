@@ -38,20 +38,20 @@ const ScrollingBanner = React.forwardRef<HTMLDivElement, ScrollingBannerProps>(
         <div>
           <div className="flex flex-col gap-2 justify-center w-full items-center">
             <div>
-              <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
+              <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
                 {t("line1a")}&nbsp;
-              </h1>
-              <h1 className="tracking-tight inline font-semibold from-[#FF705B] to-[#FFB457] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
+              </h2>
+              <h2 className="tracking-tight inline font-semibold from-[#FF705B] to-[#FFB457] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
                 {t("line1b")}
-              </h1>
+              </h2>
             </div>
             <div>
-              <h1 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
+              <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
                 {t("line2a")}&nbsp;
-              </h1>
-              <h1 className="tracking-tight inline font-semibold from-[#FF72E1] to-[#F54C7A] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
+              </h2>
+              <h2 className="tracking-tight inline font-semibold from-[#FF72E1] to-[#F54C7A] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
                 {t("line2b")}
-              </h1>
+              </h2>
             </div>
           </div>
           <Spacer y={16} />

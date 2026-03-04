@@ -48,7 +48,7 @@ export default function HeroSection() {
       animate="visible"
     >
       <div
-        dir={isRTL ? "ltr" : "ltr"}
+        dir={isRTL ? "rtl" : "ltr"}
         className={clsx("w-full py-10 grid grid-cols-12 gap-6 md:gap-0 z-20")}
       >
         <motion.div
@@ -61,7 +61,7 @@ export default function HeroSection() {
           variants={itemVariants}
         >
           <div className={clsx("flex flex-col", isRTL && "items-end")}>
-            <motion.h1
+            <motion.h2
               className={clsx(
                 "tracking-tight font-semibold text-[clamp(1rem,10vw,2rem)] sm:text-[clamp(1rem,10vw,3rem)] lg:text-5xl inline",
                 isRTL && "w-full text-right",
@@ -69,14 +69,14 @@ export default function HeroSection() {
               variants={itemVariants}
             >
               Build. Scale.{" "}
-            </motion.h1>
+            </motion.h2>
             <div className={clsx("w-full", isRTL && "flex flex-col items-end")}>
-              <motion.h1
+              <motion.h2
                 className={title({ color: "violet", size: "md" })}
                 variants={itemVariants}
               >
                 Succeed.&nbsp;
-              </motion.h1>
+              </motion.h2>
             </div>
           </div>
           <motion.p className={subtitle()} variants={itemVariants}>

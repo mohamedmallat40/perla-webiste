@@ -17,7 +17,7 @@ export default function DefaultLayout({
         <Link
           isExternal
           className="flex items-center gap-1 text-current"
-          href="https://www.perla-it.com"
+          href="https://perla-it.com"
           title="perla-it.com homepage"
         >
           <span className="text-default-600">Powered by</span>
