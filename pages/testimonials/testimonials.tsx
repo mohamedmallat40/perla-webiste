@@ -1,6 +1,5 @@
 "use client";
 
-import { useTheme } from "next-themes";
 import { useLocale } from "@react-aria/i18n";
 import { Icon } from "@iconify/react";
 import { Users, Briefcase, CalendarDays, Globe } from "lucide-react";
@@ -25,18 +24,12 @@ interface Testimonial {
 }
 
 export default function TestimonialsSection() {
-  const { theme, systemTheme } = useTheme();
   const { t } = useTranslations();
   const { locale } = useLocale();
   const [activeTab, setActiveTab] = useState("all");
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlay, setIsAutoPlay] = useState(true);
-  const [mounted, setMounted] = useState(false);
 
-  useEffect(() => setMounted(true), []);
-
-  // Only resolve theme after mount to avoid server/client mismatch
-  const currentTheme = mounted ? (theme === "system" ? systemTheme : theme) : "light";
   const isRTL = locale === "ar";
 
   const testimonials: Testimonial[] = [

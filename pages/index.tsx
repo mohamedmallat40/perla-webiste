@@ -1,5 +1,3 @@
-import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
 import {
@@ -22,7 +20,6 @@ import Services from "./services/services";
 import AdditionalDetails from "./additional-details/additional-details";
 import UIUXSection from "./hero/ui-components-boost";
 import TachnoSection from "./technologies/techno";
-import TestimonialsSection from "./testimonials/testimonials";
 import ProjectsShowcase from "./projects/projects-showcase";
 
 import DefaultLayout from "@/layouts/default";
@@ -44,20 +41,7 @@ const LazyAdditionalDetails = dynamic(
 );
 
 export default function IndexPage() {
-  const { theme, systemTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
-  // Get the actual current theme, accounting for system theme
-  const currentTheme = mounted
-    ? theme === "system"
-      ? systemTheme
-      : theme
-    : "light";
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
+  // CSS dark: classes handle theme-aware logos — no JS needed, no flash
   const logos = [
     {
       key: "alwasaet",
@@ -66,12 +50,22 @@ export default function IndexPage() {
     },
     {
       key: "proxym-it",
-      logo: currentTheme === "dark" ? proxymLight : proxymDark,
+      logo: (
+        <>
+          <span className="dark:hidden">{proxymDark}</span>
+          <span className="hidden dark:block">{proxymLight}</span>
+        </>
+      ),
       alt: "Proxym IT - Technology Partner",
     },
     {
       key: "dnext",
-      logo: currentTheme === "dark" ? dnextLight : dnextDark,
+      logo: (
+        <>
+          <span className="dark:hidden">{dnextDark}</span>
+          <span className="hidden dark:block">{dnextLight}</span>
+        </>
+      ),
       alt: "DNext - Development Partner",
     },
     {
@@ -91,7 +85,12 @@ export default function IndexPage() {
     },
     {
       key: "tawazi",
-      logo: currentTheme === "dark" ? tawazi : tawazi_dark,
+      logo: (
+        <>
+          <span className="dark:hidden">{tawazi_dark}</span>
+          <span className="hidden dark:block">{tawazi}</span>
+        </>
+      ),
       alt: "Tawazi - Digital Solutions Client",
     },
   ];

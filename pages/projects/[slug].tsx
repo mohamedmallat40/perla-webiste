@@ -16,17 +16,6 @@ interface ProjectPageProps {
   project: Project;
 }
 
-const statusColors = {
-  live: "bg-success-100 text-success-700 dark:bg-success-50 dark:text-success-800",
-  completed: "bg-primary-100 text-primary-700 dark:bg-primary-50 dark:text-primary-800",
-  beta: "bg-warning-100 text-warning-700 dark:bg-warning-50 dark:text-warning-800",
-};
-
-const statusDots = {
-  live: "bg-success-500",
-  completed: "bg-primary-500",
-  beta: "bg-warning-500",
-};
 
 export default function ProjectPage({ project }: ProjectPageProps) {
   const { locale } = useLocale();
@@ -44,13 +33,6 @@ export default function ProjectPage({ project }: ProjectPageProps) {
     : lang === "ar"
     ? project.categoryAr
     : project.category;
-
-  const statusLabel =
-    project.status === "live"
-      ? t("portfolio_status_live")
-      : project.status === "completed"
-      ? t("portfolio_status_completed")
-      : t("portfolio_status_beta");
 
   const canonicalUrl = `https://perla-it.com/projects/${project.slug}`;
 
@@ -180,16 +162,9 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          {/* Category + Status */}
+          {/* Category */}
           <div className={`flex flex-wrap items-center gap-3 mb-6 ${isRTL ? "flex-row-reverse" : ""}`}>
             <span className="text-sm font-medium text-primary">{category}</span>
-            <span className="text-default-300">·</span>
-            <div
-              className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium ${statusColors[project.status]}`}
-            >
-              <div className={`w-1.5 h-1.5 rounded-full ${statusDots[project.status]}`} />
-              {statusLabel}
-            </div>
           </div>
 
           {/* Title */}

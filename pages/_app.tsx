@@ -41,7 +41,7 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <I18nProvider locale={locale}>
       <HeroUIProvider navigate={router.push}>
-        <NextThemesProvider>
+        <NextThemesProvider defaultTheme="light" attribute="class">
           <div
             className={`${fontSans.variable} ${fontMono.variable} ${fontArabic.variable} ${locale === "ar" ? "rtl-layout arabic-locale" : "ltr-layout"}`}
           >
