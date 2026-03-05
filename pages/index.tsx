@@ -4,7 +4,8 @@ import {
   alwasaet,
   proxymLight,
   aramco,
-  extraexpertise,
+  extraexpertiseLight,
+  extraexpertiseDark,
   proxymDark,
   zacta,
   dnextDark,
@@ -75,7 +76,12 @@ export default function IndexPage() {
     },
     {
       key: "extraexpertise",
-      logo: extraexpertise,
+      logo: (
+        <>
+          <span className="dark:hidden">{extraexpertiseLight}</span>
+          <span className="hidden dark:block">{extraexpertiseDark}</span>
+        </>
+      ),
       alt: "Extra Expertise - Client Partner",
     },
     {

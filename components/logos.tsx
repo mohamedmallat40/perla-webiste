@@ -31,12 +31,21 @@ export const aramco = (
     width={200}
   />
 );
-export const extraexpertise = (
+export const extraexpertiseLight = (
   <Image
     alt="extraexpertise"
     height={100}
     loading="lazy"
-    src="/logos/ee.webp"
+    src="/logos/ee-light.png"
+    width={200}
+  />
+);
+export const extraexpertiseDark = (
+  <Image
+    alt="extraexpertise"
+    height={100}
+    loading="lazy"
+    src="/logos/ee-dark.png"
     width={200}
   />
 );
