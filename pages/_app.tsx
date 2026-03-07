@@ -26,13 +26,11 @@ export default function App({ Component, pageProps }: AppProps) {
     if (locale === "ar") {
       html.setAttribute("dir", "rtl");
       html.setAttribute("lang", "ar");
-      body.style.fontFamily = 'var(--font-arabic), "Cairo", sans-serif';
       body.classList.add("arabic-locale", "rtl-layout");
       body.classList.remove("ltr-layout");
     } else {
       html.setAttribute("dir", "ltr");
       html.setAttribute("lang", locale);
-      body.style.fontFamily = "var(--font-sans), system-ui, sans-serif";
       body.classList.remove("arabic-locale", "rtl-layout");
       body.classList.add("ltr-layout");
     }

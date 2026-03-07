@@ -6,6 +6,8 @@ import { Users, Briefcase, CalendarDays, Globe } from "lucide-react";
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+import Image from "next/image";
+
 import { useTranslations } from "@/hooks/use-translation";
 import { title, subtitle } from "@/components/primitives";
 
@@ -22,6 +24,39 @@ interface Testimonial {
   projectType: string;
   featured?: boolean;
 }
+
+const StarRating = ({
+  rating,
+  size = "sm",
+  isRTL = false,
+}: {
+  rating: number;
+  size?: "sm" | "lg";
+  isRTL?: boolean;
+}) => {
+  const starSize = size === "lg" ? "w-6 h-6" : "w-4 h-4";
+  return (
+    <div className={`flex gap-1 ${isRTL ? "flex-row-reverse" : ""}`}>
+      {[...Array(5)].map((_, i) => (
+        <motion.div
+          key={i}
+          initial={{ scale: 0, rotate: -180 }}
+          animate={{ scale: 1, rotate: 0 }}
+          transition={{ delay: i * 0.18, type: "spring", stiffness: 80, damping: 14 }}
+        >
+          <Icon
+            icon="lucide:star"
+            className={`${starSize} ${
+              i < rating
+                ? "text-yellow-400 fill-yellow-400"
+                : "text-default-300"
+            }`}
+          />
+        </motion.div>
+      ))}
+    </div>
+  );
+};
 
 export default function TestimonialsSection() {
   const { t } = useTranslations();
@@ -107,37 +142,6 @@ export default function TestimonialsSection() {
 
   const featuredTestimonial =
     testimonials.find((t) => t.featured) || testimonials[0];
-
-  const StarRating = ({
-    rating,
-    size = "sm",
-  }: {
-    rating: number;
-    size?: "sm" | "lg";
-  }) => {
-    const starSize = size === "lg" ? "w-6 h-6" : "w-4 h-4";
-    return (
-      <div className={`flex gap-1 ${isRTL ? "flex-row-reverse" : ""}`}>
-        {[...Array(5)].map((_, i) => (
-          <motion.div
-            key={i}
-            initial={{ scale: 0, rotate: -180 }}
-            animate={{ scale: 1, rotate: 0 }}
-            transition={{ delay: i * 0.18, type: "spring", stiffness: 80, damping: 14 }}
-          >
-            <Icon
-              icon="lucide:star"
-              className={`${starSize} ${
-                i < rating
-                  ? "text-yellow-400 fill-yellow-400"
-                  : "text-default-300"
-              }`}
-            />
-          </motion.div>
-        ))}
-      </div>
-    );
-  };
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -240,10 +244,13 @@ export default function TestimonialsSection() {
                     </blockquote>
 
                     <div className="flex items-center gap-3 sm:gap-4">
-                      <img
+                      <Image
                         src={testimonials[currentSlide].avatar}
                         alt={testimonials[currentSlide].name}
+                        width={64}
+                        height={64}
                         className="w-12 h-12 sm:w-16 sm:h-16 rounded-full object-cover ring-4 ring-pink-500/20 flex-shrink-0"
+                        unoptimized
                       />
                       <div className="min-w-0 flex-1">
                         <h4 className="font-semibold text-base sm:text-lg text-foreground">

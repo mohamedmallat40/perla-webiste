@@ -74,12 +74,20 @@ const ScrollingBanner = React.forwardRef<HTMLDivElement, ScrollingBannerProps>(
               shouldPauseOnHover ? "hover:[animation-play-state:paused]" : ""
             }`}
           >
-            {/* Original + duplicated content */}
-            <div className="flex items-stretch gap-[--gap]">
-              {React.Children.map(children, (child) => child)}
+            {/* Original + duplicated content for infinite scroll */}
+            <div className="flex items-stretch gap-[--gap]" aria-hidden={false}>
+              {React.Children.map(children, (child, i) =>
+                React.isValidElement(child)
+                  ? React.cloneElement(child as React.ReactElement, { key: `orig-${i}` })
+                  : child
+              )}
             </div>
-            <div className="flex items-stretch gap-[--gap]">
-              {React.Children.map(children, (child) => child)}
+            <div className="flex items-stretch gap-[--gap]" aria-hidden={true}>
+              {React.Children.map(children, (child, i) =>
+                React.isValidElement(child)
+                  ? React.cloneElement(child as React.ReactElement, { key: `dup-${i}` })
+                  : child
+              )}
             </div>
           </div>
         </div>

@@ -400,10 +400,6 @@ html[dir="rtl"] .rounded-br {
   border-bottom-left-radius: 0.25rem;
 }
 
-/* Fix transforms - be careful with icons */
-html[dir="rtl"] .transform:not(.preserve-transform) {
-  transform: scaleX(-1);
-}
 
 /* Preserve certain elements from being flipped */
 html[dir="rtl"] img,

@@ -109,6 +109,8 @@ const ProjectsShowcase: React.FC = () => {
                         src={featured.images[0]}
                         alt={`${tr.title} preview`}
                         fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, 66vw"
                         className="object-cover opacity-90 group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
@@ -202,6 +204,7 @@ const ProjectsShowcase: React.FC = () => {
                         src={project.images[0]}
                         alt={`${tr.title} preview`}
                         fill
+                        sizes="(max-width: 768px) 100vw, 33vw"
                         className="object-cover opacity-80 group-hover:scale-105 transition-transform duration-500"
                       />
                     ) : (
