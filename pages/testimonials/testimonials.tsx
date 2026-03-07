@@ -327,6 +327,8 @@ export default function TestimonialsSection() {
                   {testimonials.map((_, index) => (
                     <button
                       key={index}
+                      aria-label={`Go to testimonial ${index + 1}`}
+                      aria-current={index === currentSlide ? "true" : undefined}
                       onClick={() => {
                         setCurrentSlide(index);
                         setIsAutoPlay(false);
@@ -343,6 +345,7 @@ export default function TestimonialsSection() {
                 <div className="flex gap-1 sm:gap-2">
                   <button
                     onClick={() => setIsAutoPlay(!isAutoPlay)}
+                    aria-label={isAutoPlay ? "Pause testimonials" : "Play testimonials"}
                     className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                   >
                     <Icon
@@ -358,6 +361,7 @@ export default function TestimonialsSection() {
                           testimonials.length,
                       )
                     }
+                    aria-label="Previous testimonial"
                     className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                   >
                     <Icon
@@ -371,6 +375,7 @@ export default function TestimonialsSection() {
                         (prev) => (prev + 1) % testimonials.length,
                       )
                     }
+                    aria-label="Next testimonial"
                     className="p-2 rounded-full bg-white/10 hover:bg-white/20 transition-colors"
                   >
                     <Icon

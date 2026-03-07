@@ -180,22 +180,22 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           {/* Meta info bar */}
           <div className={`grid grid-cols-3 gap-6 p-6 rounded-2xl border border-divider bg-content1 mb-12`}>
             <div>
-              <p className="text-xs text-default-400 uppercase tracking-wide mb-1">{t("portfolio_client")}</p>
+              <p className="text-xs text-default-500 uppercase tracking-wide mb-1">{t("portfolio_client")}</p>
               <p className="text-sm font-semibold text-foreground">{project.client}</p>
             </div>
             <div>
-              <p className="text-xs text-default-400 uppercase tracking-wide mb-1">{t("portfolio_year")}</p>
+              <p className="text-xs text-default-500 uppercase tracking-wide mb-1">{t("portfolio_year")}</p>
               <p className="text-sm font-semibold text-foreground">{project.year}</p>
             </div>
             <div>
-              <p className="text-xs text-default-400 uppercase tracking-wide mb-1">{t("portfolio_category")}</p>
+              <p className="text-xs text-default-500 uppercase tracking-wide mb-1">{t("portfolio_category")}</p>
               <p className="text-sm font-semibold text-foreground">{category}</p>
             </div>
           </div>
 
           {/* Tech stack */}
           <div className="mb-12">
-            <p className="text-xs text-default-400 uppercase tracking-wide mb-3">{t("portfolio_technologies")}</p>
+            <p className="text-xs text-default-500 uppercase tracking-wide mb-3">{t("portfolio_technologies")}</p>
             <div className="flex flex-wrap gap-2">
               {project.technologies.map((tech) => (
                 <span
@@ -211,7 +211,7 @@ export default function ProjectPage({ project }: ProjectPageProps) {
           {/* Screenshot gallery */}
           {project.images.length > 0 && (
             <div className="mb-4">
-              <p className="text-xs text-default-400 uppercase tracking-wide mb-4">Screenshots</p>
+              <p className="text-xs text-default-500 uppercase tracking-wide mb-4">Screenshots</p>
               <div className={`grid gap-4 ${project.images.length === 1 ? "grid-cols-1" : project.images.length === 2 ? "grid-cols-2" : "grid-cols-2 md:grid-cols-2"}`}>
                 {project.images.map((src, i) => (
                   <motion.div

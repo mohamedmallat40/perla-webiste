@@ -43,16 +43,16 @@ export default function UIUXSection() {
             </span>
           </div>
 
-          <div className="flex-col gap-2 items-start justify-center w-full mt-2 inline md:block">
-            <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+          <h2 className="flex-col gap-2 items-start justify-center w-full mt-2 inline md:block">
+            <span className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {t("uiux_section_heading_1")}&nbsp;
-            </h2>
-            <h2 className="tracking-tight inline font-semibold from-[#5EA2EF] to-[#0072F5] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            </span>
+            <span className="tracking-tight inline font-semibold from-[#5EA2EF] to-[#0072F5] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {t("uiux_section_heading_2")}&nbsp;
-            </h2>
-            <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+            </span>
+            <span className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
               {t("uiux_section_heading_3")}&nbsp;
-            </h2>
+            </span>
             <div
               className={
                 isRTL
@@ -60,11 +60,11 @@ export default function UIUXSection() {
                   : "flex flex-col sm:flex-row"
               }
             >
-              <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
+              <span className="tracking-tight inline font-semibold text-4xl lg:text-6xl drop-shadow-[0_2px_4px_rgba(255,255,255,0.8)] dark:drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">
                 {t("uiux_section_heading_4")}
-              </h2>
+              </span>
             </div>
-          </div>
+          </h2>
 
           <p className="w-full md:w-1/2 my-2 text-medium lg:text-large font-normal block max-w-full pr-12 text-foreground-500">
             {t("uiux_section_paragraph")}

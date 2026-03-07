@@ -51,7 +51,7 @@ export default function Footer() {
           {items.map((item) => (
             <li key={item.name}>
               <Link
-                className="text-default-400 hover:text-default-600 transition-colors"
+                className="text-default-500 hover:text-default-600 transition-colors"
                 href={item.href}
                 size="sm"
               >
@@ -85,7 +85,7 @@ export default function Footer() {
                 <Link
                   key={item.name}
                   isExternal
-                  className="text-default-400 hover:text-primary transition-colors"
+                  className="text-default-500 hover:text-primary transition-colors"
                   href={item.href}
                 >
                   <span className="sr-only">{item.name}</span>
@@ -117,7 +117,7 @@ export default function Footer() {
         {/* Divider and Bottom Section */}
         <div className="mt-16 border-t border-divider pt-8 sm:mt-20 lg:mt-24">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-small text-default-400">
+            <div className="flex flex-col sm:flex-row items-center gap-4 text-small text-default-500">
               <p>
                 &copy; 2026 Perla AI.{" "}
                 {t("rights") || "All rights reserved."}
@@ -132,14 +132,14 @@ export default function Footer() {
               <Link
                 href="https://calendly.com/mohamedmallat40"
                 isExternal
-                className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
+                className="flex items-center gap-2 text-default-500 hover:text-primary transition-colors text-small"
               >
                 <Icon icon="mdi:calendar" className="w-4 h-4" />
                 Schedule Meeting
               </Link>
               <Link
                 href="mailto:mo.mallat@perla-it.com"
-                className="flex items-center gap-2 text-default-400 hover:text-primary transition-colors text-small"
+                className="flex items-center gap-2 text-default-500 hover:text-primary transition-colors text-small"
               >
                 <Icon icon="mdi:email" className="w-4 h-4" />
                 mo.mallat@perla-it.com

@@ -37,22 +37,21 @@ const ScrollingBanner = React.forwardRef<HTMLDivElement, ScrollingBannerProps>(
       <section className="mx-auto w-full max-w-6xl px-6 sm:py-32 lg:px-8 ">
         <div>
           <div className="flex flex-col gap-2 justify-center w-full items-center">
-            <div>
-              <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
+            <h2 className="text-center">
+              <span className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
                 {t("line1a")}&nbsp;
-              </h2>
-              <h2 className="tracking-tight inline font-semibold from-[#FF705B] to-[#FFB457] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
+              </span>
+              <span className="tracking-tight inline font-semibold from-[#FF705B] to-[#FFB457] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
                 {t("line1b")}
-              </h2>
-            </div>
-            <div>
-              <h2 className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
+              </span>
+              <br />
+              <span className="tracking-tight inline font-semibold text-4xl lg:text-6xl">
                 {t("line2a")}&nbsp;
-              </h2>
-              <h2 className="tracking-tight inline font-semibold from-[#FF72E1] to-[#F54C7A] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
+              </span>
+              <span className="tracking-tight inline font-semibold from-[#FF72E1] to-[#F54C7A] text-4xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-b">
                 {t("line2b")}
-              </h2>
-            </div>
+              </span>
+            </h2>
           </div>
           <Spacer y={16} />
         </div>
