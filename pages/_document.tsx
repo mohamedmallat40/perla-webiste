@@ -26,7 +26,7 @@ export default function Document() {
           }}
         />
 
-        {/* Fonts */}
+        {/* Fonts — non-render-blocking */}
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
           rel="preconnect"
@@ -34,8 +34,16 @@ export default function Document() {
           crossOrigin=""
         />
         <link
+          rel="preload"
+          as="style"
+          href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
+        />
+        <link
           href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap"
           rel="stylesheet"
+          media="print"
+          // @ts-ignore
+          onLoad="this.media='all'"
         />
 
 

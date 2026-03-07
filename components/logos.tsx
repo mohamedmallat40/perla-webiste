@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const alwasaet = (
-  <Image alt="alwasaet" height={100} src="/logos/alwasaet.png" width={200} />
+  <Image alt="alwasaet" height={100} src="/logos/alwasaet.png" width={200} style={{ height: "auto" }} />
 );
 
 export const proxymLight = (
@@ -11,6 +11,7 @@ export const proxymLight = (
     loading="lazy"
     src="/logos/proxym.png"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 export const proxymDark = (
@@ -20,6 +21,7 @@ export const proxymDark = (
     loading="lazy"
     src="/logos/proxym-dark.jpg"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 export const aramco = (
@@ -29,6 +31,7 @@ export const aramco = (
     loading="lazy"
     src="/logos/aramco-light.webp"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 export const extraexpertiseLight = (
@@ -38,6 +41,7 @@ export const extraexpertiseLight = (
     loading="lazy"
     src="/logos/ee-light.webp"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 export const extraexpertiseDark = (
@@ -47,6 +51,7 @@ export const extraexpertiseDark = (
     loading="lazy"
     src="/logos/ee-dark.png"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 export const dnextLight = (
@@ -56,6 +61,7 @@ export const dnextLight = (
     loading="lazy"
     src="/logos/dnext-light.svg"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 
@@ -66,16 +72,18 @@ export const dnextDark = (
     loading="lazy"
     src="/logos/dnext-dark.svg"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 
 export const zacta = (
   <Image
-    alt="dnext"
+    alt="zacta"
     height={100}
     loading="lazy"
     src="/logos/zacta.svg"
     width={200}
+    style={{ height: "auto" }}
   />
 );
 
@@ -86,6 +94,7 @@ export const tawazi = (
     loading="lazy"
     src="/logos/tawazi.png"
     width={100}
+    style={{ height: "auto" }}
   />
 );
 
@@ -96,5 +105,6 @@ export const tawazi_dark = (
     loading="lazy"
     src="/logos/tawazy_black.png"
     width={100}
+    style={{ height: "auto" }}
   />
 );

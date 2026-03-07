@@ -24,10 +24,10 @@ export const HeroLandingSection: FC<HeroLandingSectionProps> = ({
       dir={isRTL ? "rtl" : "ltr"}
     >
       <img
-        alt="pattern"
+        alt=""
         className={`absolute w-full ${isRTL ? "right-0 rotate-[43deg]" : "left-0 rotate-[223deg]"}`}
-        loading="lazy"
         src="/svg/looper-pattern.svg"
+        fetchPriority="high"
       />
 
       <div className="w-full">
