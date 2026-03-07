@@ -7,6 +7,7 @@ import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { I18nProvider } from "@react-aria/i18n";
+import Script from "next/script";
 
 import { fontSans, fontMono, fontArabic } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
@@ -37,6 +38,18 @@ export default function App({ Component, pageProps }: AppProps) {
   }, [locale]);
 
   return (
+    <>
+    <Script
+      src="https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js"
+      strategy="afterInteractive"
+      onLoad={() => {
+        (window as any).mixpanel.init("c30b1e297f611c7f270ed09784a7487a", {
+          autocapture: true,
+          record_sessions_percent: 100,
+          api_host: "https://api-eu.mixpanel.com",
+        });
+      }}
+    />
     <I18nProvider locale={locale}>
       <HeroUIProvider navigate={router.push}>
         <NextThemesProvider defaultTheme="light" attribute="class">
@@ -49,6 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </NextThemesProvider>
       </HeroUIProvider>
     </I18nProvider>
+    </>
   );
 }
 
