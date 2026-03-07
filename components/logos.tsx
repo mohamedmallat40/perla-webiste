@@ -36,7 +36,7 @@ export const extraexpertiseLight = (
     alt="extraexpertise"
     height={100}
     loading="lazy"
-    src="/logos/ee-light.png"
+    src="/logos/ee-light.webp"
     width={200}
   />
 );

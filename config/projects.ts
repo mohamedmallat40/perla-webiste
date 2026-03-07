@@ -47,10 +47,10 @@ export const projects: Project[] = [
     client: "Saudi Aramco",
     icon: "🎓",
     images: [
-      "/projects/lnd/dashboard.png",
-      "/projects/lnd/services.png",
-      "/projects/lnd/messages.png",
-      "/projects/lnd/request-review.png",
+      "/projects/lnd/dashboard.webp",
+      "/projects/lnd/services.webp",
+      "/projects/lnd/messages.webp",
+      "/projects/lnd/request-review.webp",
     ],
     translations: {
       en: {
@@ -140,10 +140,10 @@ export const projects: Project[] = [
     client: "ExtraExpertise (Belgium)",
     icon: "🤝",
     images: [
-      "/projects/wingman/job-board.png",
-      "/projects/wingman/talent-profiles.png",
-      "/projects/wingman/community.png",
-      "/projects/wingman/dna-profile.png",
+      "/projects/wingman/job-board.webp",
+      "/projects/wingman/talent-profiles.webp",
+      "/projects/wingman/community.webp",
+      "/projects/wingman/dna-profile.webp",
     ],
     translations: {
       en: {
@@ -321,13 +321,13 @@ export const projects: Project[] = [
     client: "Yoo Connect (Saudi Arabia)",
     icon: "🔗",
     images: [
-      "/projects/yooconnect/contacts.png",
-      "/projects/yooconnect/add-contact.png",
-      "/projects/yooconnect/contact-form.png",
-      "/projects/yooconnect/geo-view.png",
-      "/projects/yooconnect/dashboard.png",
-      "/projects/yooconnect/mobile.png",
-      "/projects/yooconnect/overview.png",
+      "/projects/yooconnect/contacts.webp",
+      "/projects/yooconnect/add-contact.webp",
+      "/projects/yooconnect/contact-form.webp",
+      "/projects/yooconnect/geo-view.webp",
+      "/projects/yooconnect/dashboard.webp",
+      "/projects/yooconnect/mobile.webp",
+      "/projects/yooconnect/overview.webp",
     ],
     translations: {
       en: {
@@ -416,7 +416,7 @@ export const projects: Project[] = [
     year: "2024",
     client: "VVTIV (Belgium)",
     icon: "🏥",
-    images: ["/projects/vvtiv/home.png"],
+    images: ["/projects/vvtiv/home.webp"],
     translations: {
       en: {
         title: "VVTIV — Secure Healthcare Platform for Therapists",
