@@ -70,20 +70,22 @@ export const Navbar = ({ setLocale }: any) => {
         }
         justify="start"
       >
-        <NavbarBrand
-          className={clsx("gap-3 max-w-fit", isRTL ? "flex-row-reverse" : "")}
-        >
-          <NextLink
-            className={clsx(
-              "flex justify-start items-center gap-1",
-              isRTL ? "flex-row-reverse" : ""
-            )}
-            href="/"
+        <NavbarItem>
+          <NavbarBrand
+            className={clsx("gap-3 max-w-fit", isRTL ? "flex-row-reverse" : "")}
           >
-            <Logo />
-            <p className="font-bold text-inherit">Perla AI</p>
-          </NextLink>
-        </NavbarBrand>
+            <NextLink
+              className={clsx(
+                "flex justify-start items-center gap-1",
+                isRTL ? "flex-row-reverse" : ""
+              )}
+              href="/"
+            >
+              <Logo />
+              <p className="font-bold text-inherit">Perla AI</p>
+            </NextLink>
+          </NavbarBrand>
+        </NavbarItem>
           {siteConfig.navItems.map((item) => (
             <NavbarItem key={item.href} className={isRTL ? "hidden lg:flex" : "hidden lg:flex"}>
               <a
