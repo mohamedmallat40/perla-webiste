@@ -84,15 +84,8 @@ export const Navbar = ({ setLocale }: any) => {
             <p className="font-bold text-inherit">Perla AI</p>
           </NextLink>
         </NavbarBrand>
-        <div
-          className={
-            isRTL
-              ? "hidden lg:flex gap-4 justify-start ml-auto flex-row-reverse"
-              : "hidden lg:flex gap-4 justify-start ml-2 "
-          }
-        >
           {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
+            <NavbarItem key={item.href} className={isRTL ? "hidden lg:flex" : "hidden lg:flex"}>
               <a
                 href={`/${item.href}`}
                 onClick={(e) => {
@@ -112,7 +105,6 @@ export const Navbar = ({ setLocale }: any) => {
               </a>
             </NavbarItem>
           ))}
-        </div>
       </NavbarContent>
 
       <NavbarContent

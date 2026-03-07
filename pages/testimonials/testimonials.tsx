@@ -253,9 +253,9 @@ export default function TestimonialsSection() {
                         unoptimized
                       />
                       <div className="min-w-0 flex-1">
-                        <h4 className="font-semibold text-base sm:text-lg text-foreground">
+                        <h3 className="font-semibold text-base sm:text-lg text-foreground">
                           {testimonials[currentSlide].name}
-                        </h4>
+                        </h3>
                         <p className="text-sm sm:text-base text-default-500">
                           {testimonials[currentSlide].role}
                         </p>
